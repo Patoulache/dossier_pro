@@ -1,3 +1,4 @@
+//verif si les champs sont set
 const CHECKID = {
   nomnaissance : "",
   nomusage : "",
@@ -10,7 +11,7 @@ const CHECKID = {
     CHECKID.prenom = document.getElementById('prenom')
     CHECKID.adresse = document.getElementById('adresse')
   },
-
+  // verif les champs
   ALLSET : function() {
     const allset = ((CHECKID.nomusage.value && CHECKID.nomnaissance.value && CHECKID.adresse.value && CHECKID.prenom.value) ? true : false);
     if (allset === false){
@@ -18,7 +19,7 @@ const CHECKID = {
     }
     return allset;
   },
-
+//change la couleur, pour rouge, des input si vide
   COLOUR : function(){
     if (CHECKID.nomnaissance.value === ""){
       console.log("test");
@@ -37,13 +38,16 @@ const CHECKID = {
 
 }
 
+// gère le click button
 const BUTTON = {
   INIT : function(){
     document.getElementById('validation').addEventListener("click",BUTTON.CLICKED);
   },
   CLICKED : function(){
     CHECKID.INIT();
-    console.log(CHECKID.ALLSET());
-  }
+    if (CHECKID.ALLSET()){
+
+    } //end if
+  }// end clicked
 }
 BUTTON.INIT();
