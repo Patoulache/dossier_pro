@@ -50,4 +50,18 @@ const BUTTON = {
     } //end if
   }// end clicked
 }
+
+const LESVARIABLES = {
+  inputs : "",
+  textareas : "",
+
+  INIT : function(){
+    LESVARIABLES.inputs = document.getElementsByTagName('input');
+    LESVARIABLES.textareas = document.getElementsByTagName('textarea')
+  },
+
+  TRAITEMENT : function(){
+    
+  }
+}
 BUTTON.INIT();
