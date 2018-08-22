@@ -51,23 +51,17 @@ const BUTTON = {
 }
 
 const LESVARIABLES = {
-  inputs : "",
-  textareas : "",
   all : [],
 
   INIT : function(){
-    console.log("et ici on a " + CHECKID.prenom.value);
-    LESVARIABLES.inputs = document.getElementsByTagName('input');
-    LESVARIABLES.textareas = document.getElementsByTagName('textarea');
-    LESVARIABLES.TRAITEMENT(LESVARIABLES.inputs);
-    LESVARIABLES.TRAITEMENT(LESVARIABLES.textareas);
+    LESVARIABLES.TRAITEMENT(document.getElementsByTagName('input'));
+    LESVARIABLES.TRAITEMENT(document.getElementsByTagName('textarea'));
   },
 
   TRAITEMENT : function(inp){
     for (i=0; i< inp.length; i++){
       LESVARIABLES.all[inp[i].id] = inp[i].value;
     }
-    console.log(LESVARIABLES.all);
   }
 }
 BUTTON.INIT();
