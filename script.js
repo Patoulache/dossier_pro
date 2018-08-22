@@ -59,7 +59,6 @@ const LESVARIABLES = {
     console.log("et ici on a " + CHECKID.prenom.value);
     LESVARIABLES.inputs = document.getElementsByTagName('input');
     LESVARIABLES.textareas = document.getElementsByTagName('textarea');
-
     LESVARIABLES.TRAITEMENT(LESVARIABLES.inputs);
     LESVARIABLES.TRAITEMENT(LESVARIABLES.textareas);
   },
