@@ -1,0 +1,26 @@
+textarea {
+    background: #fbfbfb;
+    text-align: left;
+    width: 100%;
+    height: 287px;
+    border: 2px solid #eee;
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    max-width: 100%;
+    min-width: 100%;
+    resize: none
+}
+
+#p1 {
+    
+    margin-bottom: 0in;
+    background: #ffffff;
+    border: none;
+    padding: 0in;
+    line-height: 115%;
+    page-break-inside: auto;
+    widows: 0;
+    orphans: 0;
+    page-break-after: auto;
+}
