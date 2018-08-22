@@ -22,7 +22,6 @@ const CHECKID = {
 //change la couleur, pour rouge, des input si vide
   COLOUR : function(){
     if (CHECKID.nomnaissance.value === ""){
-      console.log("test");
       CHECKID.nomnaissance.style.border = "2px solid red";
     };
     if (CHECKID.nomusage.value === ""){
@@ -46,7 +45,7 @@ const BUTTON = {
   CLICKED : function(){
     CHECKID.INIT();
     if (CHECKID.ALLSET()){
-
+      LESVARIABLES.INIT();
     } //end if
   }// end clicked
 }
@@ -54,14 +53,22 @@ const BUTTON = {
 const LESVARIABLES = {
   inputs : "",
   textareas : "",
+  all : [],
 
   INIT : function(){
+    console.log("et ici on a " + CHECKID.prenom.value);
     LESVARIABLES.inputs = document.getElementsByTagName('input');
-    LESVARIABLES.textareas = document.getElementsByTagName('textarea')
+    LESVARIABLES.textareas = document.getElementsByTagName('textarea');
+
+    LESVARIABLES.TRAITEMENT(LESVARIABLES.inputs);
+    LESVARIABLES.TRAITEMENT(LESVARIABLES.textareas);
   },
 
-  TRAITEMENT : function(){
-    
+  TRAITEMENT : function(inp){
+    for (i=0; i< inp.length; i++){
+      LESVARIABLES.all[inp[i].id] = inp[i].value;
+    }
+    console.log(LESVARIABLES.all);
   }
 }
 BUTTON.INIT();
