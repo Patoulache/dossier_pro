@@ -74,7 +74,6 @@ const SENDER = {
   INIT : function(){
     SENDER.xhr = new XMLHttpRequest();
     SENDER.tosend = JSON.stringify(LESVARIABLES.all);
-    console.log(JSON.parse(SENDER.tosend));
     SENDER.SENDINFO();
   },
 
