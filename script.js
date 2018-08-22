@@ -38,6 +38,7 @@ const CHECKID = {
 }
 
 // gère le click button
+// TOUT se pass ici
 const BUTTON = {
   INIT : function(){
     document.getElementById('validation').addEventListener("click",BUTTON.CLICKED);
@@ -46,12 +47,13 @@ const BUTTON = {
     CHECKID.INIT();
     if (CHECKID.ALLSET()){
       LESVARIABLES.INIT();
+      SENDER.INIT();
     } //end if
   }// end clicked
 }
 
 const LESVARIABLES = {
-  all : [],
+  all : {},
 
   INIT : function(){
     LESVARIABLES.TRAITEMENT(document.getElementsByTagName('input'));
@@ -64,4 +66,25 @@ const LESVARIABLES = {
     }
   }
 }
+// ajax
+const SENDER = {
+  xhr : "",
+  tosend : "",
+
+  INIT : function(){
+    SENDER.xhr = new XMLHttpRequest();
+    SENDER.tosend = JSON.stringify(LESVARIABLES.all);
+    console.log(JSON.parse(SENDER.tosend));
+    SENDER.SENDINFO();
+  },
+
+  // TODO: changer adresse script php
+  SENDINFO : function(){
+  SENDER.xhr.open('POST', 'script2.php' , true);
+  SENDER.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  SENDER.xhr.send('info='+SENDER.tosend);
+  }
+}
+
+
 BUTTON.INIT();
