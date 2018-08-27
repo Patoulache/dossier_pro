@@ -13,6 +13,8 @@
     </header>
     <main>
     <form class="" action="index.html" method="post">
+      <table>
+
       <tr>
         <td> <label for="name">entrez votre nom: </label> </td>
         <td> <input type="text" name="name" value=""> </td>
@@ -22,8 +24,12 @@
         <td> <input type="password" name="pass" value=""></td>
       </tr>
       <tr>
+      </tr>
+      <tr>
+        <td></td>
         <td> <input type="submit" value="connexion"></td>
       </tr>
+    </table>
     </form>
   </main>
   </body>

@@ -1,8 +1,8 @@
 html{
   border: 0;
   margin-left: 0;
-  background-color: aqua;
-  height: 100%;
+  background: radial-gradient(#f70707, #321632 , #f70707, #321632 ,#f70707, #321632 ,#f70707, #321632 ,#f70707, #321632 );
+  height: 100vh;
 }
 body{
   margin: 0;
@@ -11,9 +11,9 @@ body{
   height: 100%;
 }
 header{
-  width: 90%;
+  width: 95%;
   margin: auto;
-  background-color: #15425032;
+  background-color: rgba(142,138,138,0.7);
   border-radius: 50px;
   border: 2px black solid;
 }
@@ -22,7 +22,9 @@ header{
 }
 main{
   height: 80%;
-  margin: 10%;
+  margin: 2% auto;
+  background-color: rgba(112,158,22,0.6);
+  width: 80%;
   border: gray 2px solid;
   border-radius: 50px;
   box-shadow: 8px 8px 12px #aaa;
