@@ -1,3 +1,10 @@
+/* code premier essai avec convertisseur */
+
+/* html {
+    width: 100%;
+    margin-left: 30%;
+}
+
 textarea {
     background: #fbfbfb;
     text-align: left;
@@ -23,4 +30,27 @@ textarea {
     widows: 0;
     orphans: 0;
     page-break-after: auto;
+}
+
+.firstPage {
+    width: 200px;
+}
+
+.firstPageInput {
+    margin: 15px 0 0 20px;
+}
+
+.contexte {
+    width: 500px;
+}
+
+.contexte1 {
+    width: 300px;
+} */
+
+/* code form from scratch */
+
+body {
+    width: 100%;
+    margin: auto;
 }
