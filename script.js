@@ -79,7 +79,7 @@ const SENDER = {
 
   // TODO: changer adresse script php
   SENDINFO : function(){
-  SENDER.xhr.open('POST', 'script2.php' , true);
+  SENDER.xhr.open('POST', 'dossier_pro.php' , true);
   SENDER.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   SENDER.xhr.send('info='+SENDER.tosend);
   }
