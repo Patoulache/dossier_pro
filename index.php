@@ -1,9 +1,7 @@
 <?php
-try {
-  session_start();
-} catch (\Exception $e) {
 
-}
+session_start();
+
 
 if ($_POST){
 

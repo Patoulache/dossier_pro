@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $_SESSION["nom"] = "gsrsegsqgrqwr"; ?>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -34,6 +35,11 @@
       </tr>
     </table>
     </form>
+    <div class="">
+      <pre>
+      <?php print_r($_SESSION) ?>
+    </pre>
+    </div>
   </main>
   </body>
 </html>
