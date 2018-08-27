@@ -1,11 +1,11 @@
 <?php
 
 
-require_once('BDD.php');
+require_once('Bdd.php');
 /**
  *recup un objet avec toutes les valeurs dedans
  */
-class Infos extends BDD
+class Infos extends Bdd
 {
   private $values;
 
