@@ -9,23 +9,31 @@
     <form action="" method="POST">
         <header>
             <img src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
-            <div>
+            <div class="header">
                 <h1>Dossier Professionnel <sup>(DP)</sup></h1>
             </div>
         </header>       
-        
-        <div>
-            <label for="birthdate">Nom de naissance <span>▶</span></label>
-            <input type="text" id="nomnaissance" required>
+        <div id="divider"></div>
+        <div id="coordonnées">
+            <div class="champ1">
+                <label for="birthdate">Nom de naissance <span>▶</span></label>
+                <input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required>
+            </div>
             
-            <label for="usename">Nom d'usage <span>▶</span></label>
-            <input type="text" id="nomusage" required>
-            
-            <label for="prenom">Prénom <span>▶</span></label>
-            <input type="text" id="prenom" required>
-            
-            <label for="adresse">Adresse <span>▶</span></label>
-            <input type="text" id="adresse" required>
+            <div>
+                <label for="usename">Nom d'usage <span>▶</span></label>
+                <input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required>
+            </div>
+
+            <div>
+                <label for="prenom">Prénom <span>▶</span></label>
+                <input type="text" id="prenom" placeholder="Entrez votre prénom ici." required>
+            </div>
+
+            <div>
+                <label for="adresse">Adresse <span>▶</span></label>
+                <input type="text" id="adresse" placeholder="Entrez votre adresse ici." required>
+            </div>    
         </div>
         
         <div>
