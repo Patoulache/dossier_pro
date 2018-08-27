@@ -7,8 +7,11 @@
   </head>
   <body>
     <header>
+      <div class="center">
+        <h2>Dossier Pro</h2>
+      </div>
       <div  class="adroite">
-        <p>Pas encore inscrit? <a href="index.php?action=inscription">inscription</a></p>
+        Pas encore inscrit? <a href="index.php?action=inscription">inscription</a>
       </div>
     </header>
     <main>

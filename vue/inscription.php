@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
+    <header>
+      <div class="center">
+        <h2>Dossier Pro</h2>
+      </div>
+    </header>
     <main>
       <form class="center" action="index.html" method="post">
         <table>
@@ -28,6 +33,7 @@
             <td><input type="password" name="password" value="" required></td>
           </tr>
           <tr>
+            <td></td>
             <td><input type="submit" value="inscription"></td>
           </tr>
         </table>

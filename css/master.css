@@ -1,7 +1,7 @@
 html{
   border: 0;
   margin-left: 0;
-  background: radial-gradient(#f70707, #321632 , #f70707, #321632 ,#f70707, #321632 ,#f70707, #321632 ,#f70707, #321632 );
+  background-color: #228;
   height: 100vh;
 }
 body{
@@ -12,10 +12,17 @@ body{
 }
 header{
   width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
   margin: auto;
-  background-color: rgba(142,138,138,0.7);
+  background-color: rgb(142,138,138);
   border-radius: 50px;
   border: 2px black solid;
+}
+.center{
+  margin: 0 auto;
 }
 .adroite{
   margin-left: 80%;
@@ -23,11 +30,11 @@ header{
 main{
   height: 80%;
   margin: 2% auto;
-  background-color: rgba(112,158,22,0.6);
+  background-color: #999;
   width: 80%;
   border: gray 2px solid;
   border-radius: 50px;
-  box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #000;
   display: flex;
   align-items: center;
   justify-content: center;
