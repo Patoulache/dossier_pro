@@ -1,7 +1,7 @@
 <?php
 
 
-require_once('Bdd.php');
+require_once('bdd.php');
 /**
  *recup un objet avec toutes les valeurs dedans
  */
