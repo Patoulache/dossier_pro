@@ -24,7 +24,6 @@
         <td> <input type="password" name="pass" value=""></td>
       </tr>
       <tr>
-        
       </tr>
       <tr>
         <td></td>
