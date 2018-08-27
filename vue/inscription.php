@@ -22,6 +22,7 @@
         <label for="checkpass">votre password encore une fois ;)</label>
         <input type="password" name="password" value="" required>
       </div>
+      <input type="submit" value="inscription">
     </form>
   </body>
 </html>
