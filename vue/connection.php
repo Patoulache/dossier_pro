@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php $_SESSION["nom"] = "gsrsegsqgrqwr"; ?>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">

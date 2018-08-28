@@ -2,7 +2,6 @@
 
 session_start();
 
-
 if ($_POST){
 
 } else if($_GET){
