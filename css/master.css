@@ -39,3 +39,6 @@ main{
   align-items: center;
   justify-content: center;
 }
+main > form > table > tbody > tr:last-child{
+  height: 50px;
+}
