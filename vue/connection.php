@@ -23,14 +23,14 @@
         <td> <input type="text" name="name" value=""> </td>
       </tr>
       <tr>
-        <td> <label for="pass">votre password</label></td>
+        <td> <label for="pass">votre password: </label></td>
         <td> <input type="password" name="pass" value=""></td>
       </tr>
       <tr>
       </tr>
       <tr>
         <td></td>
-        <td> <input type="submit" value="connexion"></td>
+        <td> <input type="submit" value="connexion" disabled></td>
       </tr>
     </table>
     </form>

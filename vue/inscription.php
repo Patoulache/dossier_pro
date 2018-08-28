@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td></td>
-            <td><input type="submit" value="inscription"></td>
+            <td><input type="submit" value="inscription" disabled></td>
           </tr>
         </table>
       </form>
