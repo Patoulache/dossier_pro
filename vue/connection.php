@@ -34,11 +34,6 @@
       </tr>
     </table>
     </form>
-    <div class="">
-      <pre>
-      <?php print_r($_SESSION) ?>
-    </pre>
-    </div>
   </main>
   </body>
 </html>
