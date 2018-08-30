@@ -34,8 +34,11 @@ h1 {
 .list-style-None{
   list-style: none;
 }
-.margin-15h{
-  margin: 15px 0;
+.margin-20h{
+  margin: 20px 0;
+}
+.margin-28h{
+  margin: 28px 0;
 }
 .ul-0{
   width: 0;
