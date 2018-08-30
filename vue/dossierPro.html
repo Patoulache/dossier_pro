@@ -2,37 +2,34 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/grid.css">
     <title>Dossier Professionnel coda 2018</title>
 </head>
 <body>
+    <header class="col-12">
+      <img class="col-3" src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+      <div class="header">
+        <h1>Dossier Professionnel <sup>(DP)</sup></h1>
+      </div>
+    </header>
     <form action="" method="POST">
-        <header>
-            <img src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
-            <div class="header">
-                <h1>Dossier Professionnel <sup>(DP)</sup></h1>
-            </div>
-        </header>       
         <div id="divider"></div>
-        <div id="coordonnées">
-            <div class="champ">
-                <label for="birthdate">Nom de naissance </label><span class="littlepinkarrow">▶</span>
-                <input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required>
+        <div id="coordonnées" class="col-12">
+            <div class="champ col-4">
+              <ul>
+                <li class="margin-15h"><label for="nomnaissance">Nom de naissance </label><span class="littlepinkarrow">▶</span></li>
+                <li class="margin-15h"><label for="usename">Nom d'usage </label><span class="littlepinkarrow">▶</span></li>
+                <li class="margin-15h"><label for="prenom">Prénom </label><span class="littlepinkarrow">▶</span></li>
+                <li class="margin-15h"><label for="adresse">Adresse </label><span class="littlepinkarrow">▶</span></li>
+              </ul>
             </div>
-
-            <div class="champ">
-                <label for="usename">Nom d'usage </label><span class="littlepinkarrow">▶</span>
-                <input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required>
-            </div>
-
-            <div class="champ">
-                <label for="prenom">Prénom </label><span class="littlepinkarrow">▶</span>
-                <input type="text" id="prenom" placeholder="Entrez votre prénom ici." required>
-            </div>
-
-            <div class="champ">
-                <label for="adresse">Adresse </label><span class="littlepinkarrow">▶</span>
-                <input type="text" id="adresse" placeholder="Entrez votre adresse ici." required>
+            <div class="champ col-4">
+              <ul class="list-style-None ul-0">
+                <li><input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></li>
+                <li><input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required></li>
+                <li><input type="text" id="prenom" placeholder="Entrez votre prénom ici." required></li>
+                <li><input type="text" id="adresse" placeholder="Entrez votre adresse ici." required></li>
+              </ul>
             </div>
         </div>
 
