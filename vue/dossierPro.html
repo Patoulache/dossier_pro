@@ -6,25 +6,30 @@
     <title>Dossier Professionnel coda 2018</title>
 </head>
 <body>
-    <header class="col-12">
+    <header class="col-12 border-bottom">
       <img class="col-3" src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
-      <div class="header">
+      <!-- <div class="header"> -->
         <h1>Dossier Professionnel <sup>(DP)</sup></h1>
-      </div>
+      <!-- </div> -->
     </header>
-    <form action="" method="POST">
-        <div id="divider"></div>
+    <form class="col-12"action="" method="POST">
         <div id="coordonnées" class="col-12">
-            <div class="champ col-4">
+            <div class="left-border champ col-4">
+                <p class="margin-28h"><label for="nomnaissance">Nom de naissance </label></p>
+                <p class="margin-28h"><label for="usename">Nom d'usage </label></p>
+                <p class="margin-28h"><label for="prenom">Prénom </label></p>
+                <p class="margin-28h"><label for="adresse">Adresse </label></p>
+            </div>
+            <div class="champ col-1">
               <ul>
-                <p class="margin-20h"><label for="nomnaissance">Nom de naissance </label><span class="littlepinkarrow">▶</span></p>
-                <p class="margin-28h"><label for="usename">Nom d'usage </label><span class="littlepinkarrow">▶</span></p>
-                <p class="margin-28h"><label for="prenom">Prénom </label><span class="littlepinkarrow">▶</span></p>
-                <p class="margin-28h"><label for="adresse">Adresse </label><span class="littlepinkarrow">▶</span></p>
+                <p class="margin-28h"><span class="littlepinkarrow">▶</span></p>
+                <p class="margin-28h"><span class="littlepinkarrow">▶</span></p>
+                <p class="margin-28h"><span class="littlepinkarrow">▶</span></p>
+                <p class="margin-28h"><span class="littlepinkarrow">▶</span></p>
               </ul>
+
             </div>
             <div class="champ col-4">
-
                 <p><input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
                 <p><input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
                 <p><input type="text" id="prenom" placeholder="Entrez votre prénom ici." required></p>
@@ -33,30 +38,27 @@
             </div>
         </div>
 
-        <div class="article1">
-            <h2>Titre professionnel visé</h2>
+        <div class="col-12">
+            <h2 class="col-12">Titre professionnel visé</h2>
+            <input class="col-10 border-top border-bottom marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé.">
 
-            <div id="divider1"></div>
-            <input type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé.">
-            <div id="divider2"></div>
-
-            <fieldset>
-                <h3>Modalité d'accès :</h3>
-
-                <div class="champ1">
-                <input type="checkbox" id="checkbox1" checked>
-                <label for="">Parcours de formation</label>
-                </div>
-
-                <div class="champ1">
-                <input type="checkbox" id ="checkbox2">
-                <label for="">Validation des Acquis de l'Expérience (VAE)</label>
-                </div>
-            </fieldset>
+            <div class=" champ1">
+              <fieldset class="col-12">
+                <legend><h3>Modalité d'accès :</h3></legend>
+                <ul class="col-1">
+                  <input type="checkbox" id="checkbox1" checked>
+                  <input type="checkbox" id ="checkbox2">
+                </ul>
+                <ul class="col-11">
+                  <div>Parcours de formation</div>
+                  <div class="margin-10h">Validation des Acquis de l'Expérience (VAE)</div>
+                </ul>
+              </fieldset>
+            </div>
         </div>
 
-        <article class="article2">
-        <h2>Présentation du dossier</h2>
+        <article class="col-12 article2">
+        <h2 class="col-12">Présentation du dossier</h2>
         <div id="divider3"></div>
             <div class="presdossier">
                 <section class="section1">
@@ -119,173 +121,83 @@
         </div>
         <div class="sommaire">
             <h2>Sommaire</h2>
-            <h4>Exemples de pratique professionnelle</h4>
-            <h5>
-                <input type="text" placeholder="Intitulé de l’activité-type n° 1">
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 1">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 2">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 3">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
+            <h1>Exemples de pratique professionnelle</h1>
+            <div class="col-12">
+                <input class="col-10"type="text" placeholder="Intitulé de l’activité-type n° 1">
+                <label class="col-1">p.</label><input class="col-1" type="text">
 
-            <h5><input type="text" placeholder="Intitulé de l’activité-type n° 2">
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 1">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 2">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 3">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-
-            <h5><input type="text" placeholder="Intitulé de l’activité-type n° 3">
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 1">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 2">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 3">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-
-            <h5>
-                <input type="text" placeholder="Intitulé de l’activité-type n° 4">
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 1">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 2">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                    </div>
-                </div>
-                <div class="champ">
-                    <span>▶</span><input type="text" placeholder="Intitulé de l’exemple n° 3">
-                    <div class="page">
-                        <label for="">p.</label><input type="text">
-                     </div>
-                </div>
-
-            <h5 class="champ2">
-                <label>Titres, diplômes, CQP, attestations de formation (facultatif)</label>
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-
-            <h5 class="champ2">
-                <label>Déclaration sur l’honneur</label>
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-
-            <h5 class="champ2">
-                <label>Documents illustrant la pratique professionnelle (facultatif)</label>
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-
-            <h5 class="champ2">
-                <label>Annexes (Si le RC le prévoit)</label>
-                <div class="page">
-                    <label for="">p.</label><input type="text">
-                </div>
-            </h5>
-        </div>
-
-        <h1>Exemples de pratique professionnelle</h1>
-
-        <div class="activtype">
-            <div class="champ">
-                <label for="">Activité-type 1 </label>
-                <input type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité">
+                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                    <label class="col-1">p.</label><input class=" col-1" type="text">
+                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                    <label class="col-1">p.</label><input class=" col-1" type="text">
+                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                    <label class="col-1">p.</label><input class=" col-1" type="text">
             </div>
-            <div class="champ">
-                <label for="">Exemple n°1 <span>▶</span></label>
-                <input type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple">
+            <div class="col-12">
+                <input class="col-10"type="text" placeholder="Intitulé de l’activité-type n° 2">
+                <label class="col-1" for="">p.</label><input class="col-1" type="text">
+
+                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                <label class="col-1">p.</label><input class=" col-1" type="text">
+                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                <label class="col-1">p.</label><input class=" col-1" type="text">
+                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                <label class="col-1">p.</label><input class=" col-1" type="text">
             </div>
 
-            <ol>
-                <li>Décrivez les tâches ou opératons que vous avez efectuées, et ans quelles con itons :</li>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+            <div class="col-12">
+                <label class="col-10">Titres, diplômes, CQP, attestations de formation (facultatif)</label>
+                <label class="col-1"for="">p.</label><input class="col-1" type="text">
+
+
+                <label class="col-10">Déclaration sur l’honneur</label>
+                <label class="col-1" for="">p.</label><input class="col-1"type="text">
+
+                <label class="col-10">Documents illustrant la pratique professionnelle (facultatif)</label>
+                <label class="col-1" for="">p.</label><input class="col-1" type="text">
+
+                <label class="col-10">Annexes (Si le RC le prévoit)</label>
+                <label class="col-1" for="">p.</label><input class="col-1" type="text">
+              </div>
+      </div>
+
+        <div class=" col-12 activtype">
+            <div class="champ">
+                <label class="col-5"for="">Activité-type 1 </label>
+                <input class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité">
+            </div>
+            <div class="champ">
+                <label class="col-5">Exemple n°1 <span>▶</span></label>
+                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple">
+            </div>
+
+            <ol class="col-12">
+                <li class="col-12">Décrivez les tâches ou opératons que vous avez efectuées, et dans quelles conditons :</li>
+                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li>Précisez les poyens utlisés :</li>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
-                <li>Avec qui avez-vous travaillé ?</li>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                <li class="col-12">Avec qui avez-vous travaillé ?</li>
+                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
-                <li>Contexte</li>
-                <label for="">Nom de l'entreprise, organisme ou association<span>▶</span></label>
-                <input type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label for="">Chantier, atelier, service <span>▶</span></label>
-                <input type="text" placeholder="Cliquez ici pour taper du texte">
-                <label for="">Période d'exercice <span>▶</span></label>
-                <span>Du</span>
-                <input type="text" placeholder="Cliquez ici">
-                <span>au</span>
-                <input type="text" placeholder="Cliquez ici">
+                <li class="col-12">Contexte</li>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
+                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
+                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <span class="col-1">Du</span>
+                <input class="col-3"type="date" placeholder="Cliquez ici">
+                <span class="col-1">au</span>
+                <input class="col-3"type="date" placeholder="Cliquez ici">
 
-                <li>Informations complémentaires (facultatif)</li>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                <li class="col-12">Informations complémentaires (facultatif)</li>
+                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
             </ol>
         </div>
         <div>
-            <h2>Titre, diplômes, CQP, attestations de formation</h2>
+            <h2 class="col-12">Titre, diplômes, CQP, attestations de formation</h2>
             <p>(facultatif)</p>
 
             <table>
