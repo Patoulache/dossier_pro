@@ -7,12 +7,14 @@
   </head>
   <body>
     <header>
-      <div class="center">
-        <h2>Dossier Pro</h2>
-      </div>
-      <div  class="adroite">
-        Pas encore inscrit? <a href="index.php?action=inscription">inscription</a>
-      </div>
+            <img src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+            <div class="header">
+                <h1>Dossier Professionnel <sup>(DP)</sup></h1>
+            </div>
+            <div  class="adroite">
+              Pas encore inscrit? <a href="index.php?action=inscription">inscription</a>
+            </div>
+        </header>
     </header>
     <main>
     <form class="" action="index.html" method="post">
@@ -25,8 +27,6 @@
       <tr>
         <td> <label for="pass">votre password: </label></td>
         <td> <input type="password" name="pass" value=""></td>
-      </tr>
-      <tr>
       </tr>
       <tr>
         <td></td>
