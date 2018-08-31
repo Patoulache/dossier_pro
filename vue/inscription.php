@@ -25,7 +25,11 @@
           </tr>
           <tr>
             <td>adresse mail</td>
-            <td> <input type="email" name="email" value=""></td>
+            <td> <input id="email1" type="email" name="email" value=""></td>
+          </tr>
+          <tr>
+            <td>check adresse mail</td>
+            <td> <input id="email2" type="email" name="email" value=""></td>
           </tr>
           <tr>
             <td><label for="pass">un password</label></td>
