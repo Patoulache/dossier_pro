@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 body {
     width: 21cm;
     margin: auto;
