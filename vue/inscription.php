@@ -47,5 +47,7 @@
         </table>
       </form>
     </main>
+    <script src="js/biblio.js" charset="utf-8"></script>
+    <script src="js/inscription.js" charset="utf-8"></script>
   </body>
 </html>
