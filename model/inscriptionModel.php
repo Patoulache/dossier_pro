@@ -18,6 +18,35 @@ class inscriptionModel extends bdd
     $sql->bindparam(':mail', $mail);
     $sql->execute();
     $rep = $sql->fetch();
+
+    // Test à faire à la maison, sinon celui doit test si le compte est présent et activé.
+/*     // Récupération des variables necessaires à la vérification du champ 'actif' de la BDD
+$login = $_POST['login'];
+ 
+// Récupération de la valeur du champ actif pour le login $login
+$stmt = $dbh->prepare("SELECT actif FROM membres WHERE login like :login ");
+if($stmt->execute(array(':login' => $login))  && $row = $stmt->fetch())
+  {
+   	$actif = $row['actif']; // $actif contiendra alors 0 ou 1
+  }
+ 
+ 
+// Il ne nous reste plus qu'à tester la valeur du champ 'actif' pour
+// autoriser ou non le membre à se connecter
+ 
+if($actif == '1') // Si $actif est égal à 1, on autorise la connexion
+  {
+   //...
+   // On autorise la connexion...
+   //...
+  }
+else // Sinon la connexion est refusé...
+  {
+   //...
+   // On refuse la connexion et/ou on previent que ce compte n'est pas activé
+   //...
+  } */
+
     return $rep;
   }
 
@@ -34,10 +63,10 @@ class inscriptionModel extends bdd
 
 
     // Insertion de la clé dans la base de données (à adapter en INSERT si besoin)
-    $stmt = $dbh->prepare("UPDATE table1 SET cle = ':cle' WHERE nom_usage LIKE ':nom'");
-    $stmt->bindParam(':cle', $cle);
-    $stmt->bindParam(':nom', $nom);
-    $stmt->execute();
+    $sql = $this-getBdd()->prepare("UPDATE table1 SET cle = ':cle' WHERE nom_usage LIKE ':nom'");
+    $sql->bindParam(':cle', $cle);
+    $sql->bindParam(':nom', $nom);
+    $sql->execute();
 
 
     // Préparation du mail contenant le lien d'activation
