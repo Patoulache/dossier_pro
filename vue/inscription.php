@@ -7,9 +7,10 @@
   </head>
   <body>
     <header>
-      <div class="center">
-        <h2>Dossier Pro</h2>
-      </div>
+        <img src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+        <div class="header">
+            <h1>Dossier Professionnel <sup>(DP)</sup></h1>
+        </div>
     </header>
     <main>
       <form class="center" action="index.html" method="post">
@@ -25,7 +26,11 @@
           </tr>
           <tr>
             <td>adresse mail</td>
-            <td> <input type="email" name="email" value=""></td>
+            <td> <input id="email1" type="email" name="email" value=""></td>
+          </tr>
+          <tr>
+            <td>check adresse mail</td>
+            <td> <input id="email2" type="email" name="email" value=""></td>
           </tr>
           <tr>
             <td><label for="pass">un password</label></td>
