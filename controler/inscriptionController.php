@@ -24,7 +24,7 @@ class inscription
   }
 
   private function hashPass(){
-    $this->pass = password_hash($donnees["pass"], PASSWORD_BCRYPT);
+      $this->pass = password_hash($donnes["pass"], PASSWORD_BCRYPT);
   }
 
   private function setMail(){

@@ -7,7 +7,7 @@ if ($_POST["info"]){
 
 // je sais pas ce qu'il fait mettre dans le $_SESSION
   $infos["id_p"] = $_SESSION["id"];
-  $obj = new Infos($infos);
+//voir backup  $obj = new Infos($infos);
 }
 
 //check if Nomnaissance, nomusage, prenom, adresse sont dans la base
