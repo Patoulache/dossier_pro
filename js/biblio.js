@@ -38,9 +38,9 @@ AJAX = {
 
 
 CONTROLE = {
-  CheckPass: function(pass){
-    let regex = /[\wéèàùç#!@]{8,20}/;
-      return regex.test(pass);
+  CheckRegex: function(reg,pass){
+    regex = new RegExp(reg)
+    return regex.test(pass);
   },
 
   ColorBorder : function(qui,couleur){

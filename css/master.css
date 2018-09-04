@@ -33,7 +33,7 @@ h2{
   margin-left: 60%;
 }
 main{
-  height: 60%;
+  height: 80%;
   margin: 2% auto;
   background-color: #F7B565;
   width: 60%;
@@ -51,8 +51,11 @@ td{
   color: #14207A;
   padding: 10px;
 }
-input{
+/* input{
   border: 2px black double;
   border-radius: 50px;
   box-shadow: 4px 4px 10px #000000b3;
+} */
+.hidden{
+  display: none;
 }

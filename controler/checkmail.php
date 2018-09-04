@@ -1,20 +1,31 @@
 <?php /**
  *
  */
+ include_once 'model/checkmailmodel.php';
+include_once 'allfunction.php';
+
+
 class Checkmail extends Allfunction
 {
   private $info;
   private $mail;
 
+
   public function __construct()
   {
-      $this->info = $this->FromJson($_POST);
-      $this->mail = $this->info[]
-    }
-  }
+      $this->info = $_POST;
 
-  private function checkMail(){
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $this->mail = $this->info["mail"];
+    }
+
+  public function checkMail(){
+
+    echo $this->info["mail"];
+
+      $obj = new checkmailmodel();
+      $rep = $obj->getmail($this->mail);
+      return $rep;
+
   }
 }
  ?>
