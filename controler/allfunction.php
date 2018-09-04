@@ -8,11 +8,11 @@ protected function __construct()
   {
 
   }
-  protected function ToJson($text){
-    return json_encode($text);
+  protected function ToJson($t){
+    return json_encode($t);
   }
-  protected function FromJson($text){
-    return json_decode($text);
+  protected function FromJson($t){
+    return json_decode($t);
   }
 }
  ?>

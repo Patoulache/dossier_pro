@@ -14,14 +14,10 @@ class Checkmail extends Allfunction
   public function __construct()
   {
       $this->info = $_POST;
-
       $this->mail = $this->info["mail"];
     }
 
   public function checkMail(){
-
-    echo $this->info["mail"];
-
       $obj = new checkmailmodel();
       $rep = $obj->getmail($this->mail);
       return $rep;

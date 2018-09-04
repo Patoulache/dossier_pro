@@ -1,16 +1,16 @@
 AJAX = {
   xhr: "",
+  tst: "",
 
   Post : function(what, to, attributs){
     AJAX.xhr = new XMLHttpRequest(),
 
     AJAX.xhr.onload = function(){
-      return AJAX.FomJson(AJAX.xhr.responseText)
+      AJAX.tst = AJAX.xhr.responseText;
     }//end ONLOAD
-    AJAX.xhr.open('POST', to , true);
+    AJAX.xhr.open('POST', to , false);
     AJAX.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    AJAX.xhr.send(attributs + AJAX.ToJson(what));
-
+    AJAX.xhr.send(attributs+what);
   },
 
   Get : function(what, attributs, to){
@@ -27,7 +27,7 @@ AJAX = {
     return JSON.stringify(togo);
   },
 
-  FomJson : function(togo){
+  FromJson : function(togo){
     try {
       return JSON.parse(togo);
     } catch (e) {

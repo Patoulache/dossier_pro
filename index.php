@@ -9,7 +9,7 @@ if($_GET){
     include_once "controler/checkmail.php";
     $obj = new checkmail();
     $rep = $obj->checkMail();
-    var_dump($rep);
+    echo $rep;
   }
 } else {
   include_once 'vue/connection.php';
