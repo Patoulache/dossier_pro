@@ -12,7 +12,7 @@ EMAIL = {
 	checkUsed: function(){
 		EMAIL.email1 = document.getElementById("email1");
     if (EMAIL.email1.value !== "") {
-      let address = AJAX.Post(EMAIL.email1.value, "index.php", "action=inscription");
+      let address = AJAX.Post(EMAIL.email1.value, "index.php", "action=checkmail");
     }
     if (address){ // donc deja utilisé
       EMAIL.email1.style.border = "thick solid red";
@@ -48,15 +48,18 @@ PASSWORD = {
   },
 
   setPass1: function(){
-    PASSWORD.password1 = document.getElementById("password1")
-    if (CONTROLE.CheckPass(PASSWORD.password1.value)){
+    PASSWORD.pass1 = document.getElementById("password1")
+    if (CONTROLE.CheckPass(PASSWORD.pass1.value)){
       PASSWORD.yes_no = true;
+      CONTROLE.ColorBorder(PASSWORD.pass1, "black");
     }else{
       CONTROLE.ColorBorder(PASSWORD.pass1, "red");
   }
 },
 
   checkValid: function(){
+    console.log("passici");
+    PASSWORD.pass2 = document.getElementById("password2")
     if (CONTROLE.AreTheSame(PASSWORD.pass1.value,PASSWORD.pass2.value) && PASSWORD.yes_no){
       CONTROLE.ColorBorder(PASSWORD.pass2,"black");
     }else{
