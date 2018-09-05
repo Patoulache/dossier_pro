@@ -1,9 +1,17 @@
 <?php
 
-class validationModel extends bdd {
+class validationModel {
+
+  private $bdd;
+  private $nom = "ROSSO";
+
 
     public function __construct() {
-
+      try { $this->bdd = new PDO("mysql:host=localhost;dbname=id7007867_dosier_pro;charset=utf8", "id7007867_root", "sqlcoda#2018!",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        //  echo "connexion réussi";  
+      } catch (Exception $e) {
+          echo 'Connexion échouée : ' . $e->getMessage();
+        }
     }
 
     public function valid() {
@@ -13,8 +21,8 @@ class validationModel extends bdd {
         $cle = $_GET['cle'];
 
         // Récupération de la clé correspondant au $nom_usage dans la base de données
-        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage like ':nom'");
-        if($sql->execute(array(':nom' => $login)) && $row = $sql->fetch())
+        $sql = $this->bdd->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = '$this->nom'");
+        if($sql->execute(array("$this->nom" => $login)) && $row = $sql->fetch())
           {
             $clebdd = $row['cle'];	// Récupération de la clé
             $actif = $row['actif']; // $actif contiendra alors 0 ou 1
@@ -34,8 +42,8 @@ class validationModel extends bdd {
                   echo "Votre compte a bien été activé !";
             
                   // La requête qui va passer notre champ actif de 0 à 1
-                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage like ':nom'");
-                  $stmt->bindParam(':nom', $login);
+                  $stmt = $this->bdd->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = '$login'");
+                  //$stmt->bindParam(':nom', $login);
                   $stmt->execute();
                }
              else // Si les deux clés sont différentes on provoque une erreur...
@@ -55,6 +63,7 @@ class validationModel extends bdd {
         }
 
 
-
+  $valid = new validationModel();
+  $valid->valid();
 
 ?>
