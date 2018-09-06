@@ -1,17 +1,13 @@
 <?php
 
-class validationModel {
+require ("model/bdd.php");
 
-  private $bdd;
-  private $nom = "ROSSO";
+class validationModel extends bdd {
+
 
 
     public function __construct() {
-      try { $this->bdd = new PDO("mysql:host=localhost;dbname=id7007867_dosier_pro;charset=utf8", "id7007867_root", "sqlcoda#2018!",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        //  echo "connexion réussi";  
-      } catch (Exception $e) {
-          echo 'Connexion échouée : ' . $e->getMessage();
-        }
+
     }
 
     public function valid() {
@@ -21,8 +17,8 @@ class validationModel {
         $cle = $_GET['cle'];
 
         // Récupération de la clé correspondant au $nom_usage dans la base de données
-        $sql = $this->bdd->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = '$this->nom'");
-        if($sql->execute(array("$this->nom" => $login)) && $row = $sql->fetch())
+        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = ':login'");
+        if($sql->execute(array(":login" => $login)) && $row = $sql->fetch())
           {
             $clebdd = $row['cle'];	// Récupération de la clé
             $actif = $row['actif']; // $actif contiendra alors 0 ou 1
@@ -42,7 +38,7 @@ class validationModel {
                   echo "Votre compte a bien été activé !";
             
                   // La requête qui va passer notre champ actif de 0 à 1
-                  $stmt = $this->bdd->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = '$login'");
+                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = '$login'");
                   //$stmt->bindParam(':nom', $login);
                   $stmt->execute();
                }
@@ -52,18 +48,9 @@ class validationModel {
                }
           }
       
-      
-        //...	
-        // Fermeture de la connexion	
-        //$this->getBdd() = null;
-        // Votre code
-        //...
-            }
+    
+      }
         
-        }
-
-
-  $valid = new validationModel();
-  $valid->valid();
+  }
 
 ?>
