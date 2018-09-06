@@ -2,7 +2,7 @@
 
 require ("model/bdd.php");
 
-class validationModel extends bdd {
+class validationModel extends Bdd {
 
 
 

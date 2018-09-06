@@ -3,7 +3,7 @@
 /**
  *
  */
-class inscriptionModel extends bdd
+class inscriptionModel extends Bdd
 {
 
   public function __construct()
