@@ -14,10 +14,13 @@ EMAIL = {
 	checkUsed: function(){
 		EMAIL.email1 = document.getElementById("email1");
 		if (CONTROLE.CheckRegex(EMAIL.regex, EMAIL.email1.value)) {
-			console.log("avant les ajax 13");
-	    AJAX.Post(EMAIL.email1.value, "index.php?action=checkmail","mail=");
+			// console.log("avant les ajax 13");
+	    AJAX.Post(EMAIL.email1.value, "index.php?action=checkmail","mail=",EMAIL.MailUsed);
+		}
+	},
 
-	    if (AJAX.tst != ""){ // donc deja utilisé
+	MailUsed: function(reponse){
+	    if (reponse !== ""){ // donc deja utilisé
 	      CONTROLE.ColorBorder(EMAIL.email1,"red");
 	      EMAIL.yes_no = false;
 				EMAIL.tohide.classList.remove('hidden');
@@ -26,10 +29,10 @@ EMAIL = {
 	      CONTROLE.ColorBorder(EMAIL.email1,"black");
 				EMAIL.tohide.classList.add('hidden')
 	    }
-		} else{
-			CONTROLE.ColorBorder(EMAIL.email1,"red");
-			EMAIL.yes_no = false;
-		}
+		// } else{
+		// 	CONTROLE.ColorBorder(EMAIL.email1,"red");
+		// 	EMAIL.yes_no = false;
+		// }
 	},
 
 //check if email1 and email2 are the same

@@ -2,13 +2,15 @@ AJAX = {
   xhr: "",
   tst: "",
 
-  Post : function(what, to, attributs){
+  Post : function(what, to, attributs,whatToDo){
     AJAX.xhr = new XMLHttpRequest(),
 
     AJAX.xhr.onload = function(){
-      AJAX.tst = AJAX.xhr.responseText;
+      console.log(whatToDo);
+      whatToDo(AJAX.xhr.responseText);
+
     }//end ONLOAD
-    AJAX.xhr.open('POST', to , false);
+    AJAX.xhr.open('POST', to , true);
     AJAX.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     AJAX.xhr.send(attributs+what);
   },
