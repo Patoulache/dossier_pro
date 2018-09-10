@@ -21,7 +21,6 @@ class Checkmail extends Allfunction
       $obj = new checkmailmodel();
       $rep = $obj->getmail($this->mail);
       return $rep;
-
   }
 }
  ?>

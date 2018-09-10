@@ -20,7 +20,8 @@ EMAIL = {
 	},
 
 	MailUsed: function(reponse){
-	    if (reponse !== ""){ // donc deja utilisé
+		console.log(reponse);
+	    if (reponse === "1"){ // donc deja utilisé
 	      CONTROLE.ColorBorder(EMAIL.email1,"red");
 	      EMAIL.yes_no = false;
 				EMAIL.tohide.classList.remove('hidden');
@@ -29,10 +30,7 @@ EMAIL = {
 	      CONTROLE.ColorBorder(EMAIL.email1,"black");
 				EMAIL.tohide.classList.add('hidden')
 	    }
-		// } else{
-		// 	CONTROLE.ColorBorder(EMAIL.email1,"red");
-		// 	EMAIL.yes_no = false;
-		// }
+
 	},
 
 //check if email1 and email2 are the same

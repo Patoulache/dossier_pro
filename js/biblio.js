@@ -6,7 +6,7 @@ AJAX = {
     AJAX.xhr = new XMLHttpRequest(),
 
     AJAX.xhr.onload = function(){
-      console.log(whatToDo);
+
       whatToDo(AJAX.xhr.responseText);
 
     }//end ONLOAD
