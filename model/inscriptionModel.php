@@ -3,7 +3,7 @@
 /**
  *
  */
-class inscriptionModel extends bdd
+class inscriptionModel extends Bdd
 {
 
   public function __construct()
@@ -27,8 +27,31 @@ class inscriptionModel extends bdd
     $sql->bindparam(':prenom', $prenom);
     $sql->bindparam(':mail', $mail);
     $sql->bindparam(':pass', $pass);
+    $sql->bindParam(':cle', $cle);
+    $sql->bindParam(':actif', $actif);
     $sql->execute();
-  }
-}
+    
+    // Préparation du mail contenant le lien d'activation
+    $destinataire = $email;
+    $sujet = "Activer votre compte" ;
+    $entete = "From: inscription@votresite.com" ;
+
+    // Le lien d'activation est composé du login(log) et de la clé(cle), url a changer quand le site sera en ligne
+    $message = 'Bienvenue sur VotreDossierPro.com,
+
+    Pour activer votre compte, veuillez cliquer sur le lien ci dessous
+    ou copier/coller dans votre navigateur internet.
+
+    http://votredossierpro.com/validation.php?log='.urlencode($nom).'&cle='.urlencode($cle).'
+
+
+    ---------------
+    Ceci est un mail automatique, Merci de ne pas y répondre.';
+
+
+    mail($destinataire, $sujet, $message, $entete) ; // Envoi du mail
+
+      }
+    }
 
  ?>
