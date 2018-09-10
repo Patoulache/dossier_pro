@@ -18,9 +18,11 @@ class Checkmail extends Allfunction
     }
 
   public function checkMail(){
+    if (filter_var($this->mail, FILTER_VALIDATE_EMAIL)){
       $obj = new checkmailmodel();
       $rep = $obj->getmail($this->mail);
       return $rep;
+    }
   }
 }
  ?>
