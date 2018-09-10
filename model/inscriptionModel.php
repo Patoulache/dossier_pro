@@ -27,7 +27,7 @@ class inscriptionModel extends Bdd
     $actif = 0;
 
     // Insertion de la clé dans la base de données avec les autres infos
-    $sql = $this-getBdd()->prepare("INSERT INTO table1(nom_usage, prenom, email, password, cle, actif) VALUES (:nom, :prenom, :mail, :pass, :cle, :actif)");
+    $sql = $this-getBdd()->prepare("INSERT INTO table1(nom_usage, prenom, email, pass, cle, actif) VALUES (:nom, :prenom, :mail, :pass, :cle, :actif)");
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
     $sql->bindparam(':mail', $mail);
