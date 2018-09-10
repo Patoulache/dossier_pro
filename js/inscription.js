@@ -10,7 +10,7 @@ EMAIL = {
 		document.getElementById("email2").addEventListener("focusout", EMAIL.checkValid);
 	},
 
-// chech if email already used
+//send request AJAX with email
 	checkUsed: function(){
 		EMAIL.email1 = document.getElementById("email1");
 		if (CONTROLE.CheckRegex(EMAIL.regex, EMAIL.email1.value)) {
@@ -19,8 +19,8 @@ EMAIL = {
 		}
 	},
 
+	// traite la réponse de la requette AJAX email
 	MailUsed: function(reponse){
-		console.log(reponse);
 	    if (reponse === "1"){ // donc deja utilisé
 	      CONTROLE.ColorBorder(EMAIL.email1,"red");
 	      EMAIL.yes_no = false;
