@@ -27,14 +27,16 @@
           <tr>
             <td>adresse mail</td>
             <td> <input id="email1" type="email" name="email" value=""></td>
+            <td id="emailtohide" class="hidden">email déjà utilisé</td>
           </tr>
           <tr>
             <td>check adresse mail</td>
-            <td> <input id="email2" type="email" name="email" value=""></td>
+            <td> <input id="email2" type="email" name="email1" value=""></td>
           </tr>
           <tr>
             <td><label for="pass">un password</label></td>
             <td><input type="password" id="password1" value="" required></td>
+            <td>entre 8 et 20 caractères. Lettres chiffres et #!@</td>
           </tr>
           <tr>
             <td><label for="checkpass">votre password encore une fois ;)</label></td>
@@ -47,5 +49,7 @@
         </table>
       </form>
     </main>
+    <script src="js/biblio.js" charset="utf-8"></script>
+    <script src="js/inscription.js" charset="utf-8"></script>
   </body>
 </html>

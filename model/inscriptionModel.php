@@ -11,7 +11,17 @@ class inscriptionModel extends Bdd
 
   }
 
-  public function getId($nom, $prenom, $mail){
+  public function checkExist($nom, $prenom, $mail, $pass) {
+
+    if (empty($this->getId($nom, $prenom, $mail))) {
+      $this->insertId($nom, $prenom, $mail, $pass);
+    } else {
+      echo "Vous êtes déjà inscrit!";
+    }
+
+  }
+
+  private function getId($nom, $prenom, $mail){
     $sql = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE nom_usage = :nom, prenom = :prenom, email = :mail");
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
@@ -21,7 +31,7 @@ class inscriptionModel extends Bdd
     return $rep;
   }
 
-  public function insertId($nom, $prenom, $mail, $pass){
+  private function insertId($nom, $prenom, $mail, $pass){
     // Génération aléatoire d'une clé
     $cle = md5(microtime(TRUE)*100000);
     $actif = 0;
