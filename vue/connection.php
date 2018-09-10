@@ -17,20 +17,20 @@
         </header>
     </header>
     <main>
-    <form class="" action="index.html" method="post">
+    <form class="" action="index.php?action=connection" method="post">
       <table>
 
       <tr>
-        <td> <label for="name">entrez votre nom: </label> </td>
-        <td> <input type="text" name="name" value="" required> </td>
+        <td> <label for="email">entrez e_mail :</label> </td>
+        <td> <input id="email" type="email" name="email" placeholder="e-mail" value="" required> </td>
       </tr>
       <tr>
         <td> <label for="pass">votre password: </label></td>
-        <td> <input type="password" name="pass" value="" required></td>
+        <td> <input id="pass" type="password" name="pass" placeholder="mot de passe" value="" required></td>
       </tr>
       <tr>
         <td></td>
-        <td> <input type="submit" value="connexion" disabled></td>
+        <td><input type="submit" value="connexion"></td>
       </tr>
     </table>
     </form>
