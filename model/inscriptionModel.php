@@ -12,7 +12,7 @@ class inscriptionModel extends Bdd
   }
 
   public function getId($nom, $prenom, $mail){
-    $sql = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE nom_usage = :nom, prenom = :prenom, email = :mail");
+    $sql = $this->getBdd()->prepare('SELECT id FROM table1 WHERE nom = :nom, prenom = :prenom, email = :mail');
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
     $sql->bindparam(':mail', $mail);
@@ -22,12 +22,7 @@ class inscriptionModel extends Bdd
   }
 
   public function insertId($nom, $prenom, $mail, $pass){
-    // Génération aléatoire d'une clé
-    $cle = md5(microtime(TRUE)*100000);
-    $actif = 0;
-
-    // Insertion de la clé dans la base de données avec les autres infos
-    $sql = $this-getBdd()->prepare("INSERT INTO table1(nom_usage, prenom, email, password, cle, actif) VALUES (:nom, :prenom, :mail, :pass, :cle, :actif)");
+    $sql = $this-getBdd()->prepare('INSERT INTO table1 VALUES(:nom, :prenom, :mail, $pass)');
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
     $sql->bindparam(':mail', $mail);
