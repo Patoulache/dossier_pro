@@ -7,18 +7,21 @@
 
 class Connection
 {
+  private $mail;
+  private $pass;
 
   function __construct()
   {
-    // code...
+    $this->pass = htmlspecialchars($_POST["pass"]);
+    $this->mail = htmlspecialchars($_POST["email"]);
   }
+
   function askDataBase(){
+    if (!empty($this->email) && !empty($this->pass)) {
     $obj = new ConnectionModel();
-    if (!empty($_POST["email"]) && !empty($_POST["pass"])) {
-      // code...
-      if (password_verify(htmlspecialchars($_POST["pass"]),$obj->getHashPass(htmlspecialchars($_POST["email"])))){
+      if (password_verify($this->pass,$obj->getHashPass($this->email))){
        // TODO: la boucle
-      }
+     }
     }// !empty()
   }
 }
