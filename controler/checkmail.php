@@ -14,7 +14,7 @@ class Checkmail extends Allfunction
   public function __construct()
   {
       $this->info = $_POST;
-      $this->mail = $this->info["mail"];
+      $this->mail = htmlspecialchars($this->info["mail"]);
     }
 
   public function checkMail(){
