@@ -17,7 +17,7 @@ class validationModel extends Bdd {
         $cle = $_GET['cle'];
 
         // Récupération de la clé correspondant au $nom_usage dans la base de données
-        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = ':login'");
+        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = :login");
         if($sql->execute(array(":login" => $login)) && $row = $sql->fetch())
           {
             $clebdd = $row['cle'];	// Récupération de la clé
@@ -38,8 +38,8 @@ class validationModel extends Bdd {
                   echo "Votre compte a bien été activé !";
             
                   // La requête qui va passer notre champ actif de 0 à 1
-                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = '$login'");
-                  //$stmt->bindParam(':nom', $login);
+                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = ");
+                  $stmt->bindParam(':nom', $login);
                   $stmt->execute();
                }
              else // Si les deux clés sont différentes on provoque une erreur...
