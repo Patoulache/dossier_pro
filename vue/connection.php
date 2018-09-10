@@ -22,11 +22,11 @@
 
       <tr>
         <td> <label for="name">entrez votre nom: </label> </td>
-        <td> <input type="text" name="name" value=""> </td>
+        <td> <input type="text" name="name" value="" required> </td>
       </tr>
       <tr>
         <td> <label for="pass">votre password: </label></td>
-        <td> <input type="password" name="pass" value=""></td>
+        <td> <input type="password" name="pass" value="" required></td>
       </tr>
       <tr>
         <td></td>
