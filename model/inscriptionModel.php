@@ -57,7 +57,7 @@ class inscriptionModel extends Bdd
     Pour activer votre compte, veuillez cliquer sur le lien ci dessous
     ou copier/coller dans votre navigateur internet.
 
-    http://votredossierpro.com/validation.php?log='.urlencode($nom).'&cle='.urlencode($cle).'
+    http://votredossierpro.com/index.php?action=validation&log='.urlencode($nom).'&cle='.urlencode($cle).'
 
 
     ---------------

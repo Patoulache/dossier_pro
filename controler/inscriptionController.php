@@ -22,7 +22,7 @@ class inscription
     $this->pass = $arr['password'];
     $this->hashPass($this->pass);
     $this->bdd = new inscriptionModel();
-    $this->bdd->CheckExist()
+    $this->bdd->CheckExist();
   }
 
   private function hashPass($var){
