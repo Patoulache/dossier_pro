@@ -1,6 +1,6 @@
 <?php
 
-require ("model/bdd.php");
+require_once ("bdd.php");
 
 class validationModel extends Bdd {
 
@@ -15,7 +15,7 @@ class validationModel extends Bdd {
         // Récupération des variables nécessaires à l'activation
         $login = $_GET['log'];
         $cle = $_GET['cle'];
-
+        
         // Récupération de la clé correspondant au $nom_usage dans la base de données
         $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = :nom");
         if($sql->execute(array(":nom" => $login)) && $row = $sql->fetch())
@@ -45,6 +45,16 @@ class validationModel extends Bdd {
                   $stmt->bindParam(':nom', $login);
                   $stmt->bindParam(':token', $token);
                   $stmt->execute();
+
+                  $stm = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE token = :token");
+                  $stm->bindParam(':token', $token);
+                  $stm->execute();
+                  $idUser = $stm->fetch(PDO::FETCH_ASSOC);
+
+                  // Id et token serviront au status connecté
+                  $_SESSION['id_user'] = $idUser['id_user'];
+                  $_SESSION['token'] = $token;
+
                }
              else // Si les deux clés sont différentes on provoque une erreur...
                {
@@ -52,6 +62,7 @@ class validationModel extends Bdd {
                }
           }
       
+          header( "refresh:5;url=./index.php?action=connection");
     
       }
         
