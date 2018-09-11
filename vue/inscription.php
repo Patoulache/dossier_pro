@@ -44,7 +44,7 @@
           </tr>
           <tr>
             <td></td>
-            <td><input type="submit" value="inscription" disabled></td>
+            <td><input id="BTNinscrip" type="submit" value="inscription" disabled></td>
           </tr>
         </table>
       </form>

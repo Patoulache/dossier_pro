@@ -1,15 +1,24 @@
 AJAX = {
   xhr: "",
-  tst: "",
+  changedToJson : false,
 
   Post : function(what, to, attributs,whatToDo){
     AJAX.xhr = new XMLHttpRequest(),
 
     AJAX.xhr.onload = function(){
-
+      if (AJAX.changedToJson) {
+        whatToDo(AJAX.FromJson(AJAX.xhr.responseText))
+      } else{
       whatToDo(AJAX.xhr.responseText);
+      }
 
     }//end ONLOAD
+
+    if (Array.isArray(what)) {
+      what = AJAX.ToJson(what);
+      AJAX.changedToJson = true;
+    }
+
     AJAX.xhr.open('POST', to , true);
     AJAX.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     AJAX.xhr.send(attributs+what);

@@ -81,6 +81,19 @@ PASSWORD = {
   }
 }
 
+BUTTON = {
+	INIT: function(){
+		document.addEventListener("keyup",BUTTON.freeBTN);
+	},
+	freeBTN: function(){
+		if (EMAIL.yes_no && PASSWORD.yes_no) {
+			document.getElementById('BTNinscrip').disabled = false;
+		}else {
+			document.getElementById('BTNinscrip').disabled = true;
+		}
+	}
+}
+
 INITIALISATION = {
 
   INIT: function(){
