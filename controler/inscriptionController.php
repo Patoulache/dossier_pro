@@ -31,15 +31,15 @@ class inscription
 
   }
 
-  // private function setMail(){
-  //   $this->mail = $this->donnes["mail"];
-  // }
-  // private function setNom(){
-  //   $this->nom = $this->donnes["nom"];
-  // }
-  // private function setPrenom(){
-  //   $this->prenom = $this->donnes["prenom"];
-  // }
+/*   private function setMail(){
+    $this->mail = $this->donnes["mail"];
+  }
+  private function setNom(){
+    $this->nom = $this->donnes["nom"];
+  }
+  private function setPrenom(){
+    $this->prenom = $this->donnes["prenom"];
+  } */
 
 //if no entry with same name, valid inscription
   private function addId(){
