@@ -53,6 +53,7 @@ PASSWORD = {
 	regex : /[\wéèàùç#!@]{8,20}/,
   pass1: "",
   pass2: "",
+	regexPass: false,
   yes_no: false,
 
   INIT: function(){
@@ -65,8 +66,10 @@ PASSWORD = {
 
     if (CONTROLE.CheckRegex(PASSWORD.regex, PASSWORD.pass1.value)){
       CONTROLE.ColorBorder(PASSWORD.pass1, "black");
+			PASSWORD.regexPass = true;
     }else{
       CONTROLE.ColorBorder(PASSWORD.pass1, "red");
+			PASSWORD.regexPass = false;
   }
 },
 
@@ -89,7 +92,7 @@ BUTTON = {
 	},
 	freeBTN: function(){
 
-		if (EMAIL.yes_no && PASSWORD.yes_no) {
+		if (EMAIL.yes_no && PASSWORD.yes_no && EMAIL.emailUsable && PASSWORD.regexPass) {
 			document.getElementById('BTNinscrip').disabled = false;
 		}else {
 			document.getElementById('BTNinscrip').disabled = true;
