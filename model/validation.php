@@ -1,24 +1,24 @@
 <?php
 
-require ("model/bdd.php");
+require_once ("bdd.php");
 
 class validationModel extends Bdd {
 
 
-
+/* 
     public function __construct() {
 
-    }
+    } */
 
     public function valid() {
 
         // Récupération des variables nécessaires à l'activation
         $login = $_GET['log'];
         $cle = $_GET['cle'];
-
+        
         // Récupération de la clé correspondant au $nom_usage dans la base de données
-        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = :login");
-        if($sql->execute(array(":login" => $login)) && $row = $sql->fetch())
+        $sql = $this->getBdd()->prepare("SELECT cle,actif FROM table1 WHERE nom_usage = :nom");
+        if($sql->execute(array(":nom" => $login)) && $row = $sql->fetch())
           {
             $clebdd = $row['cle'];	// Récupération de la clé
             $actif = $row['actif']; // $actif contiendra alors 0 ou 1
@@ -36,18 +36,33 @@ class validationModel extends Bdd {
                {
                   // Si elles correspondent on active le compte !	
                   echo "Votre compte a bien été activé !";
+
+                  // Création token :
+                  $token = md5(microtime(TRUE)*100000);
             
                   // La requête qui va passer notre champ actif de 0 à 1
-                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1 WHERE nom_usage = ");
+                  $stmt = $this->getBdd()->prepare("UPDATE table1 SET actif = 1,token = :token WHERE nom_usage = :nom");
                   $stmt->bindParam(':nom', $login);
+                  $stmt->bindParam(':token', $token);
                   $stmt->execute();
+
+                  $stm = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE token = :token");
+                  $stm->bindParam(':token', $token);
+                  $stm->execute();
+                  $idUser = $stm->fetch(PDO::FETCH_ASSOC);
+
+                  // Id et token serviront au status connecté
+                  $_SESSION['id_user'] = $idUser['id_user'];
+                  $_SESSION['token'] = $token;
+
                }
              else // Si les deux clés sont différentes on provoque une erreur...
                {
-                  echo "Erreur ! Votre compte ne peut être activé...";
+                  echo "Erreur ! Votre compte ne peut être activé et va s'autodétruire dans 10 secondes...";
                }
           }
       
+          header( "refresh:5;url=./index.php?action=connection");
     
       }
         

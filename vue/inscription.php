@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>check adresse mail</td>
-            <td> <input id="email2" type="email" name="email" value=""></td>
+            <td> <input id="email2" type="email" name="email1" value=""></td>
           </tr>
           <tr>
             <td><label for="pass">un password</label></td>

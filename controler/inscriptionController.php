@@ -6,7 +6,7 @@ require_once 'model/inscriptionModel.php';
  */
 class inscription
 {
-  private $donnes;
+  private $donnees;
   private $nom;
   private $prenom;
   private $pass;
@@ -16,18 +16,22 @@ class inscription
   public function __construct(array $arr)
   {
     $this->donnees = $arr;
-    $this->setMail;
-    $this->setNom;
-    $this->setPrenom;
-    $this->hashPass;
+    $this->mail = $arr['email'];
+    $this->nom = $arr['nom'];
+    $this->prenom = $arr['prenom'];
+    $this->pass = $arr['password'];
+    $hashP = $this->hashPass($this->pass);
     $this->bdd = new inscriptionModel();
+    $this->bdd->CheckExist($this->nom, $this->prenom, $this->mail, $hashP);
   }
 
-  private function hashPass(){
-      $this->pass = password_hash($donnes["pass"], PASSWORD_BCRYPT);
+  private function hashPass($var){
+
+      $this->pass = password_hash($var, PASSWORD_DEFAULT);
+
   }
 
-  private function setMail(){
+/*   private function setMail(){
     $this->mail = $this->donnes["mail"];
   }
   private function setNom(){
@@ -35,7 +39,7 @@ class inscription
   }
   private function setPrenom(){
     $this->prenom = $this->donnes["prenom"];
-  }
+  } */
 
 //if no entry with same name, valid inscription
   private function addId(){

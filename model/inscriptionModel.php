@@ -6,12 +6,22 @@
 class inscriptionModel extends Bdd
 {
 
-  public function __construct()
+/*   public function __construct()
   {
+
+  } */
+
+  public function checkExist($nom, $prenom, $mail, $pass) {
+
+    if (empty($this->getId($nom, $prenom, $mail))) {
+      $this->insertId($nom, $prenom, $mail, $pass);
+    } else {
+      echo "Vous êtes déjà inscrit!";
+    }
 
   }
 
-  public function getId($nom, $prenom, $mail){
+  private function getId($nom, $prenom, $mail){
     $sql = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE nom_usage = :nom, prenom = :prenom, email = :mail");
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
@@ -20,8 +30,8 @@ class inscriptionModel extends Bdd
     $rep = $sql->fetch();
     return $rep;
   }
-//test 1 2
-  public function insertId($nom, $prenom, $mail, $pass){
+
+  private function insertId($nom, $prenom, $mail, $pass){
     // Génération aléatoire d'une clé
     $cle = md5(microtime(TRUE)*100000);
     $actif = 0;
@@ -47,7 +57,7 @@ class inscriptionModel extends Bdd
     Pour activer votre compte, veuillez cliquer sur le lien ci dessous
     ou copier/coller dans votre navigateur internet.
 
-    http://votredossierpro.com/validation.php?log='.urlencode($nom).'&cle='.urlencode($cle).'
+    http://votredossierpro.com/index.php?action=validation&log='.urlencode($nom).'&cle='.urlencode($cle).'
 
 
     ---------------
