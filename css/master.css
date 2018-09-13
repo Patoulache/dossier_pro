@@ -47,6 +47,11 @@ main{
 main > form > table > tbody > tr:last-child{
   height: 50px;
 }
+main > form > table > tbody > tr:last-child > td:last-child > input{
+  display: block;
+  margin: auto;
+}
+
 td{
   color: #14207A;
   padding: 10px;
