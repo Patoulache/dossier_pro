@@ -18,5 +18,12 @@ class ConnectionModel extends Bdd
     $rep = $sql->fetch();
     return $rep;
   }
+  function getId($mail){
+    $sql = $this->getBdd()->prepare('SELECT id_user FROM table1 WHERE email = :mail');
+    $sql->bindparam(':mail', $mail);
+    $sql->execute();
+    $rep = $sql->fetch();
+    return $rep;
+  }
 }
  ?>

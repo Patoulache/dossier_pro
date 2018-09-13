@@ -21,7 +21,14 @@ class Connection
     $obj = new ConnectionModel();
     // echo "mail is " .$this->mail;
       if (password_verify($this->pass,$obj->getHashPass($this->mail)['pass'])){
-       echo "tout va bien mec ;)";
+       $token = md5(microtime(TRUE)*100000);
+
+       $idUser = $obj->getId($this->mail);
+
+       $_SESSION['id_user'] = $idUser['id_user'];
+       $_SESSION['token'] = $token;
+
+       var_dump($_SESSION);
      }
     }// !empty()
   }
