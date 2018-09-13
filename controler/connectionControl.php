@@ -27,8 +27,6 @@ class Connection
 
        $_SESSION['id_user'] = $idUser['id_user'];
        $_SESSION['token'] = $token;
-
-       var_dump($_SESSION);
      }
     }// !empty()
   }
