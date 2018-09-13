@@ -30,10 +30,11 @@
       </tr>
       <tr>
         <td></td>
-        <td><input type="submit" value="connexion"></td>
+        <td><input id="btnconnection" type="submit" value="connexion"></td>
       </tr>
     </table>
     </form>
   </main>
+  <script src="js/connection.js" charset="utf-8"></script>
   </body>
 </html>
