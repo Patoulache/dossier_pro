@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if($_GET){
@@ -21,7 +20,6 @@ if($_GET){
         include_once "controler/connectionControl.php";
         $obj = new connection();
         $rep = $obj->askDataBase();
-        var_dump($rep);
         break;
 
       case 'validation':
