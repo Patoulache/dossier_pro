@@ -19,8 +19,9 @@ class Connection
   function askDataBase(){
     if (!empty($this->pass) && filter_var($this->mail, FILTER_VALIDATE_EMAIL)) {
     $obj = new ConnectionModel();
-      if (password_verify($this->pass,$obj->getHashPass($this->email))){
-       // TODO: la boucle
+    // echo "mail is " .$this->mail;
+      if (password_verify($this->pass,$obj->getHashPass($this->mail)['pass'])){
+       echo "tout va bien mec ;)";
      }
     }// !empty()
   }

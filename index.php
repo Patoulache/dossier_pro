@@ -20,7 +20,6 @@ if($_GET){
         include_once "controler/connectionControl.php";
         $obj = new connection();
         $rep = $obj->askDataBase();
-        var_dump($rep);
         break;
 
       default:
