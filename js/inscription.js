@@ -3,6 +3,7 @@ EMAIL = {
 	regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 	email1 : "",
 	email2 : "",
+	emailUsable: false,
   yes_no : false,
 
 	INIT : function(){
@@ -23,12 +24,13 @@ EMAIL = {
 	MailUsed: function(reponse){
 	    if (reponse === "1"){ // donc deja utilisé
 	      CONTROLE.ColorBorder(EMAIL.email1,"red");
-	      EMAIL.yes_no = false;
+				EMAIL.emailUsed = false;
+				EMAIL.yes_no = false;
 				EMAIL.tohide.classList.remove('hidden');
 	    } else {  // on ne connait pas cette adresse
-	      EMAIL.yes_no = true;
 	      CONTROLE.ColorBorder(EMAIL.email1,"black");
 				EMAIL.tohide.classList.add('hidden')
+				EMAIL.emailUsable = true;
 	    }
 
 	},
@@ -36,7 +38,7 @@ EMAIL = {
 //check if email1 and email2 are the same
   checkValid : function(){
     EMAIL.email2 = document.getElementById("email2");
-    if (CONTROLE.AreTheSame(EMAIL.email1.value, EMAIL.email2.value)){
+    if (CONTROLE.AreTheSame(EMAIL.email1.value, EMAIL.email2.value) && EMAIL.emailUsable){
       EMAIL.yes_no = true;
       CONTROLE.ColorBorder(EMAIL.email2,"black");
       EMAIL.checkUsed;
@@ -55,14 +57,13 @@ PASSWORD = {
 
   INIT: function(){
     document.getElementById("password1").addEventListener("focusout", PASSWORD.setPass1);
-    document.getElementById("password2").addEventListener("focusout", PASSWORD.checkValid);
+    document.getElementById("password2").addEventListener("keyup", PASSWORD.checkValid);
   },
 
   setPass1: function(){
     PASSWORD.pass1 = document.getElementById("password1")
 
     if (CONTROLE.CheckRegex(PASSWORD.regex, PASSWORD.pass1.value)){
-      PASSWORD.yes_no = true;
       CONTROLE.ColorBorder(PASSWORD.pass1, "black");
     }else{
       CONTROLE.ColorBorder(PASSWORD.pass1, "red");
@@ -70,10 +71,10 @@ PASSWORD = {
 },
 
   checkValid: function(){
-    console.log("passici");
     PASSWORD.pass2 = document.getElementById("password2")
-    if (CONTROLE.AreTheSame(PASSWORD.pass1.value,PASSWORD.pass2.value) && PASSWORD.yes_no){
+    if (CONTROLE.AreTheSame(PASSWORD.pass1.value,PASSWORD.pass2.value)){
       CONTROLE.ColorBorder(PASSWORD.pass2,"black");
+			PASSWORD.yes_no = true;
     }else{
       PASSWORD.yes_no = false;
       CONTROLE.ColorBorder(PASSWORD.pass2,"red");
@@ -81,11 +82,13 @@ PASSWORD = {
   }
 }
 
+//si tout est valide , le BUTTON passe en clickable
 BUTTON = {
 	INIT: function(){
 		document.addEventListener("keyup",BUTTON.freeBTN);
 	},
 	freeBTN: function(){
+
 		if (EMAIL.yes_no && PASSWORD.yes_no) {
 			document.getElementById('BTNinscrip').disabled = false;
 		}else {
@@ -99,6 +102,7 @@ INITIALISATION = {
   INIT: function(){
     EMAIL.INIT();
     PASSWORD.INIT();
+		BUTTON.INIT();
   }
 }
 INITIALISATION.INIT();
