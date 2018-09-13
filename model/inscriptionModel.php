@@ -6,10 +6,10 @@
 class inscriptionModel extends Bdd
 {
 
-  public function __construct()
+/*   public function __construct()
   {
 
-  }
+  } */
 
   public function checkExist($nom, $prenom, $mail, $pass) {
 

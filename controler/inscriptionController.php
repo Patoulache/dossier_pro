@@ -20,9 +20,9 @@ class inscription
     $this->nom = $arr['nom'];
     $this->prenom = $arr['prenom'];
     $this->pass = $arr['password'];
-    $this->hashPass($this->pass);
+    $hashP = $this->hashPass($this->pass);
     $this->bdd = new inscriptionModel();
-    $this->bdd->CheckExist();
+    $this->bdd->CheckExist($this->nom, $this->prenom, $this->mail, $hashP);
   }
 
   private function hashPass($var){
