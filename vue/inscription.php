@@ -17,20 +17,20 @@
         <table>
           <tr>
             <td><label for="nom">votre nom de famille</label></td>
-            <td><input type="text" name="nom" value="" required></td>
+            <td><input id="nom" type="text" name="nom" value="" required></td>
           </tr>
 
           <tr>
             <td><label for="prenom">votre prénom</label></td>
-            <td><input type="text" name="prenom" value="" required></td>
+            <td><input id="prenom" type="text" name="prenom" value="" required></td>
           </tr>
           <tr>
-            <td>adresse mail</td>
+            <td><label for="email1">adresse mail</label></td>
             <td> <input id="email1" type="email" name="email" value=""></td>
             <td id="emailtohide" class="hidden">email déjà utilisé</td>
           </tr>
           <tr>
-            <td>check adresse mail</td>
+            <td><label for="email2">check adresse mail</label></td>
             <td> <input id="email2" type="email" name="email1" value=""></td>
           </tr>
           <tr>
