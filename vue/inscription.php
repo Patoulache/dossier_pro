@@ -13,7 +13,7 @@
         </div>
     </header>
     <main>
-      <form class="center" action="index.html" method="post">
+      <form class="center" action="index.php?action=setinscription" method="post">
         <table>
           <tr>
             <td><label for="nom">votre nom de famille</label></td>

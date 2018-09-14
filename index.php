@@ -10,10 +10,10 @@ if($_GET){
         break;
 
       case 'checkmail':
-      include_once "controler/checkmail.php";
-      $obj = new checkmail();
-      $rep = $obj->checkMail();
-      echo $rep;
+        include_once "controler/checkmail.php";
+        $obj = new checkmail();
+        $rep = $obj->checkMail();
+        echo $rep;
         break;
 
       case 'connection':
@@ -26,6 +26,13 @@ if($_GET){
         include_once ("model/validation.php");
         $obj = new validationModel();
         $obj->valid();
+        break;
+
+      case 'setinscription':
+        include_once "controler/inscriptionController.php";
+        $obj = new inscription($_POST);
+        $obj->addId();
+        break;
 
       default:
         // code...

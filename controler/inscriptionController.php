@@ -16,13 +16,13 @@ class inscription
   public function __construct(array $arr)
   {
     $this->donnees = $arr;
-    $this->mail = $arr['email'];
-    $this->nom = $arr['nom'];
-    $this->prenom = $arr['prenom'];
-    $this->pass = $arr['password'];
+    $this->mail = htmlspecialchars($arr['email'], ENT_QUOTES);
+    $this->nom = htmlspecialchars($arr['nom'], ENT_QUOTES);
+    $this->prenom = htmlspecialchars($arr['prenom'], ENT_QUOTES);
+    $this->pass = htmlspecialchars($arr['password'], ENT_QUOTES);
     $hashP = $this->hashPass($this->pass);
     $this->bdd = new inscriptionModel();
-    $this->bdd->CheckExist($this->nom, $this->prenom, $this->mail, $hashP);
+    // $this->bdd->CheckExist($this->nom, $this->prenom, $this->mail, $hashP);
   }
 
   private function hashPass($var){
@@ -42,11 +42,15 @@ class inscription
   } */
 
 //if no entry with same name, valid inscription
-  private function addId(){
+  public function addId(){
+
     if ($this->bdd->getId($this->nom, $this->prenom, $this->mail) == null){
       $this->bdd->insertId($this->nom, $this->prenom, $this->mail, $this->pass);
       $_SESSION["id"] = $this->bdd->getId($this->nom, $this->prenom, $this->mail);
       require 'vue/dossierPro.html';
+    } else {
+      require_once 'vue/inscription.php';
+      echo "<script>alert('Vous êtes déjà inscrit!')</alert>";
     }
   }
 }

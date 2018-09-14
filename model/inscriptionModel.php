@@ -1,5 +1,5 @@
 <?php
-
+require_once "bdd.php";
 /**
  *
  */
@@ -11,17 +11,7 @@ class inscriptionModel extends Bdd
 
   } */
 
-  public function checkExist($nom, $prenom, $mail, $pass) {
-
-    if (empty($this->getId($nom, $prenom, $mail))) {
-      $this->insertId($nom, $prenom, $mail, $pass);
-    } else {
-      echo "Vous êtes déjà inscrit!";
-    }
-
-  }
-
-  private function getId($nom, $prenom, $mail){
+  public function getId($nom, $prenom, $mail){
     $sql = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE nom_usage = :nom, prenom = :prenom, email = :mail");
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
@@ -31,13 +21,13 @@ class inscriptionModel extends Bdd
     return $rep;
   }
 
-  private function insertId($nom, $prenom, $mail, $pass){
+  public function insertId($nom, $prenom, $mail, $pass){
     // Génération aléatoire d'une clé
     $cle = md5(microtime(TRUE)*100000);
     $actif = 0;
 
     // Insertion de la clé dans la base de données avec les autres infos
-    $sql = $this-getBdd()->prepare("INSERT INTO table1(nom_usage, prenom, email, pass, cle, actif) VALUES (:nom, :prenom, :mail, :pass, :cle, :actif)");
+    $sql = $this->getBdd()->prepare("INSERT INTO table1(nom_usage, prenom, email, pass, cle, actif) VALUES (:nom, :prenom, :mail, :pass, :cle, :actif)");
     $sql->bindparam(':nom', $nom);
     $sql->bindparam(':prenom', $prenom);
     $sql->bindparam(':mail', $mail);
@@ -45,9 +35,9 @@ class inscriptionModel extends Bdd
     $sql->bindParam(':cle', $cle);
     $sql->bindParam(':actif', $actif);
     $sql->execute();
-    
+
     // Préparation du mail contenant le lien d'activation
-    $destinataire = $email;
+    $destinataire = $mail;
     $sujet = "Activer votre compte" ;
     $entete = "From: inscription@votresite.com" ;
 
