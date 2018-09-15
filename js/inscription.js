@@ -1,21 +1,20 @@
 EMAIL = {
 	tohide : document.getElementById('emailtohide'),
 	regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-	email1 : "",
-	email2 : "",
-	emailUsable: false,
-  yes_no : false,
+	email1 : document.getElementById("email1"),
+	email2 : document.getElementById("email2"),
+	emailUsable: false,   //not already used
+  yes_no : false,      //both are the same
 
 	INIT : function(){
-		document.getElementById("email1").addEventListener("focusout", EMAIL.checkUsed);
-		document.getElementById("email2").addEventListener("focusout", EMAIL.checkValid);
+		EMAIL.email1.addEventListener("focusout", EMAIL.checkUsed);
+		EMAIL.email2.addEventListener("focusout", EMAIL.checkValid);
 	},
 
 //send request AJAX with email
 	checkUsed: function(){
-		EMAIL.email1 = document.getElementById("email1");
+		// EMAIL.email1 = document.getElementById("email1");
 		if (CONTROLE.CheckRegex(EMAIL.regex, EMAIL.email1.value)) {
-			// console.log("avant les ajax 13");
 	    AJAX.Post(EMAIL.email1.value, "index.php?action=checkmail","mail=",EMAIL.MailUsed);
 		}
 	},
@@ -37,7 +36,7 @@ EMAIL = {
 
 //check if email1 and email2 are the same
   checkValid : function(){
-    EMAIL.email2 = document.getElementById("email2");
+    // EMAIL.email2 = document.getElementById("email2");
     if (CONTROLE.AreTheSame(EMAIL.email1.value, EMAIL.email2.value) && EMAIL.emailUsable){
       EMAIL.yes_no = true;
       CONTROLE.ColorBorder(EMAIL.email2,"black");
@@ -51,18 +50,18 @@ EMAIL = {
 
 PASSWORD = {
 	regex : /[\wéèàùç#!@]{8,20}/,
-  pass1: "",
-  pass2: "",
+  pass1: document.getElementById("password1"),
+  pass2: document.getElementById("password2"),
 	regexPass: false,
-  yes_no: false,
+  yes_no: false,   //both the same
 
   INIT: function(){
-    document.getElementById("password1").addEventListener("focusout", PASSWORD.setPass1);
-    document.getElementById("password2").addEventListener("keyup", PASSWORD.checkValid);
+    PASSWORD.pass1.addEventListener("focusout", PASSWORD.setPass1);
+    PASSWORD.pass2.addEventListener("keyup", PASSWORD.checkValid);
   },
 
   setPass1: function(){
-    PASSWORD.pass1 = document.getElementById("password1")
+    // PASSWORD.pass1 = document.getElementById("password1")
 
     if (CONTROLE.CheckRegex(PASSWORD.regex, PASSWORD.pass1.value)){
       CONTROLE.ColorBorder(PASSWORD.pass1, "black");
@@ -74,7 +73,7 @@ PASSWORD = {
 },
 
   checkValid: function(){
-    PASSWORD.pass2 = document.getElementById("password2")
+    // PASSWORD.pass2 = document.getElementById("password2")
     if (CONTROLE.AreTheSame(PASSWORD.pass1.value,PASSWORD.pass2.value)){
       CONTROLE.ColorBorder(PASSWORD.pass2,"black");
 			PASSWORD.yes_no = true;
