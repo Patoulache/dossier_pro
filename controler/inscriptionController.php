@@ -50,7 +50,7 @@ class inscription
       require 'vue/dossierPro.html';
     } else {
       require_once 'vue/inscription.php';
-      echo "<script>alert('Vous êtes déjà inscrit!')</alert>";
+      echo "<script>alert('Vous êtes déjà inscrit!')</script>";
     }
   }
 }
