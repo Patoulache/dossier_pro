@@ -1,8 +1,10 @@
 html{
   border: 0;
   margin-left: 0;
-  background-color: #F7DAB7;
+  background-color: #eee;
+  --background-color: #F5F5F5;
   height: 100vh;
+  --couleur: #d60093;
 }
 body{
   margin: 0;
@@ -17,8 +19,8 @@ header{
   justify-content: center;
   margin: auto;
   height: 20%;
-  background-color: #8BC400E6;
-  color: #A55B00;
+  background-color: var(--background-color);
+  border-bottom: 2px solid var(--couleur);
 }
 header > img{
   height: 80%;
@@ -33,11 +35,13 @@ h2{
   margin-left: 60%;
 }
 main{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
   height: 60%;
   margin: 5% auto;
-  background-color: #F7B565;
+  background-color: var(--background-color);
   width: 60%;
-  border: gray 2px solid;
+  border: var(--couleur) 2px solid;
   border-radius: 50px;
   box-shadow: 8px 8px 12px #0000001a;
   display: flex;
@@ -53,14 +57,15 @@ main > form > table > tbody > tr:last-child > td:last-child > input{
 }
 
 td{
-  color: #14207A;
   padding: 10px;
 }
-/* input{
+input{
   border: 2px black double;
   border-radius: 50px;
   box-shadow: 4px 4px 10px #000000b3;
-} */
+  padding-left: 2px;
+  text-align: center;
+}
 .hidden{
   display: none;
 }

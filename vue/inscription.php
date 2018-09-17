@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>inscription</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
