@@ -51,7 +51,7 @@ main{
 main > form > table > tbody > tr:last-child{
   height: 50px;
 }
-main > form > table > tbody > tr:last-child > td:last-child > input{
+tbody > tr:last-child > td:last-child > input{
   display: block;
   margin: auto;
 }
