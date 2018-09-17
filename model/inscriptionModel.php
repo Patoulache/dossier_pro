@@ -42,6 +42,7 @@ class inscriptionModel extends Bdd
     $entete = "From: inscription@votresite.com" ;
 
     // Le lien d'activation est composé du login(log) et de la clé(cle), url a changer quand le site sera en ligne
+    //log -> nom d'usage et clef est généré ici puis mit dans table1 => cle
     $message = 'Bienvenue sur VotreDossierPro.com,
 
     Pour activer votre compte, veuillez cliquer sur le lien ci dessous
@@ -52,7 +53,6 @@ class inscriptionModel extends Bdd
 
     ---------------
     Ceci est un mail automatique, Merci de ne pas y répondre.';
-
 
     mail($destinataire, $sujet, $message, $entete) ; // Envoi du mail
 
