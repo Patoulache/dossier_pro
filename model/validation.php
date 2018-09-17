@@ -17,11 +17,12 @@ class validationModel extends Bdd {
         $cle = $_GET['cle'];
 
         // Récupération de la clé correspondant au $nom_usage dans la base de données
-        $sql = $this->getBdd()->prepare("SELECT nom_usage,actif FROM table1 WHERE cle = :cle");
+        $sql = $this->getBdd()->prepare("SELECT id_user,nom_usage,actif FROM table1 WHERE cle = :cle");
         if($sql->execute(array(":cle" => $cle)) && $row = $sql->fetch())
           {
             $nomUsage = $row['nom_usage'];	// Récupération de la clé
             $actif = $row['actif']; // $actif contiendra alors 0 ou 1
+            $iduser = $row['id_user'];
           }
 
 
@@ -46,13 +47,13 @@ class validationModel extends Bdd {
                   $stmt->bindParam(':token', $token);
                   $stmt->execute();
 
-                  $stm = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE token = :token");
-                  $stm->bindParam(':token', $token);
-                  $stm->execute();
-                  $idUser = $stm->fetch(PDO::FETCH_ASSOC);
+                  // $stm = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE token = :token");
+                  // $stm->bindParam(':token', $token);
+                  // $stm->execute();
+                  // $idUser = $stm->fetch(PDO::FETCH_ASSOC);
 
                   // Id et token serviront au status connecté
-                  $_SESSION['id_user'] = $idUser['id_user'];
+                  $_SESSION['id_user'] = $iduser;
                   $_SESSION['token'] = $token;
 
                }
