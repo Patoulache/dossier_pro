@@ -7,7 +7,7 @@ DOSSIER = {
     DOSSIER.inputTitrePro.addEventListener("keyup",DOSSIER.AutoComplet)
 
   },
-
+  
   AutoComplet: function(){
     DOSSIER.errase();
     if (DOSSIER.inputTitrePro.value) {
@@ -15,7 +15,7 @@ DOSSIER = {
               "titrevise=", DOSSIER.MiseEnPageAUtoComplete);
     }
   },
-
+  // executé par AJAX.ONLOAD()
   MiseEnPageAUtoComplete: function(arr){
     list = AJAX.FromJson(arr);
     for (var i = 0; i < list.length; i++) {
@@ -23,17 +23,20 @@ DOSSIER = {
     }
     DOSSIER.Selection()
   },
+
   Selection: function(){
     for (var i = 0; i < document.querySelectorAll('.autocompleted').length; i++) {
       document.querySelectorAll('.autocompleted')[i].addEventListener("click", DOSSIER.putOnTheSelection);
       console.log(document.querySelectorAll('.autocompleted')[i].textContent);
     }
   },
+  //insert dans INPUT le text choisi des propositions
   putOnTheSelection:function(e){
     console.log(e);
     DOSSIER.inputTitrePro.value = e.target.textContent;
     DOSSIER.errase();
   },
+  //mise à zero de la div des proposition
   errase: function(){
     DOSSIER.inputAutoComplet.innerHTML = "";
   }
