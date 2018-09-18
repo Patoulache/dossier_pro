@@ -41,6 +41,12 @@ if($_GET){
         $lesinfosperso = $obj->getUserPersonnalInfos();
         include_once "vue/dossierPro.php";
         break;
+
+      case 'autocomplet':
+        include_once "controler/autocomplet.php";
+        $obj = new autocomplet();
+        $obj->requestdonnees();
+        break;
       default:
         // code...
         break;

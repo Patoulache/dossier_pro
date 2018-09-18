@@ -5,16 +5,14 @@ require_once "model/setupDossierProModel.php";
  */
 class setupDossierControl
 {
-   // private $labasededonnee;
+   private $labasededonnee;
 
   public function __construct()
   {
-    // $this->$labasededonnee = new setupDossierModel();
+    $this->labasededonnee = new setupDossierModel();
   }
    public function getUserPersonnalInfos(){
-    $labasededonnee = new setupDossierModel();
-    // $lesinfosperso = $this->$labasededonnee->getUserCredential();
-    $lesinfosperso = $labasededonnee->getUserCredential();
+    $lesinfosperso = $this->labasededonnee->getUserCredential();
     return $lesinfosperso;
   }
 }

@@ -87,3 +87,14 @@ h2{
 .article1{
   grid-row: auto;
 }
+.autocompleted{
+  cursor: pointer;
+  z-index: 1;
+  border: 1px solid var(--couleur);
+}
+.autocompleted:hover{
+  background-color: red;
+}
+.nopadding{
+  padding: 0;
+}
