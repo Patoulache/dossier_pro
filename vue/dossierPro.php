@@ -15,10 +15,10 @@
     <form class="col-12"action="" method="POST">
         <div id="coordonnées" class="row">
             <div class="left-border champ col-4">
-                <p class="margin-28h"><label for="nomnaissance">Nom de naissance </label></p>
-                <p class="margin-28h"><label for="usename">Nom d'usage </label></p>
-                <p class="margin-28h"><label for="prenom">Prénom </label></p>
-                <p class="margin-28h"><label for="adresse">Adresse </label></p>
+                <p class="margin-28h"><label for="nomnaissance">Nom de naissance</label></p>
+                <p class="margin-28h"><label for="usename">Nom d'usage</label></p>
+                <p class="margin-28h"><label for="prenom">Prénom</label></p>
+                <p class="margin-28h"><label for="adresse">Adresse</label></p>
             </div>
             <div class="champ col-1">
               <ul>
