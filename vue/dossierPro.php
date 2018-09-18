@@ -30,10 +30,10 @@
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" id="prenom" placeholder="Entrez votre prénom ici." required></p>
-                <p><input type="text" id="adresse" placeholder="Entrez votre adresse ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['nom_naissance'] ?> "id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['nom_usage'] ?> "id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['prenom'] ?> "id="prenom" placeholder="Entrez votre prénom ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['adresse'] ?> "id="adresse" placeholder="Entrez votre adresse ici." required></p>
 
             </div>
         </div>
