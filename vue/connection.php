@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
     <link rel="stylesheet" href="css/master.css">
     <title>connexion</title>
   </head>

@@ -20,6 +20,7 @@ if($_GET){
         include_once "controler/connectionControl.php";
         $obj = new connection();
         $rep = $obj->askDataBase();
+        header('location: index.php?action=getpage');
         break;
 
       case 'validation':
@@ -34,6 +35,18 @@ if($_GET){
         $obj->addId();
         break;
 
+      case 'getpage':
+        include_once "controler/setupDossierProControl.php";
+        $obj = new setupDossierControl;
+        $lesinfosperso = $obj->getUserPersonnalInfos();
+        include_once "vue/dossierPro.php";
+        break;
+
+      case 'autocomplet':
+        include_once "controler/autocomplet.php";
+        $obj = new autocomplet();
+        $obj->requestdonnees();
+        break;
       default:
         // code...
         break;

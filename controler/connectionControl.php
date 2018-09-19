@@ -27,11 +27,8 @@ class Connection
 
        $_SESSION['id_user'] = $idUser['id_user'];
        $_SESSION['token'] = $token;
-       var_dump($_SESSION);
-       echo session_status();
-       echo "<br />";
 
-       echo microtime(true)*10000;
+       $obj->updateToken($this->mail,$token);
      }
     }// !empty()
   }

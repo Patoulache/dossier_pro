@@ -15,10 +15,10 @@
     <form class="col-12"action="" method="POST">
         <div id="coordonnées" class="row">
             <div class="left-border champ col-4">
-                <p class="margin-28h"><label for="nomnaissance">Nom de naissance </label></p>
-                <p class="margin-28h"><label for="usename">Nom d'usage </label></p>
-                <p class="margin-28h"><label for="prenom">Prénom </label></p>
-                <p class="margin-28h"><label for="adresse">Adresse </label></p>
+                <p class="margin-28h"><label for="nomnaissance">Nom de naissance</label></p>
+                <p class="margin-28h"><label for="usename">Nom d'usage</label></p>
+                <p class="margin-28h"><label for="prenom">Prénom</label></p>
+                <p class="margin-28h"><label for="adresse">Adresse</label></p>
             </div>
             <div class="champ col-1">
               <ul>
@@ -30,10 +30,10 @@
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" id="prenom" placeholder="Entrez votre prénom ici." required></p>
-                <p><input type="text" id="adresse" placeholder="Entrez votre adresse ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['nom_naissance'] ?> "id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['nom_usage'] ?> "id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['prenom'] ?> "id="prenom" placeholder="Entrez votre prénom ici." required></p>
+                <p><input type="text" value="<?php echo $lesinfosperso['adresse'] ?> "id="adresse" placeholder="Entrez votre adresse ici." required></p>
 
             </div>
         </div>
@@ -43,6 +43,7 @@
             <div class="col-12 border-top border-bottom">
 
             <input class="col-10  marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé.">
+            <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
 
@@ -304,5 +305,7 @@
         </div>
         <button type="submit">Valider</button>
     </form>
+    <script src="js/biblio.js" charset="utf-8"></script>
+    <script src="js/dossierpro.js" charset="utf-8"></script>
 </body>
 </html>

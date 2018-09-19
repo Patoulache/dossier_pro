@@ -25,5 +25,11 @@ class ConnectionModel extends Bdd
     $rep = $sql->fetch();
     return $rep;
   }
+  function updateToken($email,$token){
+    $sql = $this->getBdd()->prepare('UPDATE table1 SET token = :token WHERE email = :email');
+    $sql->bindparam(':token',$token);
+    $sql->bindparam(':email',$email);
+    $sql->execute();
+  }
 }
  ?>
