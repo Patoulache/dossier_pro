@@ -165,15 +165,13 @@
               </div>
       </div>
 
-        <div class=" col-12 activtype">
-            <div class="champ">
-                <label class="col-5"for="">Activité-type 1 </label>
-                <input class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité">
-            </div>
-            <div class="champ">
-                <label class="col-5">Exemple n°1 <span>▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple">
-            </div>
+        <div class="col-12 activtype">
+                <div class="row"><label class="col-5"for="">Activité-type 1 </label>
+                <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
+
+                <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
+                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+
 
             <ol class="col-12">
                 <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
