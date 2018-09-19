@@ -42,7 +42,7 @@
             <h2 class="col-12">Titre professionnel visé</h2>
             <div class="col-12 border-top border-bottom">
 
-            <input class="col-10  marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé.">
+            <input class="col-10  marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
             <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
@@ -127,26 +127,26 @@
             <h2 class="col-12">Sommaire</h2>
             <h1 class="col-12">Exemples de pratique professionnelle</h1>
             <div class="col-12">
-                <input class="col-10"type="text" placeholder="Intitulé de l’activité-type n° 1">
-                <label class="col-1">p.</label><input class="col-1" type="text">
+                <div class="row"><textarea id="pratiquePro1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
+                <label class="col-1">p.</label><input class="col-1" type="text"></div>
 
-                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
-                    <label class="col-1">p.</label><input class=" col-1" type="text">
-                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
-                    <label class="col-1">p.</label><input class=" col-1" type="text">
-                    <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
-                    <label class="col-1">p.</label><input class=" col-1" type="text">
+                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                    <label class="col-1">p.</label><input class=" col-1" type="text"></div>
+                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                    <label class="col-1">p.</label><input class=" col-1" type="text"></div>
+                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                    <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
             <div class="col-12">
-                <input class="col-10"type="text" placeholder="Intitulé de l’activité-type n° 2">
-                <label class="col-1" for="">p.</label><input class="col-1" type="text">
+                <div class="row"><textarea id="pratiquePro2" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
+                <label class="col-1" for="">p.</label><input class="col-1" type="text"></div>
 
-                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
-                <label class="col-1">p.</label><input class=" col-1" type="text">
-                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
-                <label class="col-1">p.</label><input class=" col-1" type="text">
-                <span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
-                <label class="col-1">p.</label><input class=" col-1" type="text">
+                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                <label class="col-1">p.</label><input class=" col-1" type="text"></div>
+                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                <label class="col-1">p.</label><input class=" col-1" type="text"></div>
+                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
 
             <div class="col-12">
@@ -165,15 +165,13 @@
               </div>
       </div>
 
-        <div class=" col-12 activtype">
-            <div class="champ">
-                <label class="col-5"for="">Activité-type 1 </label>
-                <input class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité">
-            </div>
-            <div class="champ">
-                <label class="col-5">Exemple n°1 <span>▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple">
-            </div>
+        <div class="col-12 activtype">
+                <div class="row"><label class="col-5"for="">Activité-type 1 </label>
+                <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
+
+                <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
+                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+
 
             <ol class="col-12">
                 <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>

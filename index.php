@@ -45,8 +45,14 @@ if($_GET){
       case 'autocomplet':
         include_once "controler/autocomplet.php";
         $obj = new autocomplet();
-        $obj->requestdonnees();
+        if (isset($_POST['titrevise'])){
+          $obj->requestdonnees();
+        }
+        if (isset($_POST['pratiquepro'])) {
+          $obj->requestPratiquePro();
+        }
         break;
+
       default:
         // code...
         break;
