@@ -11,6 +11,7 @@ body {
     margin: auto;
     border: 0 auto;
     --couleur: #d60093;
+    --borderBlue: #3daee9;
 }
 
 .col-1 {width: 8.33%;}
@@ -90,9 +91,9 @@ h2{
 .autocompleted{
   cursor: pointer;
   background-color: white;
-  border-left: 1px solid #3daee9;
-  border-bottom:  1px solid #3daee9;
-  border-right:  1px solid #3daee9;
+  border-left: 1px solid var(--borderBlue);
+  border-bottom:  1px solid var(--borderBlue);
+  border-right:  1px solid var(--borderBlue);
 }
 .autocompleted:hover{
   background-color: #BADA55;
