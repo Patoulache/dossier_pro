@@ -7,7 +7,7 @@ DOSSIER = {
     DOSSIER.inputTitrePro.addEventListener("keyup",DOSSIER.AutoComplet)
 
   },
-  
+
   AutoComplet: function(){
     DOSSIER.errase();
     if (DOSSIER.inputTitrePro.value) {
@@ -18,6 +18,7 @@ DOSSIER = {
   // executé par AJAX.ONLOAD()
   MiseEnPageAUtoComplete: function(arr){
     list = AJAX.FromJson(arr);
+    DOSSIER.inputAutoComplet.classList.add("addBorders");
     for (var i = 0; i < list.length; i++) {
       DOSSIER.inputAutoComplet.innerHTML += '<div class="autocompleted">'+list[i]+'</div>'
     }
@@ -39,6 +40,7 @@ DOSSIER = {
   //mise à zero de la div des proposition
   errase: function(){
     DOSSIER.inputAutoComplet.innerHTML = "";
+    DOSSIER.inputAutoComplet.classList.remove("addBorders");
   }
 }
 DOSSIER.INIT();
