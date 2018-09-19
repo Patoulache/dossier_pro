@@ -43,7 +43,7 @@
             <div class="col-12 border-top border-bottom">
 
             <input class="col-10  marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé.">
-            <div class="col-10  marg-1 nopadding" id="resultautocomplete"></div>
+            <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
 

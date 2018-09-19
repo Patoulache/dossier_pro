@@ -89,12 +89,22 @@ h2{
 }
 .autocompleted{
   cursor: pointer;
-  z-index: 1;
-  border: 1px solid var(--couleur);
+  background-color: white;
+  border-left: 1px solid #3daee9;
+  border-bottom:  1px solid #3daee9;
+  border-right:  1px solid #3daee9;
 }
 .autocompleted:hover{
-  background-color: red;
+  background-color: #BADA55;
 }
-.nopadding{
-  padding: 0;
+.nopaddingTop{
+  padding-top: 0;
+}
+#resultautocomplete{
+  left: 0;
+  top: 168px;
+  position: absolute;
+}
+.row{
+  position: relative;
 }
