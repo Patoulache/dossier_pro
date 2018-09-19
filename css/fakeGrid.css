@@ -43,7 +43,6 @@ body {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  /* border: 1px solid red; */
 }
 h1{
     margin: auto;
@@ -110,4 +109,8 @@ h2{
 }
 .row{
   position: relative;
+}
+textarea{
+  resize: none;
+  padding: 0;
 }

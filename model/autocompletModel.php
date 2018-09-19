@@ -18,6 +18,13 @@ class autoCompletModel extends Bdd
     $rep = $sql->fetchAll();
     return $rep;
   }
+  function pratiquePro(){
+    $sql = $this->getBdd()->prepare('SELECT activite_type FROM table3 WHERE titre_pro_vise = :titre');
+    $sql->bindparam(":titre", $_POST['pratiquepro']);
+    $sql->execute();
+    $rep = $sql->fetchAll();
+    return $rep;
+  }
 }
 
 
