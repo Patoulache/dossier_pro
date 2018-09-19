@@ -32,5 +32,4 @@ class ConnectionModel extends Bdd
     $sql->execute();
   }
 }
-// test name
  ?>
