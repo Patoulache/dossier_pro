@@ -81,10 +81,6 @@ h2{
 .border-top{
   border-top: 5px solid var(--couleur);
 }
-/* #titrevise{
-  margin: 5px auto;
-  grid-column: 3/12;
-} */
 .article1{
   grid-row: auto;
 }
