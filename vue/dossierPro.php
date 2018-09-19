@@ -127,7 +127,7 @@
             <h2 class="col-12">Sommaire</h2>
             <h1 class="col-12">Exemples de pratique professionnelle</h1>
             <div class="col-12">
-                <div class="row"><textarea id="pratiquePro1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
+                <div class="row"><textarea data-nom="pratiquePro" data-nombre="0" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
                 <label class="col-1">p.</label><input class="col-1" type="text"></div>
 
                     <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
@@ -138,7 +138,7 @@
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
             <div class="col-12">
-                <div class="row"><textarea id="pratiquePro2" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
+                <div class="row"><textarea data-nom="pratiquePro" data-nombre="1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
                 <label class="col-1" for="">p.</label><input class="col-1" type="text"></div>
 
                 <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
@@ -167,7 +167,7 @@
 
         <div class="col-12 activtype">
                 <div class="row"><label class="col-5"for="">Activité-type 1 </label>
-                <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
+                <textarea data-nom="pratiquePro" data-nombre="0" class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
 
                 <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
