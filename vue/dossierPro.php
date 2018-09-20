@@ -130,22 +130,22 @@
                 <div class="row"><textarea id="pratiquePro1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
                 <label class="col-1">p.</label><input class="col-1" type="text"></div>
 
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex1" placeholder="Intitulé de l’exemple n° 1">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex2" placeholder="Intitulé de l’exemple n° 2">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex3" placeholder="Intitulé de l’exemple n° 3">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
             <div class="col-12">
                 <div class="row"><textarea id="pratiquePro2" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
                 <label class="col-1" for="">p.</label><input class="col-1" type="text"></div>
 
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex1" placeholder="Intitulé de l’exemple n° 1">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex2" placeholder="Intitulé de l’exemple n° 2">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex3" placeholder="Intitulé de l’exemple n° 3">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
 
@@ -170,7 +170,7 @@
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
             <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+            <input class="col-7" type="text"  data-example="act1ex1" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
                 <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
@@ -196,155 +196,6 @@
                 <li class="col-12">Informations complémentaires (facultatif)</li>
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
             </ol>
-            <div class="row"><label class="col-5"for="">Activité-type 1 </label>
-            <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
-            
-            <div class="row"><label class="col-5">Exemple n°2 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
-
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-            </ol>
-            <div class="row"><label class="col-5"for="">Activité-type 1 </label>
-            <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
-            
-            <div class="row"><label class="col-5">Exemple n°3 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
-
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-            </ol>
-            <div class="row"><label class="col-5"for="">Activité-type 2 </label>
-            <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
-
-            <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
-
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-            </ol>
-            <div class="row"><label class="col-5"for="">Activité-type 1 </label>
-            <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
-            
-            <div class="row"><label class="col-5">Exemple n°2 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
-
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-            </ol>
-            <div class="row"><label class="col-5"for="">Activité-type 1 </label>
-            <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
-            
-            <div class="row"><label class="col-5">Exemple n°3 <span class="littlepinkarrow">▶</span></label>
-            <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
-
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
         </div>
        
         <div>
