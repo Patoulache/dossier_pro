@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/fakeGrid.css">
+    <link rel="stylesheet" href="./css/fakeGrid.css">
     <title>Dossier Professionnel coda 2018</title>
 </head>
 <body>
     <header class="row border-bottom">
-      <img class="col-3" src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+      <img class="col-3" src="./image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
       <!-- <div class="header"> -->
         <h1>Dossier Professionnel <sup>(DP)</sup></h1>
       <!-- </div> -->
@@ -83,11 +83,11 @@
                 <h4 class="col-12">Pour prendre sa décision, le jury dispose :</h4>
 
                 <section class="col-12">
-                    <ol>
-                        <li><span>Des résultats de la mise en situation professionnelle complétés, éventuellement, du questionnaire professionnel ou de l’entretien professionnel ou de l’entretien technique ou du questionnement à partir de productions.</span></li>
-                        <li><span>Du <b>Dossier Professionnel</b> (DP) dans lequel le candidat a consigné les preuves de sa pratique professionnelle</span></li>
-                        <li><span>Des résultats des évaluations passées en cours de formation lorsque le candidat évalué est issu d’un parcours de formation</span></li>
-                        <li><span>de l’entretien final (dans le cadre de la session titre).</span></li>
+                    <ol class="littlepinkarrow">
+                        <li><span class="blackColor">Des résultats de la mise en situation professionnelle complétés, éventuellement, du questionnaire professionnel ou de l’entretien professionnel ou de l’entretien technique ou du questionnement à partir de productions.</span></li>
+                        <li><span class="blackColor">Du <b>Dossier Professionnel</b> (DP) dans lequel le candidat a consigné les preuves de sa pratique professionnelle</span></li>
+                        <li><span class="blackColor">Des résultats des évaluations passées en cours de formation lorsque le candidat évalué est issu d’un parcours de formation</span></li>
+                        <li><span class="blackColor">de l’entretien final (dans le cadre de la session titre).</span></li>
                     </ol>
                     <aside>[Arrêté du 22 décembre 2015, relatif aux conditions de délivrance des titres professionnels du ministère chargé de l’Emploi]</aside>
                 </section>
@@ -96,19 +96,19 @@
 
                 <section class="col-12">
                     <p>
-                    <span>▶</span>Pour chaque activité-type du titre visé, un à trois exemples de pratique professionnelle ;
+                    <span class="littlepinkarrow">▶</span>Pour chaque activité-type du titre visé, un à trois exemples de pratique professionnelle ;
                     </p>
                     <p>
-                    <span>▶</span>un tableau à renseigner si le candidat souhaite porter à la connaissance du jury la détention d’un titre, d’un diplôme, d’un certificat de qualification professionnelle (CQP) ou des attestations de formation ;
+                    <span class="littlepinkarrow">▶</span>un tableau à renseigner si le candidat souhaite porter à la connaissance du jury la détention d’un titre, d’un diplôme, d’un certificat de qualification professionnelle (CQP) ou des attestations de formation ;
                     </p>
                     <p>
-                    <span>▶</span>une déclaration sur l’honneur à compléter et à signer ;
+                    <span class="littlepinkarrow">▶</span>une déclaration sur l’honneur à compléter et à signer ;
                     </p>
                     <p>
-                    <span>▶</span>des documents illustrant la pratique professionnelle du candidat (facultatif)
+                    <span class="littlepinkarrow">▶</span>des documents illustrant la pratique professionnelle du candidat (facultatif)
                     </p>
                     <p>
-                    <span>▶</span>des annexes, si nécessaire.
+                    <span class="littlepinkarrow">▶</span>des annexes, si nécessaire.
                     </p>
                 </section>
             </div>
@@ -120,7 +120,7 @@
         </div>
         <div id="lien">
             <p class="marg-1">
-                <span>◢</span> <a href="http://travail-emploi.gouv.fr/titres-professionnels" target="_blank">http://travail-emploi.gouv.fr/titres-professionnels</a>
+                <span class="littlepinkarrow">◢</span> <a href="http://travail-emploi.gouv.fr/titres-professionnels" target="_blank">http://travail-emploi.gouv.fr/titres-professionnels</a>
             </p>
         </div>
         <div class="row sommaire">
@@ -130,22 +130,22 @@
                 <div class="row"><textarea id="pratiquePro1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
                 <label class="col-1">p.</label><input class="col-1" type="text"></div>
 
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
             <div class="col-12">
                 <div class="row"><textarea id="pratiquePro2" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
                 <label class="col-1" for="">p.</label><input class="col-1" type="text"></div>
 
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
 
@@ -169,7 +169,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 1 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
-            <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -183,11 +183,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>
@@ -199,7 +199,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 1 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
-            <div class="row"><label class="col-5">Exemple n°2 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°2 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -213,11 +213,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>
@@ -229,7 +229,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 1 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
-            <div class="row"><label class="col-5">Exemple n°3 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°3 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -243,11 +243,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>
@@ -259,7 +259,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 2 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
 
-            <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -273,11 +273,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>
@@ -289,7 +289,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 1 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
-            <div class="row"><label class="col-5">Exemple n°2 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°2 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -303,11 +303,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>
@@ -319,7 +319,7 @@
             <div class="row"><label class="col-5"for="">Activité-type 1 </label>
             <textarea class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
             
-            <div class="row"><label class="col-5">Exemple n°3 <span>▶</span></label>
+            <div class="row"><label class="col-5">Exemple n°3 <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
             <ol class="col-12">
@@ -333,11 +333,11 @@
                 <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
                 <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
+                <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
                 <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
+                <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
                 <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
+                <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
                 <span class="col-1">Du</span>
                 <input class="col-3"type="date" placeholder="Cliquez ici">
                 <span class="col-1">au</span>

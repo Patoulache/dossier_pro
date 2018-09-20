@@ -97,7 +97,7 @@ h2{
 #resultautocomplete{
   left: 15px;
   top: 168px;
-  border: 8px
+  border: 8px;
   position: absolute;
 }
 .addBorders{
@@ -113,4 +113,10 @@ h2{
 textarea{
   resize: none;
   padding: 0;
+}
+.littlepinkarrow {
+  color: var(--couleur);
+}
+.blackColor {
+  color: black;
 }
