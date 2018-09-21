@@ -305,6 +305,6 @@
     </form>
     <script src="js/biblio.js" charset="utf-8"></script>
     <script src="js/dossierpro.js" charset="utf-8"></script>
-    <!-- <script src="js/implexemple.js" charset="utf-8"></script> -->
+    <script src="js/implexemple.js" charset="utf-8"></script>
 </body>
 </html>

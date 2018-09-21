@@ -1,8 +1,10 @@
 FORMAT = {
+    nameEx:"",
+
 
     init : function() {
-        var nameEx = document.querySelectorAll("input[data-exemple]");
-        nameEx.forEach(FORMAT.setListener);
+        FORMAT.nameEx = document.querySelectorAll("input[data-exemple]");
+        FORMAT.nameEx.forEach(FORMAT.setListener);
     },
     
     setListener : function(el) {
@@ -14,40 +16,48 @@ FORMAT = {
         switch(true) {
             case (cible == "act1ex1"):
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            champs.value = e.target.value;
             break;
             case (cible == "act1ex2"):
-            FORMAT.exemple();
+            FORMAT.exemple(cible);
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            console.log(champs);
+            champs.value = e.target.value;
             break;
             case (cible == "act1ex3"):
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            champs.value = e.target.value;
             break;
             case (cible == "act2ex1"):
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            champs.value = e.target.value;
             break;
             case (cible == "act2ex2"):
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            champs.value = e.target.value;
             break;
             case (cible == "act2ex3"):
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = nameEx.value;
+            champs.value = e.target.value;
             break;
 
         };
     },
 
-    exemple : function() {
+    exemple : function(cible) {
         var div = document.querySelector(".activtype");
-        var cop = div.children.cloneNode(true);
-        cop.childNodes[2].innerText = cop.childNodes[2].innerText.replace("1", "2");
+        console.log(div);
+        var cop = div.cloneNode(true);
+        var cop1 = cop.children;
+        var cop2 = cop1[1].children
+        cop2[1].setAttribute("data-example", cible);
+        console.log(cible);
+        cop2[0].innerHTML = cop2[0].innerHTML.replace("1", "2");
+        // console.log(cop1);
         div.appendChild(cop);
 
-    }
-
+    },
 
 }
+
+window.onload = FORMAT.init();
