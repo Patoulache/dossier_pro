@@ -93,7 +93,7 @@ BUTTON = {
 			document.getElementById('BTNinscrip').disabled = true;
 		}
 	}
-}
+};
 
 INITIALISATION = {
 
@@ -102,5 +102,5 @@ INITIALISATION = {
     PASSWORD.INIT();
 		BUTTON.INIT();
   }
-}
+};
 INITIALISATION.INIT();
