@@ -12,7 +12,7 @@ AJAX = {
       whatToDo(AJAX.xhr.responseText);
       }
 
-    }; //end ONLOAD
+    } //end ONLOAD
 
     if (Array.isArray(what)) {
       what = AJAX.ToJson(what);
@@ -45,7 +45,7 @@ AJAX = {
       return togo;
     }
   }
-};
+}
 
 
 CONTROLE = {
@@ -65,4 +65,4 @@ CONTROLE = {
       return false;
     }
   }
-};
+}
