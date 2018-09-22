@@ -28,7 +28,7 @@ AJAX = {
     AJAX.xhr = new XMLHttpRequest(),
 
     AJAX.xhr.onload = function(){
-      return AJAX.FromJson(AJAX.xhr.responseText)
+      return AJAX.FromJson(AJAX.xhr.responseText);
   }// END ONLOAD
     AJAX.xhr.open('GET', to + attributs + what);
     AJAX.xhr.send();
