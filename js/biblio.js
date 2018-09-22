@@ -7,12 +7,12 @@ AJAX = {
 
     AJAX.xhr.onload = function(){
       if (AJAX.changedToJson) {
-        whatToDo(AJAX.FromJson(AJAX.xhr.responseText))
+        whatToDo(AJAX.FromJson(AJAX.xhr.responseText));
       } else{
       whatToDo(AJAX.xhr.responseText);
       }
 
-    }//end ONLOAD
+    } //end ONLOAD
 
     if (Array.isArray(what)) {
       what = AJAX.ToJson(what);
@@ -29,7 +29,11 @@ AJAX = {
 
     AJAX.xhr.onload = function(){
       return AJAX.FromJson(AJAX.xhr.responseText);
+<<<<<<< HEAD
   }// END ONLOAD
+=======
+  };// END ONLOAD
+>>>>>>> 0e3a1c541d00a4e40ae02fbadf392007c6205c33
     AJAX.xhr.open('GET', to + attributs + what);
     AJAX.xhr.send();
   },
@@ -50,7 +54,7 @@ AJAX = {
 
 CONTROLE = {
   CheckRegex: function(reg,pass){
-    regex = new RegExp(reg)
+    regex = new RegExp(reg);
     return regex.test(pass);
   },
 

@@ -20,9 +20,9 @@ DOSSIER = {
     list = AJAX.FromJson(arr);
     DOSSIER.inputAutoComplet.classList.add("addBorders");
     for (var i = 0; i < list.length; i++) {
-      DOSSIER.inputAutoComplet.innerHTML += '<div class="autocompleted">'+list[i]+'</div>'
+      DOSSIER.inputAutoComplet.innerHTML += '<div class="autocompleted">'+list[i]+'</div>';
     }
-    DOSSIER.Selection()
+    DOSSIER.Selection();
   },
 
   Selection: function(){
@@ -41,7 +41,7 @@ DOSSIER = {
     DOSSIER.inputAutoComplet.innerHTML = "";
     DOSSIER.inputAutoComplet.classList.remove("addBorders");
   }
-}
+};
 
 PRATIQUEPRO = {
   pratiquePro: document.querySelectorAll("textarea[data-nom='pratiquePro']"),
@@ -60,6 +60,6 @@ PRATIQUEPRO = {
 
     }
   }
-}
+};
 
 DOSSIER.INIT();
