@@ -11,8 +11,7 @@ AJAX = {
       } else{
       whatToDo(AJAX.xhr.responseText);
       }
-
-    } //end ONLOAD
+    }; //end ONLOAD
 
     if (Array.isArray(what)) {
       what = AJAX.ToJson(what);
@@ -29,7 +28,7 @@ AJAX = {
 
     AJAX.xhr.onload = function(){
       return AJAX.FromJson(AJAX.xhr.responseText);
-  }// END ONLOAD
+  };// END ONLOAD
     AJAX.xhr.open('GET', to + attributs + what);
     AJAX.xhr.send();
   },
@@ -45,7 +44,7 @@ AJAX = {
       return togo;
     }
   }
-}
+};
 
 
 CONTROLE = {
@@ -65,4 +64,4 @@ CONTROLE = {
       return false;
     }
   }
-}
+};
