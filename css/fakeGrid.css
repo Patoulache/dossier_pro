@@ -81,7 +81,7 @@ h2{
   border-top: solid var(--couleur-bandeau);
 }
 .article1{
-  grid-row: aut}
+  grid-row: auto;}
 .autocompleted{
   /* padding: 0; */
   cursor: pointer;
@@ -100,7 +100,7 @@ h2{
   position: absolute;
 }
 .addBorders{
-  width: 612px;
+  width: 607px;
   padding: 0;
   border-left: 1px solid var(--borderBlue) !important;
   border-bottom:  1px solid var(--borderBlue) !important;
