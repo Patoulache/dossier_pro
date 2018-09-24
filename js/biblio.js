@@ -9,7 +9,7 @@ AJAX = {
       if (AJAX.changedToJson) {
         whatToDo(AJAX.FromJson(AJAX.xhr.responseText));
       } else{
-      whatToDo(AJAX.xhr.responseText);
+        whatToDo(AJAX.xhr.responseText);
       }
     }; //end ONLOAD
 
