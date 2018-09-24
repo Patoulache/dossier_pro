@@ -5,11 +5,6 @@ require_once ("bdd.php");
 class validationModel extends Bdd {
 
 
-/*
-    public function __construct() {
-
-    } */
-
     public function valid() {
 
         // Récupération des variables nécessaires à l'activation

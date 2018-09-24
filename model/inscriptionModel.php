@@ -6,10 +6,7 @@ require_once "bdd.php";
 class inscriptionModel extends Bdd
 {
 
-/*   public function __construct()
-  {
 
-  } */
 
   public function getId($nom, $prenom, $mail){
     $sql = $this->getBdd()->prepare("SELECT id_user FROM table1 WHERE nom_usage = :nom, prenom = :prenom, email = :mail");
