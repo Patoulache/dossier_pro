@@ -13,5 +13,5 @@ CONNECTION = {
       document.getElementById('btnconnection').disabled = true;
     }
   }
-}
+};
 CONNECTION.INIT();

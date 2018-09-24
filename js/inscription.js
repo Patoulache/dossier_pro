@@ -28,7 +28,7 @@ EMAIL = {
 				EMAIL.tohide.classList.remove('hidden');
 	    } else {  // on ne connait pas cette adresse
 	      CONTROLE.ColorBorder(EMAIL.email1,"black");
-				EMAIL.tohide.classList.add('hidden')
+				EMAIL.tohide.classList.add('hidden');
 				EMAIL.emailUsable = true;
 	    }
 
