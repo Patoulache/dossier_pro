@@ -38,7 +38,7 @@ if($_GET){
       case 'getpage':
         include_once "controler/setupDossierProControl.php";
         $obj = new setupDossierControl;
-        $lesinfosperso = $obj->getUserPersonnalInfos();
+        $lesinfos = $obj->getAllInfos();
         include_once "vue/dossierPro.php";
         break;
 

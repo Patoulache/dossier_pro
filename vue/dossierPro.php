@@ -1,7 +1,7 @@
 <?php
 
 function getPlacholder($val){
-  return (isset($val) ? "value=\"".$val."\"" : "value=\"\"");
+  return (isset($val) ? "value=\"".ucfirst($val)."\"" : "value=\"\"");
 }
 
  ?>
@@ -37,10 +37,10 @@ function getPlacholder($val){
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" <?php echo getPlacholder($lesinfosperso['nom_naissance']);?> id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfosperso["nom_usage"]);?> id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfosperso['prenom']);?> id="prenom" placeholder="Entrez votre prénom ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfosperso['adresse']);?> id="adresse" placeholder="Entrez votre adresse ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" placeholder="Entrez votre prénom ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['adresse']);?> id="adresse" placeholder="Entrez votre adresse ici." required></p>
 
             </div>
         </div>
@@ -49,7 +49,7 @@ function getPlacholder($val){
             <h2 class="col-12">Titre professionnel visé</h2>
             <div class="col-12 border-top border-bottom">
 
-            <input class="col-10  marg-1" type="text" id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
+            <input class="col-10  marg-1" type="text" <?php echo getPlacholder($lesinfos['titre_pro_vise']);?> id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
             <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
@@ -270,7 +270,7 @@ function getPlacholder($val){
         <div>
             <h2 class="col-12">Déclaration sur l'honneur</h2>
             <p class="col-12">
-                Je soussigné(e)[prénom et nom] <input type="text" placeholder="Cliquez ici pour taper du texte"><br>
+                Je soussigné(e)[prénom et nom] <input type="text" value="<?php echo ucfirst($lesinfosperso["nom_usage"]). ' '.ucfirst($lesinfosperso["prenom"]) ?>" placeholder="Cliquez ici pour taper du texte"><br>
                 déclare sur l'honneur que les renseignements fournis dans ce dossier sont exacts et que je<br>
                 suis l'auteur(e) des réalisations jointes.
             </p>
