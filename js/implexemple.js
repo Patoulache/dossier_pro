@@ -14,14 +14,17 @@ FORMAT = {
     },
     
     ciblage : function(e) {
+        var papa = FORMAT.div;
+        //console.log(papa);
         var cible = e.target.getAttribute("data-exemple"); // récupere nom de l'attribut
+        // suppression form si champ vide alors que le form existe
         if (e.target.value === "") {
-            var papa = document.querySelector("#".concat(cible));
-            FORMAT.div.removeChild(papa);
-            console.log("perdu");
-        };
+            var enfant = document.querySelector("#".concat(cible));
+            papa.removeChild(enfant);
+        
+        }
         // check si formulaires existent deja, sinon elle les cree
-        if (document.querySelector("input[data-example="+"\""+cible+"\"]") === null) {
+        else if (document.querySelector("input[data-example="+"\""+cible+"\"]") === null) {
             FORMAT.exemple(cible);
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
             // cible le bon input dans lequel on injecte la valeur rentree dans le sommaire 
@@ -37,22 +40,20 @@ FORMAT = {
     exemple : function(cible) {
         var regex = /\d/g;
         var rep = cible.match(regex);
-        var newDiv = document.createElement('div');
-        newDiv.id = cible;
         var cop = FORMAT.div.children[0].cloneNode(true);
-        var cop1 = FORMAT.div.children[1].cloneNode(true);
-        var cop2 = FORMAT.div.children[2].cloneNode(true);
-        var cop3 = cop.children;
-        var cop4 = cop1.children;
-        cop3[0].innerHTML = cop3[0].innerHTML.replace("1", rep[0]);
-        cop4[1].setAttribute("data-example", cible);
-        cop4[0].innerHTML = cop4[0].innerHTML.replace("1", rep[1]);
-        FORMAT.div.appendChild(newDiv);
-        newDiv.append(cop, cop1, cop2);
+        cop.id = cible;
+        var cop1 = cop.children[0].children;
+        var cop2 = cop.children[1].children;
+        cop1[0].innerHTML = cop1[0].innerHTML.replace("1", rep[0]);
+        cop2[1].setAttribute("data-example", cible);
+        cop2[0].innerHTML = cop2[0].innerHTML.replace("1", rep[1]);
+        FORMAT.div.appendChild(cop);
 
     },
-    // test suppression form si erreur
-
+    
+    indexage : function() {
+        
+    }
 }
 
 window.onload = FORMAT.init();
