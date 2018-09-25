@@ -270,7 +270,7 @@ function getPlacholder($val){
         <div>
             <h2 class="col-12">Déclaration sur l'honneur</h2>
             <p class="col-12">
-                Je soussigné(e)[prénom et nom] <input type="text" value="<?php echo ucfirst($lesinfos["nom_usage"]). ' '.ucfirst($lesinfos["prenom"]) ?>" placeholder="Cliquez ici pour taper du texte"><br>
+                Je soussigné(e)[prénom et nom] <input size="52" type="text" value="<?php echo ucfirst($lesinfos["nom_usage"]). ' '.ucfirst($lesinfos["prenom"]) ?>" placeholder="Cliquez ici pour taper du texte"><br>
                 déclare sur l'honneur que les renseignements fournis dans ce dossier sont exacts et que je<br>
                 suis l'auteur(e) des réalisations jointes.
             </p>
