@@ -10,6 +10,7 @@ body {
     width: 21cm;
     margin: auto;
     border: 0 auto;
+    --littlepinkarrow: #c60093;
     --couleur-bandeau: #d60093;
     --borderBlue: #3daee9;
 }
@@ -114,7 +115,7 @@ textarea{
   padding: 0;
 }
 .littlepinkarrow {
-  color: var(--couleur);
+  color: var(--littlepinkarrow);
 }
 .blackColor {
   color: black;
