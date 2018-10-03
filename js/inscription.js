@@ -1,4 +1,4 @@
-EMAIL = {
+const EMAIL = {
 
 	tohide : document.getElementById('emailtohide'),
 	regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -106,7 +106,7 @@ INITIALISATION = {
 		document.querySelector('footer').style = "display: NONE";
 	},
 	NON: function(){
-		alert("même joueur, joue encore !")
+		alert("même joueur, joue encore !");
 	},
 
   LeReste: function(){
