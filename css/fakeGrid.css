@@ -113,3 +113,9 @@ textarea{
   resize: none;
   padding: 0;
 }
+.littlepinkarrow {
+  color: var(--couleur);
+}
+.blackColor {
+  color: black;
+}

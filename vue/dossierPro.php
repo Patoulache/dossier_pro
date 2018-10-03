@@ -9,12 +9,12 @@ function getPlacholder($val){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/fakeGrid.css">
+    <link rel="stylesheet" href="./css/fakeGrid.css">
     <title>Dossier Professionnel coda 2018</title>
 </head>
 <body>
     <header class="row border-bottom">
-      <img class="col-3" src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+      <img class="col-3" src="./image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
       <!-- <div class="header"> -->
         <h1>Dossier Professionnel <sup>(DP)</sup></h1>
       <!-- </div> -->
@@ -90,11 +90,11 @@ function getPlacholder($val){
                 <h4 class="col-12">Pour prendre sa décision, le jury dispose :</h4>
 
                 <section class="col-12">
-                    <ol>
-                        <li><span>Des résultats de la mise en situation professionnelle complétés, éventuellement, du questionnaire professionnel ou de l’entretien professionnel ou de l’entretien technique ou du questionnement à partir de productions.</span></li>
-                        <li><span>Du <b>Dossier Professionnel</b> (DP) dans lequel le candidat a consigné les preuves de sa pratique professionnelle</span></li>
-                        <li><span>Des résultats des évaluations passées en cours de formation lorsque le candidat évalué est issu d’un parcours de formation</span></li>
-                        <li><span>de l’entretien final (dans le cadre de la session titre).</span></li>
+                    <ol class="littlepinkarrow">
+                        <li><span class="blackColor">Des résultats de la mise en situation professionnelle complétés, éventuellement, du questionnaire professionnel ou de l’entretien professionnel ou de l’entretien technique ou du questionnement à partir de productions.</span></li>
+                        <li><span class="blackColor">Du <b>Dossier Professionnel</b> (DP) dans lequel le candidat a consigné les preuves de sa pratique professionnelle</span></li>
+                        <li><span class="blackColor">Des résultats des évaluations passées en cours de formation lorsque le candidat évalué est issu d’un parcours de formation</span></li>
+                        <li><span class="blackColor">de l’entretien final (dans le cadre de la session titre).</span></li>
                     </ol>
                     <aside>[Arrêté du 22 décembre 2015, relatif aux conditions de délivrance des titres professionnels du ministère chargé de l’Emploi]</aside>
                 </section>
@@ -103,19 +103,19 @@ function getPlacholder($val){
 
                 <section class="col-12">
                     <p>
-                    <span>▶</span>Pour chaque activité-type du titre visé, un à trois exemples de pratique professionnelle ;
+                    <span class="littlepinkarrow">▶</span>Pour chaque activité-type du titre visé, un à trois exemples de pratique professionnelle ;
                     </p>
                     <p>
-                    <span>▶</span>un tableau à renseigner si le candidat souhaite porter à la connaissance du jury la détention d’un titre, d’un diplôme, d’un certificat de qualification professionnelle (CQP) ou des attestations de formation ;
+                    <span class="littlepinkarrow">▶</span>un tableau à renseigner si le candidat souhaite porter à la connaissance du jury la détention d’un titre, d’un diplôme, d’un certificat de qualification professionnelle (CQP) ou des attestations de formation ;
                     </p>
                     <p>
-                    <span>▶</span>une déclaration sur l’honneur à compléter et à signer ;
+                    <span class="littlepinkarrow">▶</span>une déclaration sur l’honneur à compléter et à signer ;
                     </p>
                     <p>
-                    <span>▶</span>des documents illustrant la pratique professionnelle du candidat (facultatif)
+                    <span class="littlepinkarrow">▶</span>des documents illustrant la pratique professionnelle du candidat (facultatif)
                     </p>
                     <p>
-                    <span>▶</span>des annexes, si nécessaire.
+                    <span class="littlepinkarrow">▶</span>des annexes, si nécessaire.
                     </p>
                 </section>
             </div>
@@ -127,7 +127,7 @@ function getPlacholder($val){
         </div>
         <div id="lien">
             <p class="marg-1">
-                <span>◢</span> <a href="http://travail-emploi.gouv.fr/titres-professionnels" target="_blank">http://travail-emploi.gouv.fr/titres-professionnels</a>
+                <span class="littlepinkarrow">◢</span> <a href="http://travail-emploi.gouv.fr/titres-professionnels" target="_blank">http://travail-emploi.gouv.fr/titres-professionnels</a>
             </p>
         </div>
         <div class="row sommaire">
@@ -137,22 +137,22 @@ function getPlacholder($val){
                 <div class="row"><textarea data-nom="pratiquePro" data-nombre="0" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 1"></textarea>
                 <label class="col-1">p.</label><input class="col-1" type="text"></div>
 
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex1" placeholder="Intitulé de l’exemple n° 1">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex2" placeholder="Intitulé de l’exemple n° 2">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                    <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex3" placeholder="Intitulé de l’exemple n° 3">
                     <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
             <div class="col-12">
                 <div class="row"><textarea data-nom="pratiquePro" data-nombre="1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"></textarea>
                 <label class="col-1" for="">p.</label><input class="col-1" type="text"></div>
 
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 1">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex1" placeholder="Intitulé de l’exemple n° 1">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 2">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex2" placeholder="Intitulé de l’exemple n° 2">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
-                <div class="row"><span class="col-1 marg-1">▶</span><input class="col-8"type="text" placeholder="Intitulé de l’exemple n° 3">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex3" placeholder="Intitulé de l’exemple n° 3">
                 <label class="col-1">p.</label><input class=" col-1" type="text"></div>
             </div>
 
@@ -173,38 +173,39 @@ function getPlacholder($val){
       </div>
 
         <div class="col-12 activtype">
+            <div id="act1ex1">
                 <div class="row"><label class="col-5"for="">Activité-type 1 </label>
                 <textarea data-nom="pratiquePro" data-nombre="0" class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"></textarea></div>
+                <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
+                <input class="col-7" type="text"  data-example="act1ex1" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
-                <div class="row"><label class="col-5">Exemple n°1 <span>▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+                <ol class="col-12">
+                    <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
+                    <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
+                    <li>Précisez les moyens utlisés :</li>
+                    <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
-            <ol class="col-12">
-                <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                    <li class="col-12">Avec qui avez-vous travaillé ?</li>
+                    <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
-                <li>Précisez les moyens utlisés :</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                    <li class="col-12">Contexte</li>
+                    <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
+                    <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
+                    <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
+                    <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
+                    <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
+                    <span class="col-1">Du</span>
+                    <input class="col-3"type="date" placeholder="Cliquez ici">
+                    <span class="col-1">au</span>
+                    <input class="col-3"type="date" placeholder="Cliquez ici">
 
-                <li class="col-12">Avec qui avez-vous travaillé ?</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-
-                <li class="col-12">Contexte</li>
-                <label class="col-8">Nom de l'entreprise, organisme ou association<span>▶</span></label>
-                <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
-                <label class="col-5">Chantier, atelier, service <span>▶</span></label>
-                <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
-                <label class="col-4">Période d'exercice <span>▶</span></label>
-                <span class="col-1">Du</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-                <span class="col-1">au</span>
-                <input class="col-3"type="date" placeholder="Cliquez ici">
-
-                <li class="col-12">Informations complémentaires (facultatif)</li>
-                <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
-            </ol>
+                    <li class="col-12">Informations complémentaires (facultatif)</li>
+                    <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+                </ol>
+            </div>
         </div>
+
         <div>
             <h2 class="col-12">Titre, diplômes, CQP, attestations de formation</h2>
             <p>(facultatif)</p>
@@ -312,5 +313,6 @@ function getPlacholder($val){
     </form>
     <script src="js/biblio.js" charset="utf-8"></script>
     <script src="js/dossierpro.js" charset="utf-8"></script>
+    <script src="js/implexemple.js" charset="utf-8"></script>
 </body>
 </html>
