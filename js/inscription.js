@@ -97,7 +97,20 @@ BUTTON = {
 
 INITIALISATION = {
 
-  INIT: function(){
+	INIT: function(){
+		document.querySelector('#BTNoui').addEventListener("click",INITIALISATION.LeReste);
+		document.querySelector('#BTNnon').addEventListener("click",INITIALISATION.NON);
+	},
+
+	HIDDEFooter: function(){
+		document.querySelector('footer').style = "display: NONE";
+	},
+	NON: function(){
+		alert("même joueur, joue encore !")
+	},
+
+  LeReste: function(){
+		INITIALISATION.HIDDEFooter();
     EMAIL.INIT();
     PASSWORD.INIT();
 		BUTTON.INIT();
