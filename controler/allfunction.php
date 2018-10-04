@@ -3,11 +3,6 @@
  */
 class Allfunction
 {
-
-protected function __construct()
-  {
-
-  }
   protected function ToJson($t){
     return json_encode($t);
   }

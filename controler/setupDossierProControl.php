@@ -28,16 +28,30 @@ class setupDossierControl
       $activity = $this->leModel->getLesActivitys($this->lesInfos['titre_pro_vise']);
       $act = [];
       foreach ($activity as $value) {
-        array_push($act,$value);
+        array_push($act,$value[0]);
       }
       $this->lesInfos['activity'] = $act;
     }
+  }
+
+  private function LesQuestionsDesActivity(){
+    $reponse = [];
+    foreach ($this->lesInfos['activity'] as $activ) {
+      $tem = [];
+      $rep = $this->leModel->getExempleActivity($activ);
+      foreach ($rep as $val) {
+        array_push($tem, $val[0]);
+      }
+      array_push($reponse, $tem);
+    }
+    $this->lesInfos['exemples'] = $reponse;
   }
 
   public function getAllInfos(){
     $this->getUserPersonnalInfos();
     $this->getInfoTitrePro();
     $this->getActivity();
+    $this->LesQuestionsDesActivity();
     return $this->lesInfos;
   }
 }

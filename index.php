@@ -35,10 +35,12 @@ if($_GET){
         $obj->addId();
         break;
 
+// ici on créer la page de rendu
       case 'getpage':
         include_once "controler/setupDossierProControl.php";
         $obj = new setupDossierControl;
         $lesinfos = $obj->getAllInfos();
+        var_dump($lesinfos['exemples']);
         include_once "vue/dossierPro.php";
         break;
 

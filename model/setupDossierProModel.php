@@ -26,7 +26,15 @@ class setupDossierModel extends Bdd
     $sql = $this->getBdd()->prepare('SELECT activite_type FROM table3 WHERE titre_pro_vise = :titre');
     $sql->bindparam(":titre", $titre);
     $sql->execute();
-    $rep = $sql->fetchAll();
+    $rep = $sql->fetchAll(PDO::FETCH_NUM);
+    return $rep;
+  }
+  function getExempleActivity($act){
+    $sql = $this->getBdd()->prepare('SELECT exemples FROM table4 WHERE activite_type = :act AND id_user= :id');
+    $sql->bindparam(":act",$act);
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetchAll(PDO::FETCH_NUM);
     return $rep;
   }
 }
