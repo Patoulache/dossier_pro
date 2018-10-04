@@ -39,7 +39,9 @@ if($_GET){
         include_once "controler/setupDossierProControl.php";
         $obj = new setupDossierControl;
         $lesinfos = $obj->getAllInfos();
+
         (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
+
         include_once "vue/dossierPro.php";
         break;
 

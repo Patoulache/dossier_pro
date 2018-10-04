@@ -37,5 +37,13 @@ class setupDossierModel extends Bdd
     $rep = $sql->fetchAll(PDO::FETCH_NUM);
     return $rep;
   }
+  function getInfosActivity($exemple){
+    $sql = $this->getBdd()->prepare('SELECT question1, question2, question3, question4, question5 FROM table5 WHERE exemple = :exemple AND id_user= :id');
+    $sql->bindparam(":exemple",$exemple);
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetchAll(PDO::FETCH_NUM);
+    return $rep;
+  }
 }
  ?>

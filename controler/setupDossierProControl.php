@@ -46,12 +46,33 @@ class setupDossierControl
     }
     $this->lesInfos['exemples'] = $reponse;
   }
+  private function infosActivity(){
+    $reponse = [];
+    for ($a=0; $a< count($this->lesInfos['exemples']);$a++){
+      $tem = [];
+      for ($b=0;$b<count($this->lesInfos['exemples'][$a]);$b++){
+        $t = [];
+        $rep = $this->leModel->getInfosActivity($this->lesInfos['exemples'][$a][$b]);
+        for ($i=0;$i<count($rep[0]);$i++) {
+          // var_dump($rep[0][$i]);
+          array_push($t,$rep[0][$i]);
+        }
+        array_push($tem, $t);
+      }
+      array_push($reponse, $tem);
+    }
+    var_dump($reponse[0][0][0]);
+    $this->lesInfos['infosactivity'] = $reponse;
+  }
+
 
   public function getAllInfos(){
     $this->getUserPersonnalInfos();
     $this->getInfoTitrePro();
     $this->getActivity();
     $this->LesQuestionsDesActivity();
+    $this->infosActivity();
+
     return $this->lesInfos;
   }
 }

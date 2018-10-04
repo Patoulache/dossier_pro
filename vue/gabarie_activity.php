@@ -14,27 +14,27 @@
 
         <ol class="col-12">
             <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
-            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"><?php echo $lesinfos['infosactivity'][$i][$j][0];?></textarea>
 
             <li>Précisez les moyens utlisés :</li>
-            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"><?php echo $lesinfos['infosactivity'][$i][$j][1];?></textarea>
 
             <li class="col-12">Avec qui avez-vous travaillé ?</li>
-            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"><?php echo $lesinfos['infosactivity'][$i][$j][2];?></textarea>
 
             <li class="col-12">Contexte</li>
             <label class="col-8">Nom de l'entreprise, organisme ou association<span class="littlepinkarrow">▶</span></label>
-            <input class="col-4"type="text" placeholder="Cliquez ici pour taper du texte.">
+            <input class="col-4"type="text" <?php echo getPlacholder($lesinfos['infosactivity'][$i][$j][3]);?> placeholder="Cliquez ici pour taper du texte.">
             <label class="col-5">Chantier, atelier, service <span class="littlepinkarrow">▶</span></label>
             <input class="col-7"type="text" placeholder="Cliquez ici pour taper du texte">
             <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
             <span class="col-1">Du</span>
-            <input class="col-3"type="date" placeholder="Cliquez ici">
+            <input class="col-3"type="date">
             <span class="col-1">au</span>
-            <input class="col-3"type="date" placeholder="Cliquez ici">
+            <input class="col-3"type="date">
 
             <li class="col-12">Informations complémentaires (facultatif)</li>
-            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
+            <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"><?php echo $lesinfos['infosactivity'][$i][$j][4];?></textarea>
         </ol>
     </div>
   <?php endfor;?>
