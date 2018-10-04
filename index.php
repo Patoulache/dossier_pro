@@ -41,7 +41,7 @@ if($_GET){
         $lesinfos = $obj->getAllInfos();
 
         (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
-        var_dump($lesinfos['question'][0][0][0]);
+
         include_once "vue/dossierPro.php";
         break;
 
