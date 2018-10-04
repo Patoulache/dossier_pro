@@ -45,5 +45,13 @@ class setupDossierModel extends Bdd
     $rep = $sql->fetchAll(PDO::FETCH_NUM);
     return $rep;
   }
+  function getElements($question){
+    $sql = $this->getBdd()->prepare('SELECT chant_at_serv, date_debut, date_fin FROM table6 WHERE question4 = :question AND id_user = :id');
+    $sql->bindparam(":question",$question);
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetchAll(PDO::FETCH_NUM);
+    return $rep;
+  }
 }
  ?>

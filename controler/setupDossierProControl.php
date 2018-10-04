@@ -61,8 +61,24 @@ class setupDossierControl
       }
       array_push($reponse, $tem);
     }
-    var_dump($reponse[0][0][0]);
     $this->lesInfos['infosactivity'] = $reponse;
+  }
+  private function elements_quatre(){
+    $reponse = [];
+    for ($i=0; $i< count($this->lesInfos['infosactivity']);$i++){
+      $a = [];
+      for($j=0;$j<count($this->lesInfos['infosactivity'][$i]);$j++) {
+        $tem = [];
+        $rep = $this->leModel->getElements($this->lesInfos['infosactivity'][$i][$j][3]);
+        for ($k=0;$k<count($rep);$k++){
+          array_push($tem, $rep[$k]);
+        }
+        array_push($a, $tem);
+      }
+      array_push($reponse, $a);
+    }
+    $this->lesInfos['question'] = $reponse;
+    // var_dump($this->lesInfos['question']);
   }
 
 
@@ -72,7 +88,7 @@ class setupDossierControl
     $this->getActivity();
     $this->LesQuestionsDesActivity();
     $this->infosActivity();
-
+    $this->elements_quatre();
     return $this->lesInfos;
   }
 }

@@ -1,3 +1,7 @@
+<?php function getPlacholder($val){
+  return (isset($val) ? "value=\"".ucfirst($val)."\"" : "value=\"\"");
+} ?>
+
 <?php ob_start(); ?>
 <div id="act1ex1">
     <div class="row"><label class="col-5"for="">Activité-type 1 </label>

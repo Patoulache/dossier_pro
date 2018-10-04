@@ -14,6 +14,9 @@ body {
     --couleur-bandeau: #d60093;
     --borderBlue: #3daee9;
 }
+.clearmarge{
+  clear:both;
+}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
