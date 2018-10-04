@@ -29,9 +29,9 @@
             <input class="col-7"type="text" <?php echo getPlacholder($lesinfos['question'][$i][$j][0][0]);?> placeholder="Cliquez ici pour taper du texte">
             <label class="col-4">Période d'exercice <span class="littlepinkarrow">▶</span></label>
             <span class="col-1">Du</span>
-            <input class="col-3"type="date" <?php echo getPlacholder($lesinfos['question'][$i][$j][0][1]);?>
+            <input class="col-3"type="date" <?php echo getPlacholder($lesinfos['question'][$i][$j][0][1]);?>>
             <span class="col-1">au</span>
-            <input class="col-3"type="date" <?php echo getPlacholder($lesinfos['question'][$i][$j][0][2]);?>
+            <input class="col-3"type="date" <?php echo getPlacholder($lesinfos['question'][$i][$j][0][2]);?>>
 
             <li class="col-12">Informations complémentaires (facultatif)</li>
             <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"><?php echo $lesinfos['infosactivity'][$i][$j][4];?></textarea>

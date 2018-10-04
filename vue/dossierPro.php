@@ -1,10 +1,4 @@
-<?php
 
-// function getPlacholder($val){
-//   return (isset($val) ? "value=\"".ucfirst($val)."\"" : "value=\"\"");
-// }
-
- ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
