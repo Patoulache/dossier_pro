@@ -1,6 +1,7 @@
 <?php function getPlacholder($val){
-  return (isset($val) ? "value=\"".ucfirst($val)."\"" : "value=\"\"");
+  return ($val ? "value=\"".ucfirst($val)."\"" : "value=\"\"");
 } ?>
+
 <?php ob_start(); ?>
 <?php for ($i=0;$i< count($lesinfos['activity']);$i ++): ?>
   <?php for ($j=0;$j< count($lesinfos['exemples'][$i]);$j ++): ?>

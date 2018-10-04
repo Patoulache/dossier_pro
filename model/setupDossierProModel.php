@@ -53,5 +53,26 @@ class setupDossierModel extends Bdd
     $rep = $sql->fetchAll(PDO::FETCH_NUM);
     return $rep;
   }
+  function getTable7(){
+    $sql = $this->getBdd()->prepare('SELECT diplome, organisme, `date` FROM table7 WHERE id_user = :id');
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetchAll(PDO::FETCH_ASSOC);
+    return $rep;
+  }
+  function getTable8(){
+    $sql = $this->getBdd()->prepare('SELECT texte1 FROM table8 WHERE id_user = :id');
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetchAll(PDO::FETCH_ASSOC);
+    return $rep;
+  }
+  function getTable9(){
+    $sql = $this->getBdd()->prepare('SELECT texte2 FROM table9 WHERE id_user = :id');
+    $sql->bindparam(":id",$_SESSION['id_user']);
+    $sql->execute();
+    $rep = $sql->fetch(PDO::FETCH_ASSOC);
+    return $rep;
+  }
 }
  ?>

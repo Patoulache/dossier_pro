@@ -78,7 +78,28 @@ class setupDossierControl
       array_push($reponse, $a);
     }
     $this->lesInfos['question'] = $reponse;
-    // var_dump($this->lesInfos['question']);
+  }
+  private function table7(){
+    $reponse = [];
+    $rep = $this->leModel->getTable7();
+    foreach ($rep as $value) {
+      $t = [$value['diplome'],$value['organisme'],$value['date']];
+      array_push($reponse, $t);
+    }
+    $this->lesInfos['table7'] = $reponse;
+  }
+  private function table8(){
+    $reponse = [];
+    $rep = $this->leModel->getTable8();
+    foreach ($rep as $value) {
+      array_push($reponse, $value['texte1']);
+    }
+    $this->lesInfos['table8'] = $reponse;
+  }
+
+  private function table9(){
+    $rep = $this->leModel->getTable9();
+    $this->lesInfos['table9'] = $rep['texte2'];
   }
 
 
@@ -89,6 +110,9 @@ class setupDossierControl
     $this->LesQuestionsDesActivity();
     $this->infosActivity();
     $this->elements_quatre();
+    $this->table7();
+    $this->table8();
+    $this->table9();
     return $this->lesInfos;
   }
 }

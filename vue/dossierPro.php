@@ -181,54 +181,54 @@
                 <tr>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][0][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][0][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][0][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][1][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][1][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][1][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][2][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][2][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][2][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][3][0]);?>type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][3][1]);?>type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][3][2]);?>type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][4][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][4][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][4][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][5][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][5][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][5][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][6][0]);?>type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][6][1]);?>type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][6][2]);?>type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][7][0]);?>type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][7][1]);?>type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][7][2]);?>type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][8][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][8][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][8][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Cliquez ici"></td>
-                    <td><input type="text" placeholder="Cliquez ici pour taper du texte"></td>
-                    <td><input type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][9][0]);?> type="text" placeholder="Cliquez ici"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][9][1]);?> type="text" placeholder="Cliquez ici pour taper du texte"></td>
+                    <td><input <?php echo getPlacholder($lesinfos['table7'][9][2]);?> type="date" placeholder="Cliquez ici pour sélectionner une date"></td>
                 </tr>
             </table>
         </div>
@@ -257,21 +257,21 @@
             <p>(facultatif)</p>
             <h3 class="col-12">Intitulé</h3>
 
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
-            <input class="col-12" type="text" placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][0]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][1]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][2]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][3]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][4]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][5]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][6]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][7]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][8]);?> placeholder="Cliquez ici pour taper du texte">
+            <input class="col-12" type="text" <?php echo getPlacholder($lesinfos['table8'][9]);?> placeholder="Cliquez ici pour taper du texte">
         </div>
         <div>
             <h2 class="col-12">Annexes</h2>
             <p class="col-12">(Si le RC le prévoit)</p>
-            <textarea class="col-12" name="" id="" cols="30" rows="10"></textarea>
+            <textarea class="col-12" name="" id="" cols="30" rows="10"> <?php echo $lesinfos['table9'];?> </textarea>
         </div>
         <button type="submit">Valider</button>
     </form>

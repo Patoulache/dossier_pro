@@ -42,7 +42,7 @@ if($_GET){
 
         (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
 
-        include_once "vue/dossierPro.php";
+        include_once "vue/dossierPro.php";        
         break;
 
       case 'autocomplet':
