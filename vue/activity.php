@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <div id="act1ex1">
     <div class="row"><label class="col-5"for="">Activité-type 1 </label>
     <textarea data-nom="pratiquePro" data-nombre="0" class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"><?php echo $lesinfos['activity'][0];?></textarea></div>
@@ -29,3 +30,4 @@
         <textarea class="col-12" name="" id="" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
     </ol>
 </div>
+<?php $contenu = ob_get_clean(); ?>

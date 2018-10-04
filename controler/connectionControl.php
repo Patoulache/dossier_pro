@@ -29,7 +29,9 @@ class Connection
        $_SESSION['token'] = $token;
 
        $obj->updateToken($this->mail,$token);
+       return true;
      }
+     return false;
     }// !empty()
   }
 }
