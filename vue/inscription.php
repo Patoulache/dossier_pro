@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>inscription</title>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
@@ -50,6 +50,13 @@
         </table>
       </form>
     </main>
+    <footer>
+      <div id="rgpd" class="">
+        <p>nous récoltons vos informations dans le seul bute de répondre au service</p>
+        <button id="BTNoui" type="button" class="vert" name="ok">biensûr, pas de problème sinon je ne serais pas là</button>
+        <button id="BTNnon" type="button" class="vert" name="non">non merci</button>
+      </div>
+    </footer>
     <script src="js/biblio.js" charset="utf-8"></script>
     <script src="js/inscription.js" charset="utf-8"></script>
   </body>

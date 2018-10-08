@@ -1,4 +1,5 @@
-EMAIL = {
+const EMAIL = {
+
 	tohide : document.getElementById('emailtohide'),
 	regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 	email1 : document.getElementById("email1"),
@@ -27,7 +28,7 @@ EMAIL = {
 				EMAIL.tohide.classList.remove('hidden');
 	    } else {  // on ne connait pas cette adresse
 	      CONTROLE.ColorBorder(EMAIL.email1,"black");
-				EMAIL.tohide.classList.add('hidden')
+				EMAIL.tohide.classList.add('hidden');
 				EMAIL.emailUsable = true;
 	    }
 
@@ -38,13 +39,13 @@ EMAIL = {
     if (CONTROLE.AreTheSame(EMAIL.email1.value, EMAIL.email2.value) && EMAIL.emailUsable){
       EMAIL.yes_no = true;
       CONTROLE.ColorBorder(EMAIL.email2,"black");
-      EMAIL.checkUsed;
+      EMAIL.checkUsed();
     }else{
       CONTROLE.ColorBorder(EMAIL.email2, "red");
       EMAIL.yes_no = false;
     }
   }
-}
+};
 
 PASSWORD = {
 	regex : /[\wéèàùç#!@]{8,20}/,
@@ -77,7 +78,7 @@ PASSWORD = {
       CONTROLE.ColorBorder(PASSWORD.pass2,"red");
     }
   }
-}
+};
 
 //si tout est valide , le BUTTON passe en clickable
 BUTTON = {
@@ -92,14 +93,27 @@ BUTTON = {
 			document.getElementById('BTNinscrip').disabled = true;
 		}
 	}
-}
+};
 
 INITIALISATION = {
 
-  INIT: function(){
+	INIT: function(){
+		document.querySelector('#BTNoui').addEventListener("click",INITIALISATION.LeReste);
+		document.querySelector('#BTNnon').addEventListener("click",INITIALISATION.NON);
+	},
+
+	HIDDEFooter: function(){
+		document.querySelector('footer').style = "display: NONE";
+	},
+	NON: function(){
+		alert("même joueur, joue encore !");
+	},
+
+  LeReste: function(){
+		INITIALISATION.HIDDEFooter();
     EMAIL.INIT();
     PASSWORD.INIT();
 		BUTTON.INIT();
   }
-}
+};
 INITIALISATION.INIT();

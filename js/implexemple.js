@@ -7,12 +7,12 @@ FORMAT = {
         FORMAT.nameEx = document.querySelectorAll("input[data-exemple]");
         FORMAT.nameEx.forEach(FORMAT.setListener);
     },
-    
+
     // ajout d'ecouteurs sur les inputs
     setListener : function(el) {
         el.addEventListener("focusout", FORMAT.ciblage);
     },
-    
+
     ciblage : function(e) {
         var papa = FORMAT.div;
         //console.log(papa);
@@ -22,20 +22,20 @@ FORMAT = {
             var enfant = document.querySelector("#".concat(cible));
             papa.removeChild(enfant);
             FORMAT.indexage(cible);
-        
+
         }
         // check si formulaires existent deja, sinon elle les cree
         else if (document.querySelector("input[data-example="+"\""+cible+"\"]") === null) {
             FORMAT.exemple(cible);
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            // cible le bon input dans lequel on injecte la valeur rentree dans le sommaire 
+            // cible le bon input dans lequel on injecte la valeur rentree dans le sommaire
             champs.value = e.target.value; // actualise la valeur du nom de l'exemple
 
         } else { // actualisation simple du nom de l'exemple si formulaire deja present
             var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
             champs.value = e.target.value;
 
-        };
+        }
     },
     // copie le formulaire pour les exemples avec les bon numeros
     exemple : function(cible) {
@@ -70,7 +70,7 @@ FORMAT = {
                     papa.children[1].children[1].setAttribute("data-example", cible);
                     jumeau.value = papa.children[1].children[1].value;
                     suppr.value = null;
-                } else {};
+                } else {}
                 break;
             case cible == "act2ex1":
                 if (papa !== null && document.querySelector("#"+FORMAT.calcul(cible, 2)) === null) {
@@ -91,7 +91,7 @@ FORMAT = {
                     jumeau.value = papa.children[1].children[1].value;
                     suppr.value = papa1.children[1].children[1].value;
                     suppr1.value = null;
-                };
+                }
                 break;
             case cible == "act2ex2":
                 if (papa !== null) {
@@ -100,7 +100,7 @@ FORMAT = {
                     papa.children[1].children[1].setAttribute("data-example", cible);
                     jumeau.value = papa.children[1].children[1].value;
                     suppr.value = null;
-                } else {};
+                } else {}
                 break;
             default:
                 break;
@@ -118,6 +118,6 @@ FORMAT = {
             return cible;
         }
     }
-}
+};
 
 window.onload = FORMAT.init();

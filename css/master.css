@@ -69,3 +69,16 @@ input{
 .hidden{
   display: none;
 }
+footer{
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  /* left: 35%; */
+}
+footer button{
+  padding: 5px;
+  margin: 5px;
+}
+.vert{
+  background-color: #bada55;
+}

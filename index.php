@@ -19,8 +19,7 @@ if($_GET){
       case 'connection':
         include_once "controler/connectionControl.php";
         $obj = new connection();
-        $rep = $obj->askDataBase();
-        header('location: index.php?action=getpage');
+        ($obj->askDataBase()) ? header('location: index.php?action=getpage') : header('location: index.php');
         break;
 
       case 'validation':
@@ -35,11 +34,15 @@ if($_GET){
         $obj->addId();
         break;
 
+// ici on créer la page de rendu
       case 'getpage':
         include_once "controler/setupDossierProControl.php";
         $obj = new setupDossierControl;
-        $lesinfosperso = $obj->getUserPersonnalInfos();
-        include_once "vue/dossierPro.php";
+        $lesinfos = $obj->getAllInfos();
+
+        (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
+
+        include_once "vue/dossierPro.php";        
         break;
 
       case 'autocomplet':
