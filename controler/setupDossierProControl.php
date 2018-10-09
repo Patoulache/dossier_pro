@@ -37,47 +37,15 @@ class setupDossierControl
   private function LesQuestionsDesActivity(){
     $reponse = [];
     foreach ($this->lesInfos['activity'] as $activ) {
-      $tem = [];
-      $rep = $this->leModel->getExempleActivity($activ);
-      foreach ($rep as $val) {
-        array_push($tem, $val[0]);
+      $tmp = [];
+      $rep = $this->leModel->lesQuestions($activ);
+      foreach ($rep as $value) {
+        array_push($tmp, $value);
       }
-      array_push($reponse, $tem);
+      array_push($reponse, $tmp);
     }
-    $this->lesInfos['exemples'] = $reponse;
-  }
-  private function infosActivity(){
-    $reponse = [];
-    for ($a=0; $a< count($this->lesInfos['exemples']);$a++){
-      $tem = [];
-      for ($b=0;$b<count($this->lesInfos['exemples'][$a]);$b++){
-        $t = [];
-        $rep = $this->leModel->getInfosActivity($this->lesInfos['exemples'][$a][$b]);
-        for ($i=0;$i<count($rep[0]);$i++) {
-          // var_dump($rep[0][$i]);
-          array_push($t,$rep[0][$i]);
-        }
-        array_push($tem, $t);
-      }
-      array_push($reponse, $tem);
-    }
-    $this->lesInfos['infosactivity'] = $reponse;
-  }
-  private function elements_quatre(){
-    $reponse = [];
-    for ($i=0; $i< count($this->lesInfos['infosactivity']);$i++){
-      $a = [];
-      for($j=0;$j<count($this->lesInfos['infosactivity'][$i]);$j++) {
-        $tem = [];
-        $rep = $this->leModel->getElements($this->lesInfos['infosactivity'][$i][$j][3]);
-        for ($k=0;$k<count($rep);$k++){
-          array_push($tem, $rep[$k]);
-        }
-        array_push($a, $tem);
-      }
-      array_push($reponse, $a);
-    }
-    $this->lesInfos['question'] = $reponse;
+    $this->lesInfos['lesQuestions'] = $reponse;
+    var_dump($this->lesInfos['lesQuestions'][0][0]);
   }
   private function table7(){
     $reponse = [];
@@ -108,8 +76,6 @@ class setupDossierControl
     $this->getInfoTitrePro();
     $this->getActivity();
     $this->LesQuestionsDesActivity();
-    $this->infosActivity();
-    $this->elements_quatre();
     $this->table7();
     $this->table8();
     $this->table9();
