@@ -11,7 +11,7 @@
         <div class="row"><label class="col-5"for="">Activité-type <?php echo $i +1; ?></label>
         <textarea data-nom="pratiquePro" data-nombre="<?php echo $i; ?>" class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"><?php echo $lesinfos['activity'][$i];?></textarea></div>
         <div class="row"><label class="col-5">Exemple n°<?php echo ($j +1).' '; ?><span class="littlepinkarrow">▶</span></label>
-        <input class="col-7" type="text" <?php echo getPlacholder($lesinfos['lesQuestions'][$i]['activite_type']);?> data-example="<?php echo 'act'. $i +1 . 'ex' .$j +1;?>" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+        <input class="col-7" type="text" <?php echo getPlacholder($lesinfos['lesQuestions'][$i][$j]['activite_type']);?> data-example="<?php echo 'act'. $i +1 . 'ex' .$j +1;?>" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
         <ol class="col-12">
             <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>

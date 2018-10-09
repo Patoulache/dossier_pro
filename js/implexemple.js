@@ -1,18 +1,12 @@
 FORMAT = {
-    nameEx:"",
     div : document.querySelector(".activtype"),
 
     // Selectionne les inputs qui vont devenir des ecouteurs
     init : function() {
-        FORMAT.nameEx = document.querySelectorAll("input[data-exemple]");
-        FORMAT.nameEx.forEach(FORMAT.setListener);
+      document.querySelectorAll("input[data-exemple]").forEach((a) => a.addEventListener("focusout", FORMAT.ciblage));
     },
 
     // ajout d'ecouteurs sur les inputs
-    setListener : function(el) {
-        el.addEventListener("focusout", FORMAT.ciblage);
-    },
-
     ciblage : function(e) {
         var papa = FORMAT.div;
         //console.log(papa);
@@ -27,14 +21,12 @@ FORMAT = {
         // check si formulaires existent deja, sinon elle les cree
         else if (document.querySelector("input[data-example="+"\""+cible+"\"]") === null) {
             FORMAT.exemple(cible);
-            var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
+            document.querySelector("input[data-example="+"\""+cible+"\"]").value = e.target.value;
             // cible le bon input dans lequel on injecte la valeur rentree dans le sommaire
-            champs.value = e.target.value; // actualise la valeur du nom de l'exemple
+           // actualise la valeur du nom de l'exemple
 
         } else { // actualisation simple du nom de l'exemple si formulaire deja present
-            var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = e.target.value;
-
+            document.querySelector("input[data-example="+"\""+cible+"\"]").value = e.target.value;
         }
     },
     // copie le formulaire pour les exemples avec les bon numeros
