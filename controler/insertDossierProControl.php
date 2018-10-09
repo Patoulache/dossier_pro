@@ -1,5 +1,5 @@
 <?php
-require_once "model/insertDossierProModel.php";
+// require_once "model/insertDossierProModel.php";
 
 class InsertDossierControl {
 
@@ -8,14 +8,14 @@ class InsertDossierControl {
     
     public function __construct() {
         $this->test = json_decode($_POST['envoi']);
-        var_dump($this->test);
-        $this->insere = new insertDossierProModel();
+        print_r($this->test);
+        // $this->insere = new insertDossierProModel();
     }
 
-    private function insertTable1(){
+    // private function insertTable1(){
 
-        $this->insere->
-    }
+    //     $this->insere->
+    // }
 
 };
 

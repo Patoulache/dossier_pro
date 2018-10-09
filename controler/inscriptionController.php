@@ -47,7 +47,7 @@ class inscription
     if ($this->bdd->getId($this->nom, $this->prenom, $this->mail) == null){
       $this->bdd->insertId($this->nom, $this->prenom, $this->mail, $this->pass);
       $_SESSION["id"] = $this->bdd->getId($this->nom, $this->prenom, $this->mail);
-      require 'vue/dossierPro.html';
+      require 'vue/dossierPro.php';
     } else {
       require_once 'vue/inscription.php';
       echo "<script>alert('Vous êtes déjà inscrit!')</script>";
