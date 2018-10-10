@@ -45,7 +45,6 @@ class setupDossierControl
       array_push($reponse, $tmp);
     }
     $this->lesInfos['lesQuestions'] = $reponse;
-    var_dump($this->lesInfos['lesQuestions'][0][0]);
   }
   private function table7(){
     $reponse = [];
@@ -72,14 +71,18 @@ class setupDossierControl
 
 
   public function getAllInfos(){
-    $this->getUserPersonnalInfos();
-    $this->getInfoTitrePro();
-    $this->getActivity();
-    $this->LesQuestionsDesActivity();
-    $this->table7();
-    $this->table8();
-    $this->table9();
-    return $this->lesInfos;
+    if ($_SESSION['id-user'] != null){
+      $this->getUserPersonnalInfos();
+      $this->getInfoTitrePro();
+      $this->getActivity();
+      $this->LesQuestionsDesActivity();
+      $this->table7();
+      $this->table8();
+      $this->table9();
+      return $this->lesInfos;
+    } else {
+      header('location: index.php');
+    }
   }
 }
  ?>
