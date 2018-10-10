@@ -1,24 +1,60 @@
 <?php
-// require_once "model/insertDossierProModel.php";
+session_start();
+require_once "../model/insertDossierProModel.php";
 
-class InsertDossierControl {
+class InsertDossierProControl {
 
     private $test;
     private $insere;
     
     public function __construct() {
         $this->test = json_decode($_POST['envoi']);
-        print_r($this->test);
-        // $this->insere = new insertDossierProModel();
+        $this->insere = new insertDossierProModel();
+        $this->insere->rmrf();
+        $this->insertTable1();
+        $this->insertTable5();
+        $this->insertTable6();
+        $this->insertTable7();
+        $this->insertTable8();
+        $this->insertTable9();
+    
     }
 
-    // private function insertTable1(){
+    private function insertTable1(){
+        $this->insere->insertT1($this->test->table1);
+    }
+    private function insertTable5(){
 
-    //     $this->insere->
-    // }
+        foreach ($this->test->table5 as $value) {
+            $this->insere->insertT5($value);
+        }
+    }
 
+    private function insertTable6(){
+        for ($i=0; $i<count($this->test->table6); $i++) {
+            $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]);
+        }
+    }
+
+    private function insertTable7(){
+        foreach ($this->test->table7 as $value) {
+            $this->insere->insertT7($value);
+        }
+    }
+
+    private function insertTable8(){
+
+        foreach ($this->test->table8 as $value) {
+            $this->insere->insertT8($value);
+        }
+    }
+
+    private function insertTable9(){
+
+        $this->insere->insertT9($this->test->table9[0]);
+    }
 };
 
-$test = new InsertDossierControl();
+ $try = new InsertDossierProControl();
 
 ?>

@@ -37,7 +37,7 @@ if($_GET){
 // ici on créer la page de rendu
       case 'getpage':
         include_once "controler/setupDossierProControl.php";
-        $obj = new setupDossierControl;
+        $obj = new setupDossierControl();
         $lesinfos = $obj->getAllInfos();
 
         (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";

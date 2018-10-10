@@ -1,5 +1,6 @@
 INSERTION = {
 
+    tbl : [],
     params : {},
     grosTest : "",
 
@@ -19,8 +20,10 @@ INSERTION = {
     recupDonnees : function() {
         var selecDonnees = document.querySelectorAll("input#insertion, textarea#insertion, input.insertion");
         selecDonnees.forEach(INSERTION.triDonnees);
-        INSERTION.makeTbl(INSERTION.params['table5'], 7, 6);
-        // console.log(INSERTION.params['table5']);
+        INSERTION.makeTbl("table5", 7, 6);
+        INSERTION.makeTbl("table6", 3, 6);
+        INSERTION.makeTbl("table7", 3, 10);
+        INSERTION.makeTbl("table8", 1, 10);
         AJAX.Post(AJAX.ToJson(INSERTION.params), "controler/insertDossierProControl.php", "envoi=", INSERTION.test);
     },
     
@@ -30,18 +33,27 @@ INSERTION = {
     
     test : function(el) {
         INSERTION.grosTest = el;
+        INSERTION.params = {
+            table1 : [],
+            table5 : [],
+            table6 : [],
+            table7 : [],
+            table8 : [],
+            table9 : []
+        };
     },
 
-    makeTbl : function (el, delim, coeff) {
-        for (var i=delim, c = i*coeff; i<= c; i = i + delim){
-            if (i == 7){
-                console.log(el.slice(0,i));
+    makeTbl : function (nomTable, delim, coeff) {
+
+        for (var i=delim, c = i*coeff, j=0; i<= c; i = i + delim, j++){
+            if (i == delim){
+                INSERTION.tbl.push(INSERTION.params[nomTable].slice(0,i));
             } else {
-                console.log(el.slice(i,i*2));
+                INSERTION.tbl.push(INSERTION.params[nomTable].slice(i-delim,i));
             }
-
-        }
-
+        };
+        INSERTION.params[nomTable] = INSERTION.tbl;
+        INSERTION.tbl = [];        
     }
 };
 
