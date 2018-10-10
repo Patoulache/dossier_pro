@@ -31,10 +31,10 @@
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" placeholder="Entrez votre prénom ici." required></p>
-                <textarea cols="28" type="text" id="adresse" placeholder="Entrez votre adresse ici." required><?php echo $lesinfos['adresse'];?></textarea>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" placeholder="Entrez votre nom de naissance ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" placeholder="Entrez votre nom d'usage ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" placeholder="Entrez votre prénom ici."></p>
+                <textarea cols="28" type="text" id="adresse" placeholder="Entrez votre adresse ici."><?php echo $lesinfos['adresse'];?></textarea>
 
             </div>
         </div>
