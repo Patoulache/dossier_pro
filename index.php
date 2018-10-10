@@ -61,6 +61,9 @@ if($_GET){
         break;
       }
   }
+  if (isset($_GET['redirect'])) {
+    include_once 'vue/redirect.php';
+  }
 
   } else {
     include_once 'vue/connection.php';
