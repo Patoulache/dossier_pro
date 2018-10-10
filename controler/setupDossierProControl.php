@@ -71,7 +71,7 @@ class setupDossierControl
 
 
   public function getAllInfos(){
-    if ($_SESSION['id-user'] != null){
+    if ($_SESSION['id_user'] != null){
       $this->getUserPersonnalInfos();
       $this->getInfoTitrePro();
       $this->getActivity();
