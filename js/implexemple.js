@@ -39,8 +39,8 @@ FORMAT = {
         if (rep[0] == "2") {
             console.log(rep[0]);
             cop1[1].setAttribute("data-nombre", 1);
+            cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         };
-        cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         cop.id = cible;
         cop1[0].innerHTML = cop1[0].innerHTML.replace("1", rep[0]);
         cop2[1].setAttribute("data-example", cible);
@@ -110,10 +110,12 @@ FORMAT = {
         if (cible2 <= 3) {
             var cible3 = cible.replace(/\d$/, cible2);
             return cible3;
-        } else {
+        } else if(cible == "act1ex3") {
             var cible3 = cible.replace(/\d$/, 1);
             cible3 = cible3.replace(/\d/, 2);
             return cible3;
+        } else {
+            return cible;
         }
     }
 };
