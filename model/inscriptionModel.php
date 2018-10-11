@@ -50,8 +50,10 @@ class inscriptionModel extends Bdd
 
     ---------------
     Ceci est un mail automatique, Merci de ne pas y répondre.';
-
-    mail($destinataire, $sujet, $message, $entete) ; // Envoi du mail
+    
+    
+    //ici pour les tests on ne peut pas utiliser les modifieurs d'entete
+    mail($destinataire, $sujet, $message) ; // Envoi du mail
 
       }
     }

@@ -44,9 +44,10 @@ DOSSIER = {
 };
 
 PRATIQUEPRO = {
-  pratiquePro: document.querySelectorAll("textarea[data-nom='pratiquePro']"),
-
+  pratiquePro: "",
+  
   INIT: function(){
+    PRATIQUEPRO.pratiquePro = document.querySelectorAll("textarea[data-nom='pratiquePro']");
     if (DOSSIER.inputTitrePro.value != "") {
       //ajax (what, to, attributs,whatToDo)
       AJAX.Post(DOSSIER.inputTitrePro.value,"index.php?action=autocomplet",

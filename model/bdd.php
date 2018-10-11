@@ -1,9 +1,9 @@
 <?php
-include_once 'Xmlbdd.php';
+// include_once 'Xmlbdd.php';
 class Bdd
 {
   protected $bdd = "";
-  private $connectXml = "";
+/*   private $connectXml = "";
   private $valueXml = "";
 
   public function __construct()
@@ -11,7 +11,7 @@ class Bdd
     $this->connectXml = new Xmlbdd();
     $this->valueXml = $this->connectXml->getValue();
   }
-
+ */
   protected function getBdd(){
 
     if ($this->bdd == null){

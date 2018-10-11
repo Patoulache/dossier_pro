@@ -9,7 +9,6 @@ FORMAT = {
     // ajout d'ecouteurs sur les inputs
     ciblage : function(e) {
         var papa = FORMAT.div;
-        //console.log(papa);
         var cible = e.target.getAttribute("data-exemple"); // récupere nom de l'attribut
         // suppression form si champ vide alors que le form existe
         if (e.target.value === "" && cible !== "act1ex1") {
@@ -37,15 +36,20 @@ FORMAT = {
         var cop1 = cop.children[0].children;
         var cop2 = cop.children[1].children;
         var cible1 = document.querySelector("#"+FORMAT.calcul(cible, 1));
+        if (rep[0] == "2") {
+            console.log(rep[0]);
+            cop1[1].setAttribute("data-nombre", 1);
+        };
+        cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         cop.id = cible;
         cop1[0].innerHTML = cop1[0].innerHTML.replace("1", rep[0]);
         cop2[1].setAttribute("data-example", cible);
         cop2[0].innerHTML = cop2[0].innerHTML.replace("1", rep[1]);
         FORMAT.div.appendChild(cop);
-        FORMAT.div.insertBefore(cop, cible1);
+        FORMAT.div.insertBefore(cop, cible1); // place le formulaire exemple avant son petit frère s'il existe
 
     },
-    // remet les exemples dans l'ordre et les valeurs au bon endroit dans le sommaire
+    // remet les exemples dans l'ordre et les valeurs au bon endroit dans le sommaire après suppression d'un exemple
     indexage : function(cible) {
 
         var jumeau = document.querySelector("input[data-exemple="+"\""+cible+"\"]");
@@ -98,7 +102,7 @@ FORMAT = {
                 break;
         }
     },
-
+    // fonction pour calculer l'id N+1 et retourner le string
     calcul : function(cible, chiffre) {
 
         var cible1 = cible.substring(6);
@@ -107,7 +111,9 @@ FORMAT = {
             var cible3 = cible.replace(/\d$/, cible2);
             return cible3;
         } else {
-            return cible;
+            var cible3 = cible.replace(/\d$/, 1);
+            cible3 = cible3.replace(/\d/, 2);
+            return cible3;
         }
     }
 };
