@@ -62,7 +62,17 @@ if($_GET){
       }
   }
   if (isset($_GET['redirect'])) {
-    include_once 'vue/redirect.php';
+    var_dump($_GET);
+    switch ($_GET['redirect']) {
+      case 'deconnexion':
+        session_destroy();
+        header('location: index.php');
+        break;
+
+      default:
+        include_once 'vue/redirect.php';
+        break;
+    }
   }
 
   } else {

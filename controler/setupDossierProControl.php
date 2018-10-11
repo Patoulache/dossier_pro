@@ -45,6 +45,7 @@ class setupDossierControl
       array_push($reponse, $tmp);
     }
     $this->lesInfos['lesQuestions'] = $reponse;
+    var_dump($this->lesInfos['lesQuestions']);
   }
   private function table7(){
     $reponse = [];
