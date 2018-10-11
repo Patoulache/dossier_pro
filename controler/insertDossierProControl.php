@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // lancement session pour récupérer les valeurs insérées dans la super globale
 require_once "../model/insertDossierProModel.php";
 
 class InsertDossierProControl {
@@ -7,7 +7,7 @@ class InsertDossierProControl {
     private $test;
     private $insere;
     
-    public function __construct() {
+    public function __construct() { // lancement de toutes les insertions
         $this->test = json_decode($_POST['envoi']);
         $this->insere = new insertDossierProModel();
         $this->insere->rmrf();
