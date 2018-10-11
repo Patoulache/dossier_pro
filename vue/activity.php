@@ -3,7 +3,7 @@
 } ?>
 
 <?php ob_start(); ?>
-<div id="act1ex1">
+<div class="clearmarge" id="act1ex1">
     <div class="row"><label class="col-5"for="">Activité-type 1 </label>
     <textarea data-nom="pratiquePro" data-nombre="0" class="col-7" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"><?php echo $lesinfos['activity'][0];?></textarea></div>
     <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>

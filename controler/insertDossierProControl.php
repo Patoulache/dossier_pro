@@ -6,7 +6,7 @@ class InsertDossierProControl {
 
     private $test;
     private $insere;
-    
+
     public function __construct() { // lancement de toutes les insertions
         $this->test = json_decode($_POST['envoi']);
         $this->insere = new insertDossierProModel();
@@ -17,7 +17,7 @@ class InsertDossierProControl {
         $this->insertTable7();
         $this->insertTable8();
         $this->insertTable9();
-    
+
     }
 
     private function insertTable1(){
@@ -32,7 +32,7 @@ class InsertDossierProControl {
 
     private function insertTable6(){
         for ($i=0; $i<count($this->test->table6); $i++) {
-            $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]);
+            ($this->test->table5[$i][5]) ? $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]) : false;
         }
     }
 
