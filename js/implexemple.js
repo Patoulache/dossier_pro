@@ -37,6 +37,7 @@ FORMAT = {
         var cop2 = cop.children[1].children;
         var cible1 = document.querySelector("#"+FORMAT.calcul(cible, 1));
         if (rep[0] == "2") {
+            console.log(rep[0]);
             cop1[1].setAttribute("data-nombre", 1);
             cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         };

@@ -25,8 +25,6 @@ INSERTION = {
         INSERTION.makeTbl("table6", 3, 6);
         INSERTION.makeTbl("table7", 3, 10);
         INSERTION.makeTbl("table8", 1, 10);
-        console.log(selecDonnees);
-        
         AJAX.Post(AJAX.ToJson(INSERTION.params), "controler/insertDossierProControl.php", "envoi=", INSERTION.test);
     },
     

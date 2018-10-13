@@ -7,7 +7,7 @@
     <div class="row"><label class="col-5"for="">Activité-type 1 </label>
     <textarea data-nom="pratiquePro" data-nombre="0" class="col-7 insertion" name="table5" type="text" placeholder="Cliquez ici pour entrer l'intitulé de l'activité"><?php echo $lesinfos['activity'][0];?></textarea></div>
     <div class="row"><label class="col-5">Exemple n°1 <span class="littlepinkarrow">▶</span></label>
-    <input class="col-7 insertion" name=table5 type="text" <?php echo getPlacholder($lesinfos['exemples'][0][0]);?> data-example="act1ex1" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
+    <input class="col-7 insertion" name="table5" type="text" <?php echo getPlacholder($lesinfos['exemples'][0][0]);?> data-example="act1ex1" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
     <ol class="col-12">
         <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>

@@ -61,7 +61,6 @@ class insertDossierProModel extends Bdd {
             $sql->bindParam(':q5', htmlspecialchars($table5[6]));
             $sql->bindParam(':id', $_SESSION['id_user']);
             $sql->execute();
-            echo "pouet";
         }
     }
 

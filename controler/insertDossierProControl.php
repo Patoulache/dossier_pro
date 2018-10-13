@@ -42,8 +42,7 @@ class InsertDossierProControl {
         for ($i=0; $i<count($this->test->table6); $i++) {
             if ($this->test->table5[$i][5] !== null) {
                 ($this->test->table5[$i][5]) ? $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]) : false;
-            }
-        }
+            }        }
     }
 
     private function insertTable7(){
