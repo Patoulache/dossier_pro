@@ -7,6 +7,7 @@ INSERTION = {
     init : function() {
         INSERTION.params = {
             table1 : [],
+            table2 : [],
             table5 : [],
             table6 : [],
             table7 : [],
@@ -18,12 +19,14 @@ INSERTION = {
     },
     
     recupDonnees : function() {
-        var selecDonnees = document.querySelectorAll("input#insertion, textarea#insertion, input.insertion");
+        var selecDonnees = document.querySelectorAll("input#insertion, textarea#insertion, input.insertion, textarea.insertion");
         selecDonnees.forEach(INSERTION.triDonnees);
         INSERTION.makeTbl("table5", 7, 6);
         INSERTION.makeTbl("table6", 3, 6);
         INSERTION.makeTbl("table7", 3, 10);
         INSERTION.makeTbl("table8", 1, 10);
+        console.log(selecDonnees);
+        
         AJAX.Post(AJAX.ToJson(INSERTION.params), "controler/insertDossierProControl.php", "envoi=", INSERTION.test);
     },
     
@@ -35,6 +38,7 @@ INSERTION = {
         INSERTION.grosTest = el;
         INSERTION.params = {
             table1 : [],
+            table2 : [],
             table5 : [],
             table6 : [],
             table7 : [],

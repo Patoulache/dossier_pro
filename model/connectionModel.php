@@ -8,7 +8,7 @@ class ConnectionModel extends Bdd
 {
 
   function getHashPass($mail){
-    $sql = $this->getBdd()->prepare('SELECT pass FROM table1 WHERE email = :mail');
+    $sql = $this->getBdd()->prepare('SELECT pass FROM table1 WHERE email = :mail AND actif > 0');
     $sql->bindparam(':mail', $mail);
     $sql->execute();
     $rep = $sql->fetch();

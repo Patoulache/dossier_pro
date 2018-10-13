@@ -34,6 +34,21 @@ class insertDossierProModel extends Bdd {
         $sql->execute();
     }
 
+    public function fetchT2($table2) { // récupére infos depuis table 2
+        $sql = $this->getBdd()->prepare("SELECT titre_pro_vise FROM table2 WHERE id_user = :id");
+        $sql->bindParam(":id", $_SESSION['id_user']);
+        $sql->execute();
+        $rep = $sql->fetch();
+        return $rep;
+    }
+
+    public function insertT2($table2) { //insére les données de la table 2
+        $sql = $this->getBdd()->prepare("INSERT INTO table2(titre_pro_vise, id_user) VALUES (:titre, :id)");
+        $sql->bindParam(':titre', htmlspecialchars($table2));
+        $sql->bindParam(':id', $_SESSION['id_user']);
+        $sql->execute();
+    }
+
     public function insertT5($table5) { //insére les données de la table 5
         if (!empty($table5)) { //check pour ne pas insérer les formulaires vides
             $sql = $this->getBdd()->prepare("INSERT INTO table5(activite_type, exemple, question1, question2, question3, question4, question5, id_user) VALUES (:act, :ex, :q1, :q2, :q3, :q4, :q5, :id)");
@@ -46,6 +61,7 @@ class insertDossierProModel extends Bdd {
             $sql->bindParam(':q5', htmlspecialchars($table5[6]));
             $sql->bindParam(':id', $_SESSION['id_user']);
             $sql->execute();
+            echo "pouet";
         }
     }
 

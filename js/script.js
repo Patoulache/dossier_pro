@@ -6,10 +6,10 @@ const CHECKID = {
   adresse : "",
 
   INIT : function(){
-    CHECKID.nomnaissance = document.getElementById('nomnaissance')
-    CHECKID.nomusage = document.getElementById('nomusage')
-    CHECKID.prenom = document.getElementById('prenom')
-    CHECKID.adresse = document.getElementById('adresse')
+    CHECKID.nomnaissance = document.getElementById('nomnaissance');
+    CHECKID.nomusage = document.getElementById('nomusage');
+    CHECKID.prenom = document.getElementById('prenom');
+    CHECKID.adresse = document.getElementById('adresse');
   },
   // verif les champs
   ALLSET : function() {
@@ -23,19 +23,19 @@ const CHECKID = {
   COLOUR : function(){
     if (CHECKID.nomnaissance.value === ""){
       CHECKID.nomnaissance.style.border = "2px solid red";
-    };
+    }
     if (CHECKID.nomusage.value === ""){
       CHECKID.nomusage.style.border = "2px solid red";
-    };
+    }
     if (CHECKID.prenom.value === ""){
       CHECKID.prenom.style.border = "2px solid red";
-    };
+    }
     if (CHECKID.adresse.value === ""){
       CHECKID.adresse.style.border = "2px solid red";
-    };
+    }
   }
 
-}
+};
 
 // gère le click button
 // TOUT se pass ici
@@ -50,7 +50,7 @@ const BUTTON = {
       SENDER.INIT();
     } //end if
   }// end clicked
-}
+};
 
 const LESVARIABLES = {
   all : {},
@@ -65,7 +65,7 @@ const LESVARIABLES = {
       LESVARIABLES.all[inp[i].id] = inp[i].value;
     }
   }
-}
+};
 // ajax
 const SENDER = {
   xhr : "",
@@ -83,7 +83,7 @@ const SENDER = {
   SENDER.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   SENDER.xhr.send('info='+SENDER.tosend);
   }
-}
+};
 
 
 BUTTON.INIT();
