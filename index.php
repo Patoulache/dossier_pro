@@ -36,6 +36,7 @@ if($_GET){
 
 // ici on créer la page de rendu
       case 'getpage':
+      if ($_SESSION){
         include_once "controler/setupDossierProControl.php";
         $obj = new setupDossierControl;
         $lesinfos = $obj->getAllInfos();
@@ -44,6 +45,10 @@ if($_GET){
 
         include_once "vue/dossierPro.php";
         break;
+      }else{
+        header("location: index.php");
+        break;
+      }
 
       case 'autocomplet':
         include_once "controler/autocomplet.php";

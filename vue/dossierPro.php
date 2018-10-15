@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html mozdisallowselectionprint>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/fakeGrid.css">
@@ -10,7 +10,7 @@
   <form class="" action="index.php" method="get">
     <input type="submit" id="deco" name="redirect" value="deconnexion">
   </form>
-    <header class="row border-bottom">
+    <header class="row repeat border-bottom">
       <img class="col-3" src="./image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
       <!-- <div class="header"> -->
         <h1>Dossier Professionnel <sup>(DP)</sup></h1>

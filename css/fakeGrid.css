@@ -136,3 +136,28 @@ textarea{
 #deco:hover{
   background-color: var(--button_hover);
 }
+
+@media print {
+  @page {
+    margin-top:0;
+    /* margin-bottom: 0; */
+  }
+  #deco{
+    display: none;
+  }
+  button {
+    display: none;
+  }
+  h2{
+    color-adjust: exact;
+  }
+  /* .repeat{
+    position: running(repeat);
+    top: 0;
+  }
+}
+@page{
+  @top-center {
+    content: element(repeat);
+  } */
+}

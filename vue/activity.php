@@ -13,7 +13,7 @@
         <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
         <textarea class="col-12" name="table5" id="insertion" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
-        <li>Précisez les moyens utlisés :</li>
+        <li class="cols-12">Précisez les moyens utlisés :</li>
         <textarea class="col-12" name="table5" id="insertion" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
         <li class="col-12">Avec qui avez-vous travaillé ?</li>
