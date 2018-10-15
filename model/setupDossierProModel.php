@@ -29,28 +29,13 @@ class setupDossierModel extends Bdd
     $rep = $sql->fetchAll(PDO::FETCH_NUM);
     return $rep;
   }
-  function getExempleActivity($act){
-    $sql = $this->getBdd()->prepare('SELECT exemples FROM table4 WHERE activite_type = :act AND id_user= :id');
-    $sql->bindparam(":act",$act);
+  function lesQuestions($activity){
+    $sql = $this->getBdd()->prepare('SELECT exemple, question1, question2, question3, activite_type, table5.question4, question5, chant_at_serv, date_debut, date_fin FROM table5
+      JOIN table6 ON table5.question4 = table6.question4 WHERE table5.activite_type = :act AND table5.id_user = :id');
+    $sql->bindparam(":act",$activity);
     $sql->bindparam(":id",$_SESSION['id_user']);
     $sql->execute();
-    $rep = $sql->fetchAll(PDO::FETCH_NUM);
-    return $rep;
-  }
-  function getInfosActivity($exemple){
-    $sql = $this->getBdd()->prepare('SELECT question1, question2, question3, question4, question5 FROM table5 WHERE exemple = :exemple AND id_user= :id');
-    $sql->bindparam(":exemple",$exemple);
-    $sql->bindparam(":id",$_SESSION['id_user']);
-    $sql->execute();
-    $rep = $sql->fetchAll(PDO::FETCH_NUM);
-    return $rep;
-  }
-  function getElements($question){
-    $sql = $this->getBdd()->prepare('SELECT chant_at_serv, date_debut, date_fin FROM table6 WHERE question4 = :question AND id_user = :id');
-    $sql->bindparam(":question",$question);
-    $sql->bindparam(":id",$_SESSION['id_user']);
-    $sql->execute();
-    $rep = $sql->fetchAll(PDO::FETCH_NUM);
+    $rep = $sql->fetchAll(PDO::FETCH_ASSOC);
     return $rep;
   }
   function getTable7(){

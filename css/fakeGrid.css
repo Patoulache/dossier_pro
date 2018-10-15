@@ -9,10 +9,12 @@
 body {
     width: 21cm;
     margin: auto;
-    border: 0 auto;
+    /* border: 0 auto; */
     --littlepinkarrow: #c60093;
     --couleur-bandeau: #d60093;
     --borderBlue: #3daee9;
+    --button_hover: #adaee8;
+    --black: #000;
 }
 .clearmarge{
   clear:both;
@@ -121,5 +123,16 @@ textarea{
   color: var(--littlepinkarrow);
 }
 .blackColor {
-  color: black;
+  color: var(--black);
+}
+#deco {
+  background-color: var(--borderBlue);
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+#deco:hover{
+  background-color: var(--button_hover);
 }

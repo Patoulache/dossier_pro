@@ -1,18 +1,13 @@
 FORMAT = {
-    nameEx:"",
     div : document.querySelector(".activtype"),
+    skel : "",
 
     // Selectionne les inputs qui vont devenir des ecouteurs
     init : function() {
-        FORMAT.nameEx = document.querySelectorAll("input[data-exemple]");
-        FORMAT.nameEx.forEach(FORMAT.setListener);
+      document.querySelectorAll("input[data-exemple]").forEach((a) => a.addEventListener("focusout", FORMAT.ciblage));
     },
 
     // ajout d'ecouteurs sur les inputs
-    setListener : function(el) {
-        el.addEventListener("focusout", FORMAT.ciblage);
-    },
-
     ciblage : function(e) {
         var papa = FORMAT.div;
         var cible = e.target.getAttribute("data-exemple"); // récupere nom de l'attribut
@@ -26,14 +21,12 @@ FORMAT = {
         // check si formulaires existent deja, sinon elle les cree
         else if (document.querySelector("input[data-example="+"\""+cible+"\"]") === null) {
             FORMAT.exemple(cible);
-            var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
+            document.querySelector("input[data-example="+"\""+cible+"\"]").value = e.target.value;
             // cible le bon input dans lequel on injecte la valeur rentree dans le sommaire
-            champs.value = e.target.value; // actualise la valeur du nom de l'exemple
+           // actualise la valeur du nom de l'exemple
 
         } else { // actualisation simple du nom de l'exemple si formulaire deja present
-            var champs = document.querySelector("input[data-example="+"\""+cible+"\"]");
-            champs.value = e.target.value;
-
+            document.querySelector("input[data-example="+"\""+cible+"\"]").value = e.target.value;
         }
     },
     // copie le formulaire pour les exemples avec les bon numeros
@@ -41,14 +34,14 @@ FORMAT = {
         var regex = /\d/g;
         var rep = cible.match(regex);
         var cop = FORMAT.div.children[0].cloneNode(true);
+        var del = cop.querySelectorAll("input, textarea").forEach((e) => e.value = "");
         var cop1 = cop.children[0].children;
         var cop2 = cop.children[1].children;
         var cible1 = document.querySelector("#"+FORMAT.calcul(cible, 1));
         if (rep[0] == "2") {
-            console.log(rep[0]);
             cop1[1].setAttribute("data-nombre", 1);
+            cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         };
-        cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
         cop.id = cible;
         cop1[0].innerHTML = cop1[0].innerHTML.replace("1", rep[0]);
         cop2[1].setAttribute("data-example", cible);
@@ -118,11 +111,17 @@ FORMAT = {
         if (cible2 <= 3) {
             var cible3 = cible.replace(/\d$/, cible2);
             return cible3;
-        } else {
+        } else if(cible == "act1ex3") {
             var cible3 = cible.replace(/\d$/, 1);
             cible3 = cible3.replace(/\d/, 2);
             return cible3;
+        } else {
+            return cible;
         }
+    },
+
+    keepVar : function(el) {
+        FORMAT.skel = el;
     }
 };
 

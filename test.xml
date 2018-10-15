@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+  <server site="dossier_pro">
+    <id>
+      root
+    </id>
+    <pass>
+      sqlcoda#2018!
+    </pass>
+    <host>
+      192.168.3.125
+    </host>
+    <db>
+      dossier_professionnel
+    </db>
+  </server>
+  <server site="algo">
+    <id>encore et encore</id>
+    <pass>
+      654789
+    </pass>
+    <host>
+      localhost
+    </host>
+    <db>
+      satable
+    </db>
+  </server>
+</config>

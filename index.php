@@ -37,12 +37,12 @@ if($_GET){
 // ici on créer la page de rendu
       case 'getpage':
         include_once "controler/setupDossierProControl.php";
-        $obj = new setupDossierControl();
+        $obj = new setupDossierControl;
         $lesinfos = $obj->getAllInfos();
 
-        (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
+        (empty($lesinfos['lesQuestions'][0]) && empty($lesinfos['lesQuestions'][1])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
 
-        include_once "vue/dossierPro.php";        
+        include_once "vue/dossierPro.php";
         break;
 
       case 'autocomplet':
@@ -60,6 +60,19 @@ if($_GET){
         // code...
         break;
       }
+  }
+  if (isset($_GET['redirect'])) {
+    var_dump($_GET);
+    switch ($_GET['redirect']) {
+      case 'deconnexion':
+        session_destroy();
+        header('location: index.php');
+        break;
+
+      default:
+        include_once 'vue/redirect.php';
+        break;
+    }
   }
 
   } else {

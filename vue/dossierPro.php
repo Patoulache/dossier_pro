@@ -7,6 +7,9 @@
     <title>Dossier Professionnel coda 2018</title>
 </head>
 <body>
+  <form class="" action="index.php" method="get">
+    <input type="submit" id="deco" name="redirect" value="deconnexion">
+  </form>
     <header class="row border-bottom">
       <img class="col-3" src="./image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
       <!-- <div class="header"> -->
@@ -30,10 +33,10 @@
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" class="insertion" name="table1" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" name="table1" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" name="table1" placeholder="Entrez votre prénom ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos['adresse']);?> id="adresse" class="insertion" name="table1" placeholder="Entrez votre adresse ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" class="insertion" name="table1" placeholder="Entrez votre nom de naissance ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" name="table1" placeholder="Entrez votre nom d'usage ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" name="table1" placeholder="Entrez votre prénom ici."></p>
+                <p><textarea id="adresse" class="insertion" name="table1" placeholder="Entrez votre adresse ici."> <?php echo $lesinfos['adresse'];?> </textarea></p>
 
             </div>
         </div>
@@ -42,7 +45,7 @@
             <h2 class="col-12">Titre professionnel visé</h2>
             <div class="col-12 border-top border-bottom">
 
-            <input class="col-10  marg-1" type="text" <?php echo getPlacholder($lesinfos['titre_pro_vise']);?> id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
+            <input class="col-10  marg-1 insertion" name="table2" type="text" <?php echo getPlacholder($lesinfos['titre_pro_vise']);?> id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
             <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
@@ -123,6 +126,9 @@
                 <span class="littlepinkarrow">◢</span> <a href="http://travail-emploi.gouv.fr/titres-professionnels" target="_blank">http://travail-emploi.gouv.fr/titres-professionnels</a>
             </p>
         </div>
+
+        <!-- ici commence la partie SOMMAIRE -->
+
         <div class="row sommaire">
             <h2 class="col-12">Sommaire</h2>
             <h1 class="col-12">Exemples de pratique professionnelle</h1>
@@ -130,22 +136,22 @@
                 <div class="row"><textarea data-nom="pratiquePro" data-nombre="0" class="col-10" type="text"  placeholder="Intitulé de l’activité-type n° 1"><?php echo $lesinfos['activity'][0];?></textarea>
                 <label class="col-1">p.</label></div>
 
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex1" <?php echo getPlacholder($lesinfos['exemples'][0][0]);?> placeholder="Intitulé de l’exemple n° 1">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex1" <?php echo getPlacholder($lesinfos['lesQuestions'][0][0]['exemple']);?> placeholder="Intitulé de l’exemple n° 1">
                     <label class="col-1">p.</label></div>
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex2" <?php echo getPlacholder($lesinfos['exemples'][0][1]);?> placeholder="Intitulé de l’exemple n° 2">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex2" <?php echo getPlacholder($lesinfos['lesQuestions'][0][1]['exemple']);?> placeholder="Intitulé de l’exemple n° 2">
                     <label class="col-1">p.</label></div>
-                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex3" <?php echo getPlacholder($lesinfos['exemples'][0][2]);?> placeholder="Intitulé de l’exemple n° 3">
+                    <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act1ex3" <?php echo getPlacholder($lesinfos['lesQuestions'][0][2]['exemple']);?> placeholder="Intitulé de l’exemple n° 3">
                     <label class="col-1">p.</label></div>
             </div>
             <div class="col-12">
                 <div class="row"><textarea data-nom="pratiquePro" data-nombre="1" class="col-10" type="text" placeholder="Intitulé de l’activité-type n° 2"><?php echo $lesinfos['activity'][1];?></textarea>
                 <label class="col-1" for="">p.</label></div>
 
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex1" <?php echo getPlacholder($lesinfos['exemples'][1][0]);?> placeholder="Intitulé de l’exemple n° 1">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex1" <?php echo getPlacholder($lesinfos['lesQuestions'][1][0]['exemple']);?> placeholder="Intitulé de l’exemple n° 1">
                 <label class="col-1">p.</label></div>
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex2" <?php echo getPlacholder($lesinfos['exemples'][1][1]);?> placeholder="Intitulé de l’exemple n° 2">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex2" <?php echo getPlacholder($lesinfos['lesQuestions'][1][1]['exemple']);?> placeholder="Intitulé de l’exemple n° 2">
                 <label class="col-1">p.</label></div>
-                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex3" <?php echo getPlacholder($lesinfos['exemples'][1][2]);?> placeholder="Intitulé de l’exemple n° 3">
+                <div class="row"><span class="col-1 marg-1 littlepinkarrow">▶</span><input class="col-8"type="text" data-exemple="act2ex3" <?php echo getPlacholder($lesinfos['lesQuestions'][1][2]['exemple']);?> placeholder="Intitulé de l’exemple n° 3">
                 <label class="col-1">p.</label></div>
             </div>
 
