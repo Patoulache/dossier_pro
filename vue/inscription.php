@@ -52,8 +52,8 @@
     </main>
     <footer>
       <div id="rgpd" class="">
-        <p>nous récoltons vos informations dans le seul bute de répondre au service</p>
-        <button id="BTNoui" type="button" class="vert" name="ok">biensûr, pas de problème sinon je ne serais pas là</button>
+        <p>nous récoltons vos informations dans le seul but de répondre au service</p>
+        <button id="BTNoui" type="button" class="vert" name="ok">bien sûr, pas de problème sinon je ne serais pas là</button>
         <button id="BTNnon" type="button" class="vert" name="non">non merci</button>
       </div>
     </footer>

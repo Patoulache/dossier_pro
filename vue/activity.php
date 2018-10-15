@@ -10,7 +10,7 @@
     <input class="col-7 insertion" name="table5" type="text" <?php echo getPlacholder($lesinfos['exemples'][0][0]);?> data-example="act1ex1" placeholder="Cliquez ici pour entrer l'intitulé de l'exemple"></div>
 
     <ol class="col-12">
-        <li class="col-12">Décrivez les tâches ou opératons que vous avez effectuées, et dans quelles conditions :</li>
+        <li class="col-12">Décrivez les tâches ou opérations que vous avez effectuées, et dans quelles conditions :</li>
         <textarea class="col-12" name="table5" id="insertion" cols="30" rows="10" placeholder="Cliquez ici pour taper du texte"></textarea>
 
         <li class="cols-12">Précisez les moyens utlisés :</li>
