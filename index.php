@@ -40,7 +40,7 @@ if($_GET){
         $obj = new setupDossierControl;
         $lesinfos = $obj->getAllInfos();
 
-        (empty($lesinfos['activity'])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
+        (empty($lesinfos['lesQuestions'][0]) && empty($lesinfos['lesQuestions'][1])) ? require "vue/activity.php" : require "vue/gabarie_activity.php";
 
         include_once "vue/dossierPro.php";
         break;

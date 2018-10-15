@@ -33,10 +33,10 @@
 
             </div>
             <div class="champ col-4">
-                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" class="insertion" name="table1" placeholder="Entrez votre nom de naissance ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" name="table1" placeholder="Entrez votre nom d'usage ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" name="table1" placeholder="Entrez votre prénom ici." required></p>
-                <p><input type="text" <?php echo getPlacholder($lesinfos['adresse']);?> id="adresse" class="insertion" name="table1" placeholder="Entrez votre adresse ici." required></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" class="insertion" name="table1" placeholder="Entrez votre nom de naissance ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" name="table1" placeholder="Entrez votre nom d'usage ici."></p>
+                <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" name="table1" placeholder="Entrez votre prénom ici."></p>
+                <p><textarea id="adresse" class="insertion" name="table1" placeholder="Entrez votre adresse ici."> <?php echo $lesinfos['adresse'];?> </textarea></p>
 
             </div>
         </div>
@@ -45,7 +45,7 @@
             <h2 class="col-12">Titre professionnel visé</h2>
             <div class="col-12 border-top border-bottom">
 
-            <input class="col-10  marg-1" type="text" <?php echo getPlacholder($lesinfos['titre_pro_vise']);?> id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
+            <input class="col-10  marg-1 insertion" name="table2" type="text" <?php echo getPlacholder($lesinfos['titre_pro_vise']);?> id="titrevise" placeholder="Cliquez ici pour entrer l'intitulé du titre professionnel visé." autocomplete="off">
             <div class="col-10  marg-1 nopaddingTop" id="resultautocomplete"></div>
           </div>
 
