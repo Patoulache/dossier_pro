@@ -62,7 +62,6 @@ if($_GET){
       }
   }
   if (isset($_GET['redirect'])) {
-    var_dump($_GET);
     switch ($_GET['redirect']) {
       case 'deconnexion':
         session_destroy();

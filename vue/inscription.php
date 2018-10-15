@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-        <img src="../image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
+        <img src="image/1-Dossier_professionnel_version_traitement_de_text_html_2bec0533.jpg" name="image/image12.jpg">
         <div class="header">
             <h1>Dossier Professionnel <sup>(DP)</sup></h1>
         </div>
