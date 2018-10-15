@@ -12,6 +12,7 @@ class InsertDossierProControl {
         $this->insere = new insertDossierProModel();
         $this->insere->rmrf();
         $this->insertTable1();
+        $this->insertTable2();
         $this->insertTable5();
         $this->insertTable6();
         $this->insertTable7();
@@ -23,6 +24,13 @@ class InsertDossierProControl {
     private function insertTable1(){
         $this->insere->insertT1($this->test->table1);
     }
+
+    private function insertTable2(){
+        if ($this->insere->fetchT2($this->test->table2[0]) === false) {
+            $this->insere->insertT2($this->test->table2[0]);
+        }
+    }
+
     private function insertTable5(){
 
         foreach ($this->test->table5 as $value) {
@@ -32,8 +40,9 @@ class InsertDossierProControl {
 
     private function insertTable6(){
         for ($i=0; $i<count($this->test->table6); $i++) {
-            ($this->test->table5[$i][5]) ? $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]) : false;
-        }
+            if ($this->test->table5[$i][5] !== null) {
+                ($this->test->table5[$i][5]) ? $this->insere->insertT6($this->test->table5[$i][5],$this->test->table6[$i]) : false;
+            }        }
     }
 
     private function insertTable7(){
