@@ -34,13 +34,15 @@ FORMAT = {
         var regex = /\d/g;
         var rep = cible.match(regex);
         var cop = FORMAT.div.children[0].cloneNode(true);
-        var del = cop.querySelectorAll("input, textarea").forEach((e) => e.value = "");
+        cop.querySelectorAll("input, textarea").forEach((e) => e.value = "");
         var cop1 = cop.children[0].children;
         var cop2 = cop.children[1].children;
         var cible1 = document.querySelector("#"+FORMAT.calcul(cible, 1));
         if (rep[0] == "2") {
             cop1[1].setAttribute("data-nombre", 1);
             cop1[1].value = document.querySelector('textarea[data-nombre ="1"]').value;
+        } else {
+            cop1[1].value = document.querySelector('textarea[data-nombre ="0"]').value;
         };
         cop.id = cible;
         cop1[0].innerHTML = cop1[0].innerHTML.replace("1", rep[0]);
