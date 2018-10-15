@@ -36,7 +36,7 @@
                 <p><input type="text" <?php echo getPlacholder($lesinfos['nom_naissance']);?> id="nomnaissance" class="insertion" name="table1" placeholder="Entrez votre nom de naissance ici."></p>
                 <p><input type="text" <?php echo getPlacholder($lesinfos["nom_usage"]);?> id="nomusage" name="table1" placeholder="Entrez votre nom d'usage ici."></p>
                 <p><input type="text" <?php echo getPlacholder($lesinfos['prenom']);?> id="prenom" name="table1" placeholder="Entrez votre prénom ici."></p>
-                <p><textarea id="adresse" class="insertion" name="table1" placeholder="Entrez votre adresse ici."> <?php echo $lesinfos['adresse'];?> </textarea></p>
+                <p><textarea id="adresse" cols="28" class="insertion" name="table1" placeholder="Entrez votre adresse ici."><?php echo $lesinfos['adresse'];?></textarea></p>
 
             </div>
         </div>
@@ -276,7 +276,7 @@
         <div>
             <h2 class="col-12">Annexes</h2>
             <p class="col-12">(Si le RC le prévoit)</p>
-            <textarea class="col-12" name="table9" id="insertion" cols="30" rows="10"> <?php echo $lesinfos['table9'];?> </textarea>
+            <textarea class="col-12" name="table9" id="insertion" cols="30" rows="10"><?php echo $lesinfos['table9'];?></textarea>
         </div>
         <button>Valider</button>
     <script src="js/biblio.js" charset="utf-8"></script>
