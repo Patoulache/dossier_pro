@@ -1,11 +1,11 @@
 INSERTION = {
 
-    tbl : [],
-    params : {},
-    grosTest : "",
+    tbl : [], // tableau tampon
+    params : {}, // objet pour envoi AJAX
+    grosTest : "", // variable test réponse AJAX
 
     init : function() {
-        INSERTION.params = {
+        INSERTION.params = { // création de l'objet que j'enverrai par POST
             table1 : [],
             table2 : [],
             table5 : [],
@@ -17,10 +17,10 @@ INSERTION = {
         var btn = document.querySelector("button");
         btn.addEventListener("click", INSERTION.recupDonnees);
     },
-    
+    // Récupération données à envoyer
     recupDonnees : function() {
-        var selecDonnees = document.querySelectorAll("input#insertion, textarea#insertion, input.insertion, textarea.insertion");
-        selecDonnees.forEach(INSERTION.triDonnees);
+        var selecDonnees = document.querySelectorAll("input#insertion, textarea#insertion, input.insertion, textarea.insertion"); // sélectionne tous les champs comportant les données à insérer
+        selecDonnees.forEach(INSERTION.triDonnees); // formatage des données dans certains paramètres pour faire des sous-tableaux
         INSERTION.makeTbl("table5", 7, 6);
         INSERTION.makeTbl("table6", 3, 6);
         INSERTION.makeTbl("table7", 3, 10);
@@ -29,12 +29,12 @@ INSERTION = {
     },
     
     triDonnees : function(el) {       
-        INSERTION.params[el.name].push(el.value);          
+        INSERTION.params[el.name].push(el.value); // Insertion des données dans l'objet    
     },
     
     test : function(el) {
         INSERTION.grosTest = el;
-        INSERTION.params = {
+        INSERTION.params = { // reset de l'objet pour le prochain envoi
             table1 : [],
             table2 : [],
             table5 : [],
@@ -45,7 +45,8 @@ INSERTION = {
         };
     },
 
-    makeTbl : function (nomTable, delim, coeff) {
+    makeTbl : function (nomTable, delim, coeff) { // création des sous-tableaux en fonction des parametres (nomTable = table où l'on veut formater en sous-tableau 
+                                                  // delim = nombre de donnée dans un sous-tableau, coeff = nombre de sous-tableau)
 
         for (var i=delim, c = i*coeff, j=0; i<= c; i = i + delim, j++){
             if (i == delim){
@@ -54,8 +55,8 @@ INSERTION = {
                 INSERTION.tbl.push(INSERTION.params[nomTable].slice(i-delim,i));
             }
         };
-        INSERTION.params[nomTable] = INSERTION.tbl;
-        INSERTION.tbl = [];        
+        INSERTION.params[nomTable] = INSERTION.tbl; // insertion du sous-tableau dans la table ciblée
+        INSERTION.tbl = []; // reset tableau tampon
     }
 };
 
