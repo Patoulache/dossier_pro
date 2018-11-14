@@ -2,4 +2,4 @@
 .project
 .directory
 .jshintrc
-/model/bdd.php
+model/bdd.php
